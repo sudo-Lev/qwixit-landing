@@ -31,8 +31,8 @@
         "app": "Slack — #beta",
         "before": "привіт всім бета майже готова, протестуйте будь ласка і напишіть що зламано",
         "after": "Привіт усім! Бета майже готова — протестуйте, будь ласка, і напишіть, що зламано.",
-        "verb": "CLEANING",
-        "done": "FIXED",
+        "verb": "QWIXING",
+        "done": "QWIXED",
         "sub": "TEXT REPLACED"
       },
       {
@@ -40,8 +40,8 @@
         "app": "Mail — Re: sync",
         "before": "Hi! Can we move the call to Thursday?",
         "after": "Привіт! Можемо перенести дзвінок на четвер?",
-        "verb": "TRANSLATING",
-        "done": "TRANSLATED",
+        "verb": "QWIXING",
+        "done": "QWIXED",
         "sub": "EN → UA"
       },
       {
@@ -49,8 +49,8 @@
         "app": "Notion — Release notes",
         "before": "Хотіли повідомити всім, що онбординг оновили і тепер він має коректно працювати також на всіх Mac з процесорами Intel.",
         "after": "Онбординг тепер працює і на Intel Mac.",
-        "verb": "SHORTENING",
-        "done": "SHORTENED",
+        "verb": "QWIXING",
+        "done": "QWIXED",
         "sub": "−68% LENGTH"
       },
       {
@@ -58,14 +58,14 @@
         "app": "Linear — KIR-214",
         "before": "ця штука тупить коли відкриваєш великі файли і іноді просто зависає",
         "after": "Під час відкриття великих файлів продуктивність падає, а застосунок іноді зависає.",
-        "verb": "REWRITING",
-        "done": "REWRITTEN",
+        "verb": "QWIXING",
+        "done": "QWIXED",
         "sub": "FORMAL TONE"
       }
     ]
   },
   "modes": {
-    "h2a": "ДВІ КЛАВІШІ.",
+    "h2a": "ОДИН ШОРТКАТ.",
     "h2b": "БУДЬ-ДЕ.",
     "fixTitle": "ВИПРАВ НА МІСЦІ",
     "fixCopy": "Помилки, тон, переклад. Один тап — повтор останньої дії. Два тапи — палітра. Замінити, вставити нижче або відкрити в картці.",

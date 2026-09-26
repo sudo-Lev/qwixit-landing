@@ -31,8 +31,8 @@
         "app": "Slack — #beta",
         "before": "hej wszystkim beta jest prawie gotowa, przetestujcie prosze i napiszcie co nie dziala",
         "after": "Hej wszystkim! Beta jest prawie gotowa — przetestujcie, proszę, i napiszcie, co nie działa.",
-        "verb": "CLEANING",
-        "done": "FIXED",
+        "verb": "QWIXING",
+        "done": "QWIXED",
         "sub": "TEXT REPLACED"
       },
       {
@@ -40,8 +40,8 @@
         "app": "Mail — Re: sync",
         "before": "Hi! Can we move the call to Thursday?",
         "after": "Cześć! Możemy przełożyć rozmowę na czwartek?",
-        "verb": "TRANSLATING",
-        "done": "TRANSLATED",
+        "verb": "QWIXING",
+        "done": "QWIXED",
         "sub": "EN → PL"
       },
       {
@@ -49,8 +49,8 @@
         "app": "Notion — Release notes",
         "before": "Chcieliśmy poinformować wszystkich, że onboarding został zaktualizowany i teraz powinien poprawnie działać również na wszystkich Macach z procesorami Intel.",
         "after": "Onboarding działa teraz także na Macach z Intelem.",
-        "verb": "SHORTENING",
-        "done": "SHORTENED",
+        "verb": "QWIXING",
+        "done": "QWIXED",
         "sub": "−68% LENGTH"
       },
       {
@@ -58,14 +58,14 @@
         "app": "Linear — KIR-214",
         "before": "to coś muli jak otwierasz duże pliki i czasem się po prostu zawiesza",
         "after": "Przy otwieraniu dużych plików wydajność spada, a aplikacja czasami się zawiesza.",
-        "verb": "REWRITING",
-        "done": "REWRITTEN",
+        "verb": "QWIXING",
+        "done": "QWIXED",
         "sub": "FORMAL TONE"
       }
     ]
   },
   "modes": {
-    "h2a": "DWA SKRÓTY.",
+    "h2a": "JEDEN SKRÓT.",
     "h2b": "KAŻDA APKA.",
     "fixTitle": "POPRAW NA MIEJSCU",
     "fixCopy": "Literówki, ton, tłumaczenie. Jedno stuknięcie — powtórz ostatnią akcję. Dwa — paleta. Zamień, wstaw poniżej lub otwórz w karcie.",

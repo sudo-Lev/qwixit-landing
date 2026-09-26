@@ -31,8 +31,8 @@
         "app": "Slack — #beta",
         "before": "hey guys the beta build is almost redy, pls test it and tell me whats broken",
         "after": "Hey guys, the beta build is almost ready. Please test it and tell me what's broken.",
-        "verb": "CLEANING",
-        "done": "FIXED",
+        "verb": "QWIXING",
+        "done": "QWIXED",
         "sub": "TEXT REPLACED"
       },
       {
@@ -40,8 +40,8 @@
         "app": "Mail — Re: sync",
         "before": "Привіт! Можемо перенести дзвінок на четвер?",
         "after": "Hi! Can we move the call to Thursday?",
-        "verb": "TRANSLATING",
-        "done": "TRANSLATED",
+        "verb": "QWIXING",
+        "done": "QWIXED",
         "sub": "UA → EN"
       },
       {
@@ -49,8 +49,8 @@
         "app": "Notion — Release notes",
         "before": "We wanted to let everyone know that the onboarding flow has been updated and it should now work correctly on all Intel-based Macs as well.",
         "after": "Onboarding now works on Intel Macs too.",
-        "verb": "SHORTENING",
-        "done": "SHORTENED",
+        "verb": "QWIXING",
+        "done": "QWIXED",
         "sub": "−71% LENGTH"
       },
       {
@@ -58,14 +58,14 @@
         "app": "Linear — KIR-214",
         "before": "the thing is kinda slow when u open big files and sometimes it just freezes",
         "after": "Performance degrades when opening large files, and the app occasionally freezes.",
-        "verb": "REWRITING",
-        "done": "REWRITTEN",
+        "verb": "QWIXING",
+        "done": "QWIXED",
         "sub": "FORMAL TONE"
       }
     ]
   },
   "modes": {
-    "h2a": "TWO KEYS.",
+    "h2a": "ONE HOTKEY.",
     "h2b": "EVERY APP.",
     "fixTitle": "FIX IT IN PLACE",
     "fixCopy": "Typos, tone, translation. Tap once — repeat last action. Tap twice — the palette. Replace, insert below, or open in a card.",
