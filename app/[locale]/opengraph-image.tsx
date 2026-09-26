@@ -75,7 +75,7 @@ export default async function OpengraphImage({ params }: { params: Promise<{ loc
             color: "#A39EB2",
           }}
         >
-          FOR MACOS · qwixit.ai
+          FOR MACOS · qwixit.app
         </div>
       </div>
     </div>,

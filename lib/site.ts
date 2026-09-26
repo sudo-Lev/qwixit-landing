@@ -1,1 +1,1 @@
-export const SITE_URL = "https://qwixit.ai";
+export const SITE_URL = "https://qwixit.app";

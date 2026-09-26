@@ -1,6 +1,6 @@
 # qwixit-landing
 
-Marketing site for [Qwixit](https://qwixit.ai) — Next.js 15 (App Router), Tailwind v4, Motion, next-intl. Deployed on Vercel.
+Marketing site for [Qwixit](https://qwixit.app) — Next.js 15 (App Router), Tailwind v4, Motion, next-intl. Deployed on Vercel.
 
 ```sh
 pnpm install
