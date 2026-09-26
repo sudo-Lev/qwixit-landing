@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "title": "Qwixit — Don't rewrite it. Qwixit.",
+    "description": "AI on the go for macOS. Select text in any app, hit ⌥⌘X — fixed, translated or rewritten in place.",
+    "ogHeadline": "DON'T REWRITE IT."
+  },
+  "header": {
+    "home": "Qwixit home",
+    "forMacos": "FOR MACOS",
+    "modes": "MODES",
+    "download": "DOWNLOAD",
+    "language": "Language"
+  },
+  "hero": {
+    "eyebrow": "AI ON THE GO",
+    "h1a": "DON'T REWRITE IT.",
+    "h1b": "QWIXIT.",
+    "subLead": "You keep writing. Qwixit keeps up.",
+    "subBody": "AI on the go — in Slack, Mail, Notion, anywhere you type.",
+    "subAction": "Select, hit ⌥⌘X, done.",
+    "ctaDownload": "DOWNLOAD FREE",
+    "ctaHow": "HOW IT WORKS"
+  },
+  "demo": {
+    "live": "LIVE DEMO",
+    "label": "Animated demo: Qwixit rewriting text in place",
+    "tabsLabel": "Demo cases",
+    "cases": [
+      {
+        "id": "fix",
+        "app": "Slack — #beta",
+        "before": "hey guys the beta build is almost redy, pls test it and tell me whats broken",
+        "after": "Hey guys, the beta build is almost ready. Please test it and tell me what's broken.",
+        "verb": "CLEANING",
+        "done": "FIXED",
+        "sub": "TEXT REPLACED"
+      },
+      {
+        "id": "translate",
+        "app": "Mail — Re: sync",
+        "before": "Привіт! Можемо перенести дзвінок на четвер?",
+        "after": "Hi! Can we move the call to Thursday?",
+        "verb": "TRANSLATING",
+        "done": "TRANSLATED",
+        "sub": "UA → EN"
+      },
+      {
+        "id": "shorten",
+        "app": "Notion — Release notes",
+        "before": "We wanted to let everyone know that the onboarding flow has been updated and it should now work correctly on all Intel-based Macs as well.",
+        "after": "Onboarding now works on Intel Macs too.",
+        "verb": "SHORTENING",
+        "done": "SHORTENED",
+        "sub": "−71% LENGTH"
+      },
+      {
+        "id": "formal",
+        "app": "Linear — KIR-214",
+        "before": "the thing is kinda slow when u open big files and sometimes it just freezes",
+        "after": "Performance degrades when opening large files, and the app occasionally freezes.",
+        "verb": "REWRITING",
+        "done": "REWRITTEN",
+        "sub": "FORMAL TONE"
+      }
+    ]
+  },
+  "modes": {
+    "h2a": "TWO KEYS.",
+    "h2b": "EVERY APP.",
+    "fixTitle": "FIX IT IN PLACE",
+    "fixCopy": "Typos, tone, translation. Tap once — repeat last action. Tap twice — the palette. Replace, insert below, or open in a card.",
+    "fixMockLabel": "Qwixit action palette with Fix, Translate and Shorten actions.",
+    "peekTitle": "PEEK, DON'T TOUCH",
+    "peekCopy": "A floating card that translates, summarizes or clarifies the selection. Your text stays exactly as it is.",
+    "peekMockLabel": "Qwixit Peek card showing a Ukrainian to English translation."
+  },
+  "cta": {
+    "privacy": "Text is sent only when you press the shortcut. No keystroke monitoring. Nothing retained.",
+    "download": "DOWNLOAD FOR MACOS"
+  },
+  "footer": {
+    "copyright": "QWIXIT © 2026",
+    "credit": "DEVELOPED AND DESIGNED BY LEV MISILIUK",
+    "requirements": "MACOS 14+ · APPLE SILICON & INTEL"
+  },
+  "toast": {
+    "title": "COMING SOON",
+    "body": "The macOS build is almost ready."
+  }
+}

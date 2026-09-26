@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "title": "Qwixit — Nie przepisuj. Qwixit.",
+    "description": "AI w biegu na macOS. Zaznacz tekst w dowolnej aplikacji, wciśnij ⌥⌘X — poprawiony, przetłumaczony lub przepisany na miejscu.",
+    "ogHeadline": "NIE PRZEPISUJ."
+  },
+  "header": {
+    "home": "Qwixit — strona główna",
+    "forMacos": "NA MACOS",
+    "modes": "TRYBY",
+    "download": "POBIERZ",
+    "language": "Język"
+  },
+  "hero": {
+    "eyebrow": "AI W BIEGU",
+    "h1a": "NIE PRZEPISUJ.",
+    "h1b": "QWIXIT.",
+    "subLead": "Ty piszesz dalej. Qwixit nadąża.",
+    "subBody": "AI w biegu — w Slacku, Mailu, Notion, wszędzie, gdzie piszesz.",
+    "subAction": "Zaznacz, wciśnij ⌥⌘X, gotowe.",
+    "ctaDownload": "POBIERZ ZA DARMO",
+    "ctaHow": "JAK TO DZIAŁA"
+  },
+  "demo": {
+    "live": "DEMO NA ŻYWO",
+    "label": "Animowane demo: Qwixit przepisuje tekst na miejscu",
+    "tabsLabel": "Przykłady",
+    "cases": [
+      {
+        "id": "fix",
+        "app": "Slack — #beta",
+        "before": "hej wszystkim beta jest prawie gotowa, przetestujcie prosze i napiszcie co nie dziala",
+        "after": "Hej wszystkim! Beta jest prawie gotowa — przetestujcie, proszę, i napiszcie, co nie działa.",
+        "verb": "CLEANING",
+        "done": "FIXED",
+        "sub": "TEXT REPLACED"
+      },
+      {
+        "id": "translate",
+        "app": "Mail — Re: sync",
+        "before": "Hi! Can we move the call to Thursday?",
+        "after": "Cześć! Możemy przełożyć rozmowę na czwartek?",
+        "verb": "TRANSLATING",
+        "done": "TRANSLATED",
+        "sub": "EN → PL"
+      },
+      {
+        "id": "shorten",
+        "app": "Notion — Release notes",
+        "before": "Chcieliśmy poinformować wszystkich, że onboarding został zaktualizowany i teraz powinien poprawnie działać również na wszystkich Macach z procesorami Intel.",
+        "after": "Onboarding działa teraz także na Macach z Intelem.",
+        "verb": "SHORTENING",
+        "done": "SHORTENED",
+        "sub": "−68% LENGTH"
+      },
+      {
+        "id": "formal",
+        "app": "Linear — KIR-214",
+        "before": "to coś muli jak otwierasz duże pliki i czasem się po prostu zawiesza",
+        "after": "Przy otwieraniu dużych plików wydajność spada, a aplikacja czasami się zawiesza.",
+        "verb": "REWRITING",
+        "done": "REWRITTEN",
+        "sub": "FORMAL TONE"
+      }
+    ]
+  },
+  "modes": {
+    "h2a": "DWA SKRÓTY.",
+    "h2b": "KAŻDA APKA.",
+    "fixTitle": "POPRAW NA MIEJSCU",
+    "fixCopy": "Literówki, ton, tłumaczenie. Jedno stuknięcie — powtórz ostatnią akcję. Dwa — paleta. Zamień, wstaw poniżej lub otwórz w karcie.",
+    "fixMockLabel": "Paleta akcji Qwixit: Fix, Translate i Shorten.",
+    "peekTitle": "PODEJRZYJ, NIE RUSZAJ",
+    "peekCopy": "Pływająca karta, która tłumaczy, streszcza lub wyjaśnia zaznaczenie. Twój tekst zostaje dokładnie taki, jaki był.",
+    "peekMockLabel": "Karta Qwixit Peek z tłumaczeniem z ukraińskiego na angielski."
+  },
+  "cta": {
+    "privacy": "Tekst jest wysyłany tylko po naciśnięciu skrótu. Żadnego monitorowania klawiszy. Nic nie jest przechowywane.",
+    "download": "POBIERZ NA MACOS"
+  },
+  "footer": {
+    "copyright": "QWIXIT © 2026",
+    "credit": "DEVELOPED AND DESIGNED BY LEV MISILIUK",
+    "requirements": "MACOS 14+ · APPLE SILICON & INTEL"
+  },
+  "toast": {
+    "title": "WKRÓTCE",
+    "body": "Wersja na macOS jest prawie gotowa."
+  }
+}

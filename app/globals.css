@@ -1,0 +1,243 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0b0812;
+  --color-panel-a: #1c1728;
+  --color-panel-b: #120e1b;
+  --color-card: rgba(14, 12, 22, 0.96);
+  --color-ink: #16131f;
+  --color-text: #edebf3;
+  --color-muted: #a39eb2;
+  --color-dim: #8e8899;
+  --color-faint: #726d80;
+  /* #726D80 is 3.98:1 on the page bg; text uses this nudge to clear WCAG AA (4.75:1). */
+  --color-faint-text: #7e7990;
+  --color-doc: #fafafc;
+  --color-violet: #6d28ff;
+  --color-violet-glow: #8b5cff;
+  --color-magenta: #ff2d9b;
+  --color-cyan: #00d8f0;
+  --color-cyan-deep: #00bfdb;
+  --color-green: #2eeb73;
+  --color-green-bar: #3df58a;
+  --color-lilac: #a77bff;
+  --color-line: rgba(255, 255, 255, 0.12);
+  --color-line-soft: rgba(255, 255, 255, 0.08);
+
+  --radius-tag: 6px;
+  --radius-key: 9px;
+  --radius-cta: 10px;
+  --radius-status: 11px;
+  --radius-doc: 14px;
+  --radius-panel: 16px;
+
+  --shadow-panel: 0 30px 60px -24px rgba(12, 6, 30, 0.85);
+  --shadow-doc: 0 50px 120px -50px rgba(109, 40, 255, 0.7);
+  --shadow-split: 5px 0 0 0 #ff2d9b, -5px 0 0 0 #00d8f0;
+
+  --font-sys: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+
+  --animate-caret: q-caret 1s steps(1) infinite;
+}
+
+@theme inline {
+  --font-mono: var(--font-jetbrains), ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-display: var(--font-unbounded), var(--font-jetbrains), sans-serif;
+}
+
+@layer base {
+  html {
+    background: var(--color-bg);
+    color-scheme: dark;
+  }
+  body {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-mono);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-cyan);
+    outline-offset: 3px;
+  }
+}
+
+/* ——— Display headline ——— */
+@utility split-4 {
+  text-shadow:
+    4px 0 var(--color-magenta),
+    -4px 0 var(--color-cyan);
+}
+@utility split-3 {
+  text-shadow:
+    3px 0 var(--color-magenta),
+    -3px 0 var(--color-cyan);
+}
+
+/* ——— Keyframes (transform/opacity only) ——— */
+@keyframes q-caret {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes q-scanlines {
+  to {
+    transform: translateY(6px);
+  }
+}
+@keyframes q-sweep {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(100% + 68px));
+  }
+}
+@keyframes q-trace {
+  from {
+    transform: translateX(-42px);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+@keyframes q-scan-y {
+  from {
+    transform: translateY(-43%);
+  }
+  to {
+    transform: translateY(43%);
+  }
+}
+@keyframes q-jitter {
+  0%,
+  100% {
+    transform: translateX(-0.8px);
+  }
+  50% {
+    transform: translateX(0.8px);
+  }
+}
+@keyframes q-ring {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.18);
+  }
+}
+@keyframes q-slide {
+  from {
+    opacity: 0;
+    transform: translateX(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes q-glitch {
+  0%,
+  92%,
+  100% {
+    transform: none;
+    clip-path: none;
+  }
+  93% {
+    transform: translateX(-4px);
+    clip-path: inset(20% 0 55% 0);
+  }
+  95% {
+    transform: translateX(4px);
+    clip-path: inset(60% 0 10% 0);
+  }
+  97% {
+    transform: translateX(-2px);
+    clip-path: none;
+  }
+}
+
+.q-scanlines {
+  position: fixed;
+  inset: -6px 0 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.025) 0 1px,
+    transparent 1px 3px
+  );
+  animation: q-scanlines 0.6s linear infinite;
+  will-change: transform;
+}
+.q-hud-card {
+  background:
+    linear-gradient(135deg, rgba(109, 40, 255, 0.16), transparent 55%, rgba(0, 191, 219, 0.08)),
+    var(--color-card);
+}
+.q-glitch {
+  animation: q-glitch 5s steps(1) infinite;
+}
+.q-sweep {
+  animation: q-sweep 640ms linear infinite;
+}
+.q-trace {
+  animation: q-trace 460ms linear infinite;
+}
+.q-scan-y {
+  animation: q-scan-y 720ms linear infinite;
+}
+.q-jitter {
+  animation: q-jitter 720ms linear infinite;
+}
+.q-ring {
+  animation: q-ring 720ms ease-out forwards;
+}
+.q-slide {
+  animation: q-slide 160ms ease-out both;
+}
+.q-scan-line {
+  background: linear-gradient(90deg, transparent, #00bfdb, #ff2d9b, transparent);
+  mix-blend-mode: screen;
+}
+@supports (mix-blend-mode: plus-lighter) {
+  .q-scan-line {
+    mix-blend-mode: plus-lighter;
+  }
+}
+
+/* Infinite loops stop while their section is off-screen or the tab is hidden. */
+[data-paused="true"],
+[data-paused="true"] * {
+  animation-play-state: paused !important;
+}
+
+/* Glow elements at ~75% on small screens. */
+@media (max-width: 639px) {
+  [data-glow] {
+    opacity: 0.75;
+  }
+  :root {
+    --shadow-doc: 0 50px 120px -50px rgba(109, 40, 255, 0.52);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+  }
+}

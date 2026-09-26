@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "title": "Qwixit — Не переписуй. Qwixit.",
+    "description": "AI на ходу для macOS. Виділи текст у будь-якому застосунку, натисни ⌥⌘X — виправлено, перекладено або переписано на місці.",
+    "ogHeadline": "НЕ ПЕРЕПИСУЙ."
+  },
+  "header": {
+    "home": "Qwixit — головна",
+    "forMacos": "ДЛЯ MACOS",
+    "modes": "РЕЖИМИ",
+    "download": "СКАЧАТИ",
+    "language": "Мова"
+  },
+  "hero": {
+    "eyebrow": "AI НА ХОДУ",
+    "h1a": "НЕ ПЕРЕПИСУЙ.",
+    "h1b": "QWIXIT.",
+    "subLead": "Ти пишеш далі. Qwixit встигає.",
+    "subBody": "AI на ходу — у Slack, Mail, Notion, будь-де, де ти пишеш.",
+    "subAction": "Виділи, натисни ⌥⌘X, готово.",
+    "ctaDownload": "СКАЧАТИ БЕЗКОШТОВНО",
+    "ctaHow": "ЯК ЦЕ ПРАЦЮЄ"
+  },
+  "demo": {
+    "live": "ЖИВЕ ДЕМО",
+    "label": "Анімоване демо: Qwixit переписує текст на місці",
+    "tabsLabel": "Приклади",
+    "cases": [
+      {
+        "id": "fix",
+        "app": "Slack — #beta",
+        "before": "привіт всім бета майже готова, протестуйте будь ласка і напишіть що зламано",
+        "after": "Привіт усім! Бета майже готова — протестуйте, будь ласка, і напишіть, що зламано.",
+        "verb": "CLEANING",
+        "done": "FIXED",
+        "sub": "TEXT REPLACED"
+      },
+      {
+        "id": "translate",
+        "app": "Mail — Re: sync",
+        "before": "Hi! Can we move the call to Thursday?",
+        "after": "Привіт! Можемо перенести дзвінок на четвер?",
+        "verb": "TRANSLATING",
+        "done": "TRANSLATED",
+        "sub": "EN → UA"
+      },
+      {
+        "id": "shorten",
+        "app": "Notion — Release notes",
+        "before": "Хотіли повідомити всім, що онбординг оновили і тепер він має коректно працювати також на всіх Mac з процесорами Intel.",
+        "after": "Онбординг тепер працює і на Intel Mac.",
+        "verb": "SHORTENING",
+        "done": "SHORTENED",
+        "sub": "−68% LENGTH"
+      },
+      {
+        "id": "formal",
+        "app": "Linear — KIR-214",
+        "before": "ця штука тупить коли відкриваєш великі файли і іноді просто зависає",
+        "after": "Під час відкриття великих файлів продуктивність падає, а застосунок іноді зависає.",
+        "verb": "REWRITING",
+        "done": "REWRITTEN",
+        "sub": "FORMAL TONE"
+      }
+    ]
+  },
+  "modes": {
+    "h2a": "ДВІ КЛАВІШІ.",
+    "h2b": "БУДЬ-ДЕ.",
+    "fixTitle": "ВИПРАВ НА МІСЦІ",
+    "fixCopy": "Помилки, тон, переклад. Один тап — повтор останньої дії. Два тапи — палітра. Замінити, вставити нижче або відкрити в картці.",
+    "fixMockLabel": "Палітра дій Qwixit: Fix, Translate і Shorten.",
+    "peekTitle": "ПОДИВИСЬ, НЕ ЧІПАЙ",
+    "peekCopy": "Плаваюча картка, що перекладає, підсумовує або пояснює виділене. Твій текст лишається точно таким, як був.",
+    "peekMockLabel": "Картка Qwixit Peek з перекладом з української на англійську."
+  },
+  "cta": {
+    "privacy": "Текст надсилається лише тоді, коли ти натискаєш шорткат. Жодного стеження за клавіатурою. Нічого не зберігається.",
+    "download": "СКАЧАТИ ДЛЯ MACOS"
+  },
+  "footer": {
+    "copyright": "QWIXIT © 2026",
+    "credit": "DEVELOPED AND DESIGNED BY LEV MISILIUK",
+    "requirements": "MACOS 14+ · APPLE SILICON & INTEL"
+  },
+  "toast": {
+    "title": "СКОРО",
+    "body": "Збірка для macOS майже готова."
+  }
+}
