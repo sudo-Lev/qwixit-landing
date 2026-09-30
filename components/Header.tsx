@@ -12,13 +12,13 @@ export async function Header() {
     <header className="relative mx-auto flex max-w-[1120px] items-center justify-between gap-4 px-7 py-[22px]">
       <a href={`/${locale}`} aria-label={t("home")} className="flex items-center gap-3.5">
         <Image
-          src="/brand/qwixit-mark-white.svg"
+          src="/brand/qwixit-lockup-dark.svg"
           alt=""
-          width={24}
-          height={34}
+          width={134}
+          height={36}
           priority
           unoptimized
-          className="block h-[34px] w-auto flex-none"
+          className="block h-9 w-auto flex-none"
         />
         <span className="hidden text-[11px] leading-none font-medium tracking-[.14em] text-faint-text sm:inline">
           {t("forMacos")}

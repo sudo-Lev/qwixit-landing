@@ -18,12 +18,12 @@ export default async function OpengraphImage({ params }: { params: Promise<{ loc
   const locale = hasLocale(routing.locales, requested) ? requested : routing.defaultLocale;
   const t = await getTranslations({ locale, namespace: "meta" });
   const root = process.cwd();
-  const [unbounded, mono, tower] = await Promise.all([
+  const [unbounded, mono, appIcon] = await Promise.all([
     readFile(join(root, "assets/fonts/Unbounded-Black.ttf")),
     readFile(join(root, "assets/fonts/JetBrainsMono-Bold.ttf")),
-    readFile(join(root, "assets/qwixit-tower-white-4x.png")),
+    readFile(join(root, "assets/qwixit-appicon-1024.png")),
   ]);
-  const towerSrc = `data:image/png;base64,${tower.toString("base64")}`;
+  const appIconSrc = `data:image/png;base64,${appIcon.toString("base64")}`;
 
   return new ImageResponse(
     <div
@@ -40,7 +40,7 @@ export default async function OpengraphImage({ params }: { params: Promise<{ loc
         color: "#fff",
       }}
     >
-      <img src={towerSrc} width={244} height={339} alt="" />
+      <img src={appIconSrc} width={276} height={276} alt="" />
       <div style={{ display: "flex", flex: 1, flexDirection: "column", gap: 28 }}>
         <div
           style={{

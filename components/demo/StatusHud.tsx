@@ -9,12 +9,12 @@ const CARD =
 function Mark({ className }: { className?: string }) {
   return (
     <Image
-      src="/brand/qwixit-mark-white.svg"
+      src="/brand/qwixit-mark-dark.svg"
       alt=""
-      width={22}
+      width={31}
       height={31}
       unoptimized
-      className={`block h-[31px] w-[22px] flex-none ${className ?? ""}`}
+      className={`block size-[31px] flex-none ${className ?? ""}`}
     />
   );
 }
