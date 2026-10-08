@@ -86,5 +86,76 @@
   "toast": {
     "title": "COMING SOON",
     "body": "The macOS build is almost ready."
+  },
+  "landing": {
+    "cta": "MACOS — COMING SOON",
+    "navHow": "How it works",
+    "navPrivacy": "Privacy",
+    "navPricing": "Pricing",
+    "heroStatus": "MACOS · READY",
+    "heroA": "Select it.",
+    "heroB": "Qwix it.",
+    "heroC": "Keep working.",
+    "heroBody": "Fix writing anywhere on your Mac without opening another app.",
+    "heroNote": "FAST BY WORKFLOW · PRIVATE BY DESIGN",
+    "race": {
+      "eyebrow": "SPEED TEST · SAME TEXT · SAME FIX",
+      "title": "Not even close.",
+      "lead": "Same models under the hood. We’re lightning because we deleted the round trip, not because we found a faster brain.",
+      "chatSteps": {
+        "select": "Select text",
+        "copy": "Copy it (⌘C)",
+        "switch": "Switch to the chat",
+        "paste": "Paste it in",
+        "prompt": "Write a prompt",
+        "wait": "Wait for the answer",
+        "copyBack": "Copy the answer",
+        "switchBack": "Switch back",
+        "pasteFix": "Paste & fix formatting"
+      },
+      "qwixitSteps": {
+        "select": "Select text",
+        "press": "Press ⌥⌘X",
+        "replaced": "Replaced in place"
+      },
+      "heckles": {
+        "switch": "Done already. You’re still tab-hunting.",
+        "paste": "Paste. Wow. So fast.",
+        "prompt": "“Fix grammar, keep my tone…” lol.",
+        "wait": "Model is “thinking”. We’re napping.",
+        "copyBack": "Copy it back. Again.",
+        "switchBack": "Back to the app you never had to leave.",
+        "pasteFix": "Bullets broke. Classic.",
+        "end": "Welcome back. We saved you a seat."
+      },
+      "done": "UNDER 3 SECONDS. NEVER LEFT THE APP.",
+      "footer": "That’s the whole workflow.",
+      "footerMeta": "8 STEPS · 2 APP SWITCHES → 1 SHORTCUT"
+    },
+    "fastTitle": "Fast by workflow",
+    "fastBody": "No chat. No prompting. No copy-paste loop. Select, shortcut, continue.",
+    "privateTitle": "Private by design",
+    "privateBody": "Your selected text and results aren’t logged or retained. No account required.",
+    "workTitleA": "Three moves.",
+    "workTitleB": "No chat window.",
+    "workBody": "Fix by default. Transform only when you ask. Peek without touching the source.",
+    "fixBody": "Your voice, minus the typo. Conservative corrections replace the selection in place.",
+    "actionsBody": "Translate, shorten, or change tone when you explicitly choose to.",
+    "peekBody": "Translate or explain the selection in a read-only card. Your text stays put.",
+    "privacyTitleA": "Your text passes through.",
+    "privacyTitleB": "It doesn’t move in.",
+    "privacyBody": "Concrete privacy behavior. No magic words, no dramatic promises.",
+    "transient": "Selected text is processed only when you trigger Qwixit.",
+    "notLogged": "Selected text and model output are not persisted or logged.",
+    "noAccount": "Download, use your free actions, and keep moving.",
+    "pricingTitleA": "Try the habit.",
+    "pricingTitleB": "Then keep it.",
+    "pricingBody": "Thirty actions arrive each calendar month. Unlimited is there when Qwixit becomes muscle memory.",
+    "freeActions": "AI actions per calendar month",
+    "unlimitedBody": "No action counter. Just the shortcut.",
+    "finalA": "Stay in the app",
+    "finalB": "you’re already using.",
+    "finalBody": "Select text. Press one shortcut. Keep working.",
+    "footerUtility": "FAST & SECURE · NATIVE MACOS WRITING UTILITY"
   }
 }

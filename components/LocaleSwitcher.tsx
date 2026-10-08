@@ -3,14 +3,11 @@ import { localeLabels, routing, type Locale } from "@/i18n/routing";
 /** Plain links: a full navigation lets the middleware persist the choice in NEXT_LOCALE. */
 export function LocaleSwitcher({ current, label }: { current: Locale; label: string }) {
   return (
-    <nav
-      aria-label={label}
-      className="flex items-center text-[12px] leading-none font-bold tracking-[.14em]"
-    >
+    <nav aria-label={label} className="locale-switcher">
       {routing.locales.map((locale, i) => (
-        <span key={locale} className="flex items-center">
+        <span key={locale}>
           {i > 0 && (
-            <span aria-hidden className="px-[.45em] text-dim">
+            <span aria-hidden className="locale-divider">
               ·
             </span>
           )}
@@ -19,11 +16,7 @@ export function LocaleSwitcher({ current, label }: { current: Locale; label: str
             hrefLang={locale}
             lang={locale}
             aria-current={locale === current ? "true" : undefined}
-            className={
-              locale === current
-                ? "py-2 text-white"
-                : "py-2 text-dim transition-colors hover:text-magenta"
-            }
+            className={locale === current ? "is-current" : undefined}
           >
             {localeLabels[locale]}
           </a>

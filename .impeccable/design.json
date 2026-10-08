@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-08T13:08:11Z",
+  "title": "Design System: Qwixit",
+  "extensions": {
+    "colorMeta": {
+      "ink": { "role": "neutral", "displayName": "Near-Black Ink", "canonical": "#16131f", "tonalRamp": ["oklch(15% 0.02 300)", "oklch(27% 0.02 300)", "oklch(39% 0.02 300)", "oklch(51% 0.02 300)", "oklch(63% 0.02 300)", "oklch(75% 0.02 300)", "oklch(87% 0.02 300)", "oklch(95% 0.02 300)"] },
+      "muted-ink": { "role": "neutral", "displayName": "Muted Ink", "canonical": "#6e6b7d", "tonalRamp": ["oklch(15% 0.025 290)", "oklch(27% 0.025 290)", "oklch(39% 0.025 290)", "oklch(51% 0.025 290)", "oklch(63% 0.025 290)", "oklch(75% 0.025 290)", "oklch(87% 0.025 290)", "oklch(95% 0.025 290)"] },
+      "canvas-paper": { "role": "neutral", "displayName": "Canvas Paper", "canonical": "#f9f8fc", "tonalRamp": ["oklch(15% 0.008 300)", "oklch(27% 0.008 300)", "oklch(39% 0.008 300)", "oklch(51% 0.008 300)", "oklch(63% 0.008 300)", "oklch(75% 0.008 300)", "oklch(87% 0.008 300)", "oklch(95% 0.008 300)"] },
+      "raised-paper": { "role": "neutral", "displayName": "Raised Paper", "canonical": "#fdfcff", "tonalRamp": ["oklch(15% 0.006 300)", "oklch(27% 0.006 300)", "oklch(39% 0.006 300)", "oklch(51% 0.006 300)", "oklch(63% 0.006 300)", "oklch(75% 0.006 300)", "oklch(87% 0.006 300)", "oklch(95% 0.006 300)"] },
+      "surface-white": { "role": "neutral", "displayName": "Surface White", "canonical": "#ffffff", "tonalRamp": ["oklch(15% 0 0)", "oklch(27% 0 0)", "oklch(39% 0 0)", "oklch(51% 0 0)", "oklch(63% 0 0)", "oklch(75% 0 0)", "oklch(87% 0 0)", "oklch(95% 0 0)"] },
+      "hover-lilac": { "role": "neutral", "displayName": "Hover Lilac", "canonical": "#f6f4fd", "tonalRamp": ["oklch(15% 0.015 295)", "oklch(27% 0.015 295)", "oklch(39% 0.015 295)", "oklch(51% 0.015 295)", "oklch(63% 0.015 295)", "oklch(75% 0.015 295)", "oklch(87% 0.015 295)", "oklch(95% 0.015 295)"] },
+      "hairline": { "role": "neutral", "displayName": "Hairline Lavender", "canonical": "#dfdaec", "tonalRamp": ["oklch(15% 0.025 300)", "oklch(27% 0.025 300)", "oklch(39% 0.025 300)", "oklch(51% 0.025 300)", "oklch(63% 0.025 300)", "oklch(75% 0.025 300)", "oklch(87% 0.025 300)", "oklch(95% 0.025 300)"] },
+      "electric-violet": { "role": "primary", "displayName": "Electric Violet", "canonical": "#6d28ff", "tonalRamp": ["oklch(15% 0.2 293)", "oklch(27% 0.2 293)", "oklch(39% 0.2 293)", "oklch(51% 0.2 293)", "oklch(63% 0.2 293)", "oklch(75% 0.2 293)", "oklch(87% 0.2 293)", "oklch(95% 0.2 293)"] },
+      "registration-magenta": { "role": "secondary", "displayName": "Registration Magenta", "canonical": "#ff2d9b", "tonalRamp": ["oklch(15% 0.2 350)", "oklch(27% 0.2 350)", "oklch(39% 0.2 350)", "oklch(51% 0.2 350)", "oklch(63% 0.2 350)", "oklch(75% 0.2 350)", "oklch(87% 0.2 350)", "oklch(95% 0.2 350)"] },
+      "registration-cyan": { "role": "secondary", "displayName": "Registration Cyan", "canonical": "#00abc7", "tonalRamp": ["oklch(15% 0.12 205)", "oklch(27% 0.12 205)", "oklch(39% 0.12 205)", "oklch(51% 0.12 205)", "oklch(63% 0.12 205)", "oklch(75% 0.12 205)", "oklch(87% 0.12 205)", "oklch(95% 0.12 205)"] },
+      "ready-green": { "role": "tertiary", "displayName": "Ready Green", "canonical": "#149145", "tonalRamp": ["oklch(15% 0.13 150)", "oklch(27% 0.13 150)", "oklch(39% 0.13 150)", "oklch(51% 0.13 150)", "oklch(63% 0.13 150)", "oklch(75% 0.13 150)", "oklch(87% 0.13 150)", "oklch(95% 0.13 150)"] },
+      "terminal-green": { "role": "tertiary", "displayName": "Terminal Green", "canonical": "#149e4a", "tonalRamp": ["oklch(15% 0.14 150)", "oklch(27% 0.14 150)", "oklch(39% 0.14 150)", "oklch(51% 0.14 150)", "oklch(63% 0.14 150)", "oklch(75% 0.14 150)", "oklch(87% 0.14 150)", "oklch(95% 0.14 150)"] },
+      "magenta-text": { "role": "secondary", "displayName": "Accessible Magenta Text", "canonical": "#a90060", "tonalRamp": ["oklch(15% 0.15 350)", "oklch(27% 0.15 350)", "oklch(39% 0.15 350)", "oklch(51% 0.15 350)", "oklch(63% 0.15 350)", "oklch(75% 0.15 350)", "oklch(87% 0.15 350)", "oklch(95% 0.15 350)"] },
+      "cyan-text": { "role": "secondary", "displayName": "Accessible Cyan Text", "canonical": "#006f80", "tonalRamp": ["oklch(15% 0.09 205)", "oklch(27% 0.09 205)", "oklch(39% 0.09 205)", "oklch(51% 0.09 205)", "oklch(63% 0.09 205)", "oklch(75% 0.09 205)", "oklch(87% 0.09 205)", "oklch(95% 0.09 205)"] },
+      "green-text": { "role": "tertiary", "displayName": "Accessible Green Text", "canonical": "#0a6d33", "tonalRamp": ["oklch(15% 0.1 150)", "oklch(27% 0.1 150)", "oklch(39% 0.1 150)", "oklch(51% 0.1 150)", "oklch(63% 0.1 150)", "oklch(75% 0.1 150)", "oklch(87% 0.1 150)", "oklch(95% 0.1 150)"] },
+      "danger": { "role": "tertiary", "displayName": "Danger Red", "canonical": "#e6293d", "tonalRamp": ["oklch(15% 0.17 25)", "oklch(27% 0.17 25)", "oklch(39% 0.17 25)", "oklch(51% 0.17 25)", "oklch(63% 0.17 25)", "oklch(75% 0.17 25)", "oklch(87% 0.17 25)", "oklch(95% 0.17 25)"] },
+      "receipt": { "role": "neutral", "displayName": "Receipt", "canonical": "#f3f1f7", "tonalRamp": ["oklch(15% 0.012 300)", "oklch(27% 0.012 300)", "oklch(39% 0.012 300)", "oklch(51% 0.012 300)", "oklch(63% 0.012 300)", "oklch(75% 0.012 300)", "oklch(87% 0.012 300)", "oklch(95% 0.012 300)"] },
+      "terminal-black": { "role": "neutral", "displayName": "Terminal Black", "canonical": "#0c0a12", "tonalRamp": ["oklch(15% 0.015 300)", "oklch(27% 0.015 300)", "oklch(39% 0.015 300)", "oklch(51% 0.015 300)", "oklch(63% 0.015 300)", "oklch(75% 0.015 300)", "oklch(87% 0.015 300)", "oklch(95% 0.015 300)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Short localized hero and final CTA statements." },
+      "headline": { "displayName": "Headline", "purpose": "The main claim of each narrative block." },
+      "title": { "displayName": "Title", "purpose": "Fix, Actions, Peek, and component landmarks." },
+      "body": { "displayName": "Body", "purpose": "Native-feeling explanatory copy in English, Polish, and Ukrainian." },
+      "label": { "displayName": "Operational Label", "purpose": "State, shortcuts, navigation, metadata, and compact controls." }
+    },
+    "shadows": [
+      { "name": "panel-shadow", "value": "0 0 0 0.5px rgba(22, 19, 31, 0.1), 0 14px 36px rgba(22, 19, 31, 0.16)", "purpose": "Shared lift for real light product fragments and the toast." },
+      { "name": "hero-work-surface", "value": "0 36px 90px -42px rgba(66, 37, 126, 0.42), 0 12px 30px -20px rgba(24, 16, 40, 0.22)", "purpose": "The full-scale Notes workspace only." },
+      { "name": "light-hud", "value": "0 10px 26px rgba(109, 40, 255, 0.16)", "purpose": "Floating processing and completion feedback." },
+      { "name": "dark-lift", "value": "0 16px 40px rgba(0, 0, 0, 0.35)", "purpose": "Featured Unlimited pricing on the pale canvas." }
+    ],
+    "motion": [
+      { "name": "control-response", "value": "150ms cubic-bezier(0.2, 0.9, 0.3, 1)", "purpose": "CTA lift and press response." },
+      { "name": "mechanism-cycle", "value": "4.5s steps(3, end) infinite", "purpose": "One synchronized hero-and-detour clock: 1.5s selection, 1.5s shortcut plus processing, 1.5s success plus replacement; never blank." },
+      { "name": "processing-wave", "value": "560ms cubic-bezier(0.45, 0, 0.55, 1), 40ms letter stagger", "purpose": "Per-letter PROCESSING wave in the canonical HUD." },
+      { "name": "processing-trace", "value": "460ms linear infinite", "purpose": "Violet–magenta–cyan movement through the HUD trace rail." },
+      { "name": "hud-sweep", "value": "640ms linear infinite", "purpose": "Narrow processing trace across the real light HUD." },
+      { "name": "reduced-motion", "value": "none; transitions 0.001ms", "purpose": "Stop animation and show the successful replacement state immediately." }
+    ],
+    "breakpoints": [
+      { "name": "stack", "value": "960px" },
+      { "name": "mobile", "value": "640px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Coming Soon CTA",
+      "kind": "button",
+      "refersTo": "cta-coming-soon",
+      "description": "Localized macOS availability action with a single bottom-right chamfer.",
+      "html": "<button class=\"ds-cta\"><span>MACOS — COMING SOON</span><span aria-hidden=\"true\">→</span></button>",
+      "css": ".ds-cta{min-height:46px;display:inline-flex;align-items:center;justify-content:space-between;gap:22px;padding:0 20px;color:#fff;background:var(--ink,#16131f);border:0;clip-path:polygon(0 0,100% 0,100% calc(100% - 9px),calc(100% - 9px) 100%,0 100%);font:800 11px/1 var(--font-mono,monospace);letter-spacing:.1em;text-transform:uppercase;box-shadow:2px 2px 0 var(--violet,#6d28ff),0 12px 24px -16px rgba(109,40,255,.7);transition:transform 150ms cubic-bezier(.2,.9,.3,1),background 150ms ease}.ds-cta:hover{transform:translateY(-2px);background:#251f30}.ds-cta:focus-visible{outline:3px solid var(--cyan,#00abc7);outline-offset:3px}.ds-cta:active{transform:translateY(1px)}"
+    },
+    {
+      "name": "Shortcut Keys",
+      "kind": "custom",
+      "refersTo": "shortcut-key",
+      "description": "Light product-faithful keycaps with the action letter in violet.",
+      "html": "<span class=\"ds-shortcut\"><span><kbd>⌥</kbd><kbd>⌘</kbd><kbd class=\"ds-shortcut-letter\">X</kbd></span></span>",
+      "css": ".ds-shortcut{display:inline-flex;padding:1px;background:var(--border,#dfdaec);clip-path:polygon(6px 0,100% 0,100% calc(100% - 6px),calc(100% - 6px) 100%,0 100%,0 6px)}.ds-shortcut>span{display:flex;gap:5px;padding:6px;background:var(--raised,#fdfcff);clip-path:polygon(5.5px 0,100% 0,100% calc(100% - 5.5px),calc(100% - 5.5px) 100%,0 100%,0 5.5px)}.ds-shortcut kbd{min-width:30px;height:30px;display:grid;place-items:center;padding:0 8px;border:1px solid var(--border,#dfdaec);border-radius:7px;background:#fff;box-shadow:inset 0 -2px 0 var(--border,#dfdaec);color:var(--ink,#16131f);font:700 13px/1 var(--font-mono,monospace)}.ds-shortcut .ds-shortcut-letter{color:#fff;background:var(--violet,#6d28ff);border-color:#5020bd;box-shadow:inset 0 -2px 0 rgba(0,0,0,.25);font-weight:800}"
+    },
+    {
+      "name": "Semantic Status",
+      "kind": "chip",
+      "description": "A saturated state dot paired with accessible dark text on a light surface.",
+      "html": "<span class=\"ds-status ds-status-ready\"><i></i>SMALLEST SAFE EDIT</span><span class=\"ds-status ds-status-transform\"><i></i>INTENTIONAL TRANSFORM</span><span class=\"ds-status ds-status-unchanged\"><i></i>SOURCE UNCHANGED</span>",
+      "css": ".ds-status{display:inline-flex;align-items:center;gap:8px;margin:8px;color:var(--green-text,#0a6d33);white-space:nowrap;font:800 10px/1 var(--font-mono,monospace);letter-spacing:.13em}.ds-status i{width:6px;height:6px;border-radius:50%;background:var(--green,#149145);box-shadow:0 0 0 3px rgba(20,145,69,.16)}.ds-status-transform{color:var(--cyan-text,#006f80)}.ds-status-transform i{background:var(--cyan,#00abc7);box-shadow:0 0 0 3px rgba(0,171,199,.16)}.ds-status-unchanged{color:var(--magenta-text,#a90060)}.ds-status-unchanged i{background:var(--magenta,#ff2d9b);box-shadow:0 0 0 3px rgba(255,45,155,.16)}"
+    },
+    {
+      "name": "Product HUD",
+      "kind": "custom",
+      "refersTo": "product-hud",
+      "description": "Canonical 236×58 light HUD; processing cycles three Face frames with a letter wave and trace before READY / TEXT REPLACED.",
+      "html": "<div class=\"ds-hud\"><div class=\"ds-hud-inner\"><i class=\"ds-hud-rail\"></i><span class=\"ds-hud-face\"><b>[ ¬_¬ ]</b><b>[ •_• ]</b><b>[ ¬‿¬ ]</b></span><span class=\"ds-hud-copy\"><strong><em>&gt;</em><span class=\"ds-hud-word\"><i>P</i><i>R</i><i>O</i><i>C</i><i>E</i><i>S</i><i>S</i><i>I</i><i>N</i><i>G</i></span></strong><span class=\"ds-hud-trace\"></span></span><span class=\"ds-hud-badge\">AI</span></div></div>",
+      "css": "@keyframes ds-face{0%,32%{opacity:1}33%,100%{opacity:0}}@keyframes ds-wave{0%,30%,100%{transform:none;text-shadow:none}8%{transform:translateY(-2px);text-shadow:-2px 0 var(--cyan,#00abc7),2px 0 var(--magenta,#ff2d9b)}}@keyframes ds-trace{from{background-position:-42px 0}to{background-position:100px 0}}.ds-hud{width:236px;height:58px;padding:6px;box-sizing:border-box}.ds-hud-inner{position:relative;width:224px;height:46px;display:flex;align-items:center;gap:10px;padding:0 12px;box-sizing:border-box;overflow:hidden;border:1px solid var(--border,#dfdaec);border-radius:11px;background:rgba(255,255,255,.98);box-shadow:0 6px 16px rgba(109,40,255,.12);color:var(--ink,#16131f);font-family:var(--font-mono,monospace)}.ds-hud-rail{position:absolute;left:1px;top:10px;width:2px;height:24px;background:var(--violet,#6d28ff);box-shadow:0 0 5px var(--violet,#6d28ff)}.ds-hud-face{position:relative;width:59px;height:29px;display:grid;place-items:center;flex:0 0 auto;border:1px solid rgba(109,40,255,.35);border-radius:8px;font-size:13px;font-weight:800}.ds-hud-face b{position:absolute;font:inherit;animation:ds-face 1.68s step-end infinite}.ds-hud-face b:nth-child(2){animation-delay:.56s;opacity:0}.ds-hud-face b:nth-child(3){animation-delay:1.12s;opacity:0}.ds-hud-copy{flex:1;display:flex;flex-direction:column;gap:6px}.ds-hud-copy strong{display:flex;gap:5px;font-size:11px;letter-spacing:.8px}.ds-hud-copy strong em{color:var(--cyan,#00abc7);font-style:normal}.ds-hud-word{display:inline-flex}.ds-hud-word i{display:inline-block;font-style:normal;animation:ds-wave 560ms cubic-bezier(.45,0,.55,1) infinite}.ds-hud-word i:nth-child(2){animation-delay:40ms}.ds-hud-word i:nth-child(3){animation-delay:80ms}.ds-hud-word i:nth-child(4){animation-delay:120ms}.ds-hud-word i:nth-child(5){animation-delay:160ms}.ds-hud-word i:nth-child(6){animation-delay:200ms}.ds-hud-word i:nth-child(7){animation-delay:240ms}.ds-hud-word i:nth-child(8){animation-delay:280ms}.ds-hud-word i:nth-child(9){animation-delay:320ms}.ds-hud-word i:nth-child(10){animation-delay:360ms}.ds-hud-trace{width:100px;height:2px;border-radius:1px;background:linear-gradient(90deg,transparent,var(--violet,#6d28ff),var(--magenta,#ff2d9b),var(--cyan,#00abc7),transparent);background-size:142px 2px;animation:ds-trace 460ms linear infinite}.ds-hud-badge{padding:3px 5px;border:1px solid rgba(109,40,255,.35);border-radius:4px;background:rgba(109,40,255,.12);color:var(--violet,#6d28ff);font-size:8px;font-weight:700}"
+    },
+    {
+      "name": "Product HUD Success",
+      "kind": "custom",
+      "description": "Canonical completion state: [ ^_- ], READY, TEXT REPLACED, and OK.",
+      "html": "<div class=\"ds-hud-success\"><div><i></i><span>[ ^_- ]</span><strong><b>READY</b><em><i></i>TEXT REPLACED</em></strong><small>OK</small></div></div>",
+      "css": ".ds-hud-success{width:236px;height:58px;padding:6px;box-sizing:border-box}.ds-hud-success>div{position:relative;width:224px;height:46px;display:flex;align-items:center;gap:10px;padding:0 12px;box-sizing:border-box;overflow:hidden;border:1px solid var(--border,#dfdaec);border-radius:11px;background:rgba(255,255,255,.98);box-shadow:0 6px 16px rgba(109,40,255,.12);color:var(--ink,#16131f);font-family:var(--font-mono,monospace)}.ds-hud-success>div>i{position:absolute;left:1px;top:10px;width:2px;height:24px;background:var(--terminal,#149e4a);box-shadow:0 0 5px var(--terminal,#149e4a)}.ds-hud-success>div>span{width:59px;height:29px;display:grid;place-items:center;flex:0 0 auto;border:1px solid rgba(20,158,74,.45);border-radius:8px;font-size:13px;font-weight:800}.ds-hud-success strong{flex:1;display:flex;flex-direction:column;gap:6px}.ds-hud-success strong b{color:var(--terminal,#149e4a);font-size:11px;letter-spacing:1.45px}.ds-hud-success strong em{display:flex;align-items:center;gap:4px;color:var(--muted,#6e6b7d);font-size:8px;letter-spacing:.4px;font-style:normal;white-space:nowrap}.ds-hud-success strong em i{width:14px;height:1px;background:var(--terminal,#149e4a)}.ds-hud-success small{padding:3px 5px;border:1px solid rgba(20,158,74,.45);border-radius:4px;background:rgba(20,158,74,.12);color:var(--terminal,#149e4a);font-size:8px;font-weight:700}"
+    },
+    {
+      "name": "Actions Palette",
+      "kind": "card",
+      "refersTo": "product-panel",
+      "description": "Canonical 432×260 light transformation palette with exact 50px header and 38px footer.",
+      "html": "<div class=\"ds-palette\"><header><b>◆</b><span>Action or instruction…</span><small>38 CHARS · EN</small></header><main><div class=\"ds-palette-active\"><i></i><b>Translate</b><em>UKRAINIAN</em><small>REPLACE</small></div><div><i></i><b>Slack style</b><span>Clear, concise, human</span><small>REPLACE</small></div><div><i></i><b>Make formal</b><span>Polished professional tone</span><small>REPLACE</small></div></main><footer><span>⌥⌘A · ACTIONS</span><span>↵ RUN · esc CLOSE</span></footer></div>",
+      "css": ".ds-palette{width:432px;height:260px;display:flex;flex-direction:column;overflow:hidden;border:1px solid var(--border,#dfdaec);border-radius:14px;background:#fff;color:var(--ink,#16131f);box-shadow:0 0 0 .5px rgba(22,19,31,.1),0 14px 36px rgba(22,19,31,.16);font-family:var(--font-mono,monospace)}.ds-palette header{height:50px;flex:0 0 auto;display:flex;align-items:center;gap:10px;padding:0 14px 0 12px;border-bottom:1px solid var(--border,#dfdaec);background:var(--raised,#fdfcff)}.ds-palette header b{color:var(--magenta,#ff2d9b)}.ds-palette header span{flex:1;color:var(--muted,#6e6b7d);font-size:13px}.ds-palette header small,.ds-palette footer{color:var(--muted,#6e6b7d);font-size:9px;letter-spacing:.08em}.ds-palette main{flex:1;overflow:auto;padding:10px 12px}.ds-palette main>div{min-height:36px;display:flex;align-items:center;gap:9px;padding:0 9px;border:1px solid transparent;border-radius:8px}.ds-palette main i{width:3px;height:16px;border-radius:2px;background:var(--green,#149145)}.ds-palette main b{font-size:12px}.ds-palette main span{flex:1;color:var(--muted,#6e6b7d);font-size:11px}.ds-palette main small{margin-left:auto;color:var(--muted,#6e6b7d);font-size:9px}.ds-palette-active{min-height:42px!important;border-color:rgba(0,171,199,.72)!important;background:rgba(0,171,199,.13)}.ds-palette-active i{background:var(--cyan,#00abc7)!important}.ds-palette-active em{padding:5px 7px;border:1px solid rgba(0,171,199,.55);border-radius:5px;background:rgba(0,171,199,.1);font-size:9px;font-style:normal}.ds-palette footer{height:38px;flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 14px;border-top:1px solid var(--border,#dfdaec);background:var(--raised,#fdfcff)}"
+    },
+    {
+      "name": "Translated Peek",
+      "kind": "card",
+      "refersTo": "product-panel",
+      "description": "Canonical 440px translated Peek, capped at 380px unpinned, with language tabs, scrolling, word count, Pin, and Copy.",
+      "html": "<div class=\"ds-peek\"><header><b>◆</b><span>EN →</span><nav><button>UA</button><button class=\"ds-peek-active\">PL</button><button>DE</button><button>EN</button></nav><button aria-label=\"Close\">×</button></header><main><h3>Przegląd kwartalny przenosimy na czwartek</h3><p>Dwóch liderów jest w podróży, więc przegląd odbędzie się w czwartek. Prześlijcie zaktualizowane liczby do środy do południa.</p><p>Slajdy są opcjonalne.</p></main><footer><span>36 words · Esc</span><button>Pin</button><button class=\"ds-peek-copy\">Copy <small>⌘C</small></button></footer></div>",
+      "css": ".ds-peek{width:440px;max-height:380px;display:flex;flex-direction:column;overflow:hidden;border:1px solid var(--border,#dfdaec);border-radius:14px;background:#fff;color:var(--ink,#16131f);box-shadow:0 0 0 .5px rgba(22,19,31,.1),0 14px 36px rgba(22,19,31,.16);font-family:var(--font-sys,sans-serif)}.ds-peek header{height:46px;flex:0 0 auto;display:flex;align-items:center;gap:12px;padding:0 10px 0 16px}.ds-peek header>b{color:var(--violet,#6d28ff)}.ds-peek header>span{color:var(--muted,#6e6b7d);font-size:13px}.ds-peek nav{height:100%;display:flex;gap:2px}.ds-peek nav button{height:46px;padding:0 8px;border:0;border-block:2px solid transparent;background:transparent;color:var(--muted,#6e6b7d);font:500 13px/1 var(--font-sys,sans-serif)}.ds-peek nav .ds-peek-active{border-bottom-color:var(--cyan,#00abc7);color:var(--ink,#16131f);font-weight:700}.ds-peek header>button{margin-left:auto;width:26px;height:26px;border:0;border-radius:7px;background:transparent;color:var(--muted,#6e6b7d);font-size:19px}.ds-peek header>button:hover{background:var(--hover,#f6f4fd);color:var(--ink,#16131f)}.ds-peek main{flex:1;min-height:0;overflow:auto;padding:8px 28px 22px}.ds-peek h3{margin:0 0 14px;font:650 20px/26px var(--font-sys,sans-serif);letter-spacing:-.35px}.ds-peek p{margin:0 0 12px;font:400 16px/26px var(--font-sys,sans-serif)}.ds-peek footer{height:50px;flex:0 0 auto;display:flex;align-items:center;gap:8px;padding:0 12px 0 20px;border-top:1px solid var(--border,#dfdaec)}.ds-peek footer>span{flex:1;color:var(--muted,#6e6b7d);font-size:12px}.ds-peek footer button{height:30px;padding:0 12px;border:1px solid var(--border,#dfdaec);border-radius:8px;background:#fff;color:var(--ink,#16131f);font:600 12px/1 var(--font-sys,sans-serif)}.ds-peek footer .ds-peek-copy{padding:0 14px;border-color:rgba(255,255,255,.18);background:var(--violet,#6d28ff);color:#fff}.ds-peek-copy small{opacity:.7}"
+    },
+    {
+      "name": "Menu-Bar Pricing Panel",
+      "kind": "card",
+      "description": "Canonical 318px menu panel with QWIXIT 1.4.2, Cloud, Access, and 12/30 ACTIONS.",
+      "html": "<div class=\"ds-menu\"><header><span>QWIXIT 1.4.2</span><b>● Cloud</b></header><main><strong>▣ qwixit</strong><kbd>⌥⌘X</kbd><em>● Access</em></main><section><span>FREE PLAN</span><b>12/30 ACTIONS</b></section><footer><span>Settings</span><i></i><span>Onboarding</span><i></i><span>Quit</span></footer></div>",
+      "css": ".ds-menu{width:318px;overflow:hidden;border:1px solid var(--border,#dfdaec);border-radius:12px;background:var(--canvas,#f9f8fc);color:var(--ink,#16131f);box-shadow:0 0 0 .5px rgba(22,19,31,.1),0 14px 36px rgba(22,19,31,.16)}.ds-menu header{height:28px;display:flex;align-items:center;justify-content:space-between;padding:0 12px;border-bottom:1px solid var(--border,#dfdaec);background:var(--raised,#fdfcff);color:var(--muted,#6e6b7d);font:700 9px/1 var(--font-mono,monospace);letter-spacing:.35px}.ds-menu header b{color:var(--cyan-text,#006f80)}.ds-menu main{height:68px;display:flex;align-items:center;gap:8px;padding:0 14px}.ds-menu main strong{font:800 15px/1 var(--font-sys,sans-serif)}.ds-menu kbd{margin-left:auto;height:25px;display:flex;align-items:center;padding:0 7px;border:1px solid var(--border,#dfdaec);border-radius:7px;background:var(--hover,#f6f4fd);font:700 10px/1 var(--font-mono,monospace)}.ds-menu main em{height:24px;display:flex;align-items:center;padding:0 9px;border:1px solid rgba(20,145,69,.4);border-radius:12px;color:var(--green-text,#0a6d33);background:rgba(20,145,69,.12);font:700 10px/1 var(--font-sys,sans-serif);font-style:normal}.ds-menu section{height:34px;display:flex;align-items:center;gap:8px;padding:0 14px;border-top:1px solid var(--border,#dfdaec);font:700 9px/1 var(--font-mono,monospace)}.ds-menu section span{color:var(--muted,#6e6b7d)}.ds-menu section b{flex:1;font-size:10px}.ds-menu footer{height:43px;display:flex;align-items:center;justify-content:space-around;border-top:1px solid var(--border,#dfdaec);background:var(--raised,#fdfcff);color:var(--muted,#6e6b7d);font:700 11px/1 var(--font-sys,sans-serif)}.ds-menu footer i{width:1px;height:24px;background:var(--border,#dfdaec)}.ds-menu footer span:last-child{color:var(--danger,#e6293d)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Native Shortcut Workbench",
+    "overview": "Qwixit is a compact macOS instrument shown at working scale. Pale paper carries the marketing narrative, while the product is demonstrated through real light HUDs, result cards, action palettes, Peek cards, and the menu-bar panel—not illustrative substitutes. The system feels native, fast, slightly punk, and trustworthy because every decorative choice also explains state.\n\nThe landing surface follows six blocks with one job each: hero mechanism, copy-paste detour, Fix/Actions/Peek, privacy, pricing with the menu-bar panel, and final CTA. System sans explains, Unbounded turns short localized statements into landmarks, and JetBrains Mono carries state, shortcuts, metadata, and controls. The anti-reference remains a centered generic AI slogan above a detached dashboard screenshot.",
+    "keyCharacteristics": [
+      "Light, real-scale product fragments on cool macOS paper.",
+      "Six blocks, each anchored by one product behavior or component.",
+      "Electric violet for action; cyan, magenta, and green for precise operational meaning.",
+      "A single bottom-right chamfer identifies primary CTAs.",
+      "Copy and layout are authored for English, Polish, and Ukrainian—not translated afterthoughts."
+    ],
+    "rules": [
+      { "name": "The Semantic Pair Rule", "body": "On light surfaces, saturated cyan, magenta, and green render the dot or rail while their darker text variants render the label.", "section": "colors" },
+      { "name": "The One Electric Voice Rule", "body": "Violet owns action emphasis. Other saturated colors explain state and must not become competing primary accents.", "section": "colors" },
+      { "name": "The Three Voices Rule", "body": "Unbounded declares, system sans explains, and JetBrains Mono operates.", "section": "typography" },
+      { "name": "The Localized Measure Rule", "body": "Preserve readable phrase groups in every locale; allow Polish and Ukrainian headings to gain lines rather than reduce weight, tracking, or intended prominence.", "section": "typography" },
+      { "name": "The One Job Per Block Rule", "body": "Each block advances one argument and shows one relevant product behavior. Do not add a separate Mac-utility checklist; the menu-bar panel and product fragments already prove nativeness.", "section": "layout" },
+      { "name": "The Working-Scale Rule", "body": "Product UI must stay plausibly usable, with labels and controls legible instead of reduced to screenshot texture.", "section": "layout" },
+      { "name": "The Real Surface Rule", "body": "Marketing depth follows the product component it presents; do not restyle light product fragments into dark promotional cards.", "section": "elevation" },
+      { "name": "The One Chamfer Rule", "body": "Primary CTAs cut only the bottom-right corner. Do not return to opposing-corner cuts or pill-shaped actions.", "section": "shapes" }
+      ,{ "name": "The Continuous Mechanism Rule", "body": "Selection, processing, and success always occupy the stage; no transition may expose an empty document or missing HUD state.", "section": "components" }
+    ],
+    "dos": [
+      "Do keep the six-block story: hero, detour, workflows, privacy, pricing, final CTA.",
+      "Do use real light HUD, Result, Actions, Peek, and menu-bar fragments at readable scale.",
+      "Do keep every repeated mechanism demo on the same three-phase 4.5-second clock, with no blank state.",
+      "Do pair saturated state dots with darker accessible text on light backgrounds.",
+      "Do author and visually verify English, Polish, and Ukrainian copy independently.",
+      "Do keep every macOS CTA in localized coming-soon mode until a real download exists.",
+      "Do preserve visible focus, large targets, and the fully legible reduced-motion success state."
+    ],
+    "donts": [
+      "Don't add a seventh native-features block; integrate that proof into product fragments and pricing.",
+      "Don't darken the product HUD or workflow fragments for marketing drama.",
+      "Don't use bright cyan, magenta, or green for small text on pale surfaces.",
+      "Don't use pills or opposing-corner cuts for the primary CTA.",
+      "Don't invent download availability, proof, compatibility, privacy, or performance claims.",
+      "Don't redraw, trace, typeset, or reinterpret supplied Qwixit logo assets."
+    ]
+  }
+}

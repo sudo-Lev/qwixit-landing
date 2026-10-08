@@ -86,5 +86,76 @@
   "toast": {
     "title": "WKRÓTCE",
     "body": "Wersja na macOS jest prawie gotowa."
+  },
+  "landing": {
+    "cta": "MACOS — WKRÓTCE",
+    "navHow": "Jak to działa",
+    "navPrivacy": "Prywatność",
+    "navPricing": "Cennik",
+    "heroStatus": "MACOS · GOTOWE",
+    "heroA": "Zaznacz.",
+    "heroB": "Qwix it.",
+    "heroC": "Pisz dalej.",
+    "heroBody": "Poprawiaj tekst w dowolnej aplikacji na Macu bez otwierania kolejnego okna.",
+    "heroNote": "SZYBKO Z NATURY · PRYWATNIE Z ZAŁOŻENIA",
+    "race": {
+      "eyebrow": "TEST SZYBKOŚCI · TEN SAM TEKST · TA SAMA POPRAWKA",
+      "title": "Nawet nie blisko.",
+      "lead": "Pod maską te same modele. Jesteśmy błyskawiczni, bo usunęliśmy drogę tam i z powrotem, a nie dlatego, że znaleźliśmy szybszy mózg.",
+      "chatSteps": {
+        "select": "Zaznacz tekst",
+        "copy": "Skopiuj (⌘C)",
+        "switch": "Przejdź do czatu",
+        "paste": "Wklej",
+        "prompt": "Napisz prompt",
+        "wait": "Czekaj na odpowiedź",
+        "copyBack": "Skopiuj odpowiedź",
+        "switchBack": "Wróć",
+        "pasteFix": "Wklej i popraw format"
+      },
+      "qwixitSteps": {
+        "select": "Zaznacz tekst",
+        "press": "Naciśnij ⌥⌘X",
+        "replaced": "Zamienione w miejscu"
+      },
+      "heckles": {
+        "switch": "Już gotowe. A ty wciąż szukasz karty.",
+        "paste": "Wklejanie. Wow. Ale szybko.",
+        "prompt": "„Popraw gramatykę, zachowaj mój ton…” lol.",
+        "wait": "Model „myśli”. My sobie drzemiemy.",
+        "copyBack": "Skopiuj z powrotem. Znowu.",
+        "switchBack": "Z powrotem do aplikacji, której nie trzeba było opuszczać.",
+        "pasteFix": "Punktory się rozjechały. Klasyka.",
+        "end": "Witaj z powrotem. Trzymaliśmy ci miejsce."
+      },
+      "done": "PONIŻEJ 3 SEKUND. BEZ WYCHODZENIA Z APLIKACJI.",
+      "footer": "To cały proces.",
+      "footerMeta": "8 KROKÓW · 2 PRZEŁĄCZENIA → 1 SKRÓT"
+    },
+    "fastTitle": "Szybko dzięki procesowi",
+    "fastBody": "Bez czatu. Bez promptów. Bez pętli kopiuj–wklej. Zaznacz, skrót, dalej.",
+    "privateTitle": "Prywatnie z założenia",
+    "privateBody": "Zaznaczony tekst ani wyniki nie są logowane ani przechowywane. Konto nie jest potrzebne.",
+    "workTitleA": "Trzy ruchy.",
+    "workTitleB": "Zero okien czatu.",
+    "workBody": "Domyślnie poprawiaj. Zmieniaj tylko na życzenie. Podglądaj bez ruszania źródła.",
+    "fixBody": "Twój głos, tylko bez literówki. Ostrożna korekta zastępuje zaznaczenie na miejscu.",
+    "actionsBody": "Tłumacz, skracaj lub zmieniaj ton tylko wtedy, gdy świadomie to wybierzesz.",
+    "peekBody": "Przetłumacz lub wyjaśnij zaznaczenie w karcie tylko do odczytu. Tekst zostaje na miejscu.",
+    "privacyTitleA": "Twój tekst przechodzi.",
+    "privacyTitleB": "Nie zostaje na stałe.",
+    "privacyBody": "Konkretne zasady prywatności. Bez magicznych słów i wielkich obietnic.",
+    "transient": "Zaznaczony tekst jest przetwarzany tylko po uruchomieniu Qwixit.",
+    "notLogged": "Zaznaczony tekst i odpowiedź modelu nie są zapisywane ani logowane.",
+    "noAccount": "Pobierz, wykorzystaj darmowe akcje i pracuj dalej.",
+    "pricingTitleA": "Wypróbuj nawyk.",
+    "pricingTitleB": "Potem go zachowaj.",
+    "pricingBody": "Co miesiąc dostajesz trzydzieści akcji. Unlimited czeka, gdy Qwixit wejdzie w pamięć mięśniową.",
+    "freeActions": "akcji AI na miesiąc kalendarzowy",
+    "unlimitedBody": "Bez licznika akcji. Tylko skrót.",
+    "finalA": "Zostań w aplikacji,",
+    "finalB": "której już używasz.",
+    "finalBody": "Zaznacz tekst. Wciśnij skrót. Pracuj dalej.",
+    "footerUtility": "FAST & SECURE · NATYWNE NARZĘDZIE DO PISANIA NA MACOS"
   }
 }

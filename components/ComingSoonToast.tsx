@@ -34,13 +34,11 @@ export function ComingSoonToast({ title, body }: { title: string; body: string }
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.13, ease: "easeOut" }}
-            className="flex items-center gap-3 rounded-status border border-line bg-card py-3 pr-4 pl-3.5 shadow-[0_18px_44px_-18px_rgba(109,40,255,.65),0_24px_50px_-24px_rgba(8,4,20,.9)]"
+            className="qwixit-toast"
           >
-            <span data-glow className="h-5 w-0.5 rounded-sm bg-cyan shadow-[0_0_10px_#00D8F0]" />
-            <span className="text-[13px] leading-none font-extrabold tracking-[.1em] text-white">
-              {title}
-            </span>
-            <span className="text-[12px] leading-none font-medium text-muted">{body}</span>
+            <span className="toast-rail" />
+            <strong>{title}</strong>
+            <span>{body}</span>
           </m.div>
         )}
       </AnimatePresence>
