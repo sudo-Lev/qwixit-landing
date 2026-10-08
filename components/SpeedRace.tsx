@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { useActive } from "@/lib/useActive";
+import { ProductHud } from "./ProductHud";
 
 /**
  * Illustrative timings in seconds. Swap in measured numbers here; everything else derives from them.
@@ -81,9 +82,15 @@ const HECKLES: Record<HeckleId, { face: string; x: number; dy: number; rot: numb
 const ROW = 37;
 
 const LOGOS = [
-  { name: "Codex", src: "/brand/ai/openai.svg" },
+  { name: "OpenAI", src: "/brand/ai/openai.svg" },
   { name: "Claude", src: "/brand/ai/claude.svg" },
+  { name: "Gemini", mark: "G" },
+  { name: "Copilot", mark: "C" },
+  { name: "Grok", mark: "X" },
   { name: "DeepSeek", src: "/brand/ai/deepseek.svg" },
+  { name: "Perplexity", mark: "P" },
+  { name: "Mistral", mark: "M" },
+  { name: "Meta AI", mark: "M" },
 ];
 
 function clock(seconds: number) {
@@ -197,20 +204,7 @@ export function SpeedRace({ copy }: { copy: RaceCopy }) {
 
   const now = reduced ? FINAL_T : t;
   const qx = now < QWIXIT_TOTAL ? "running" : now < QWIXIT_TOTAL + RACE.finishFlash ? "finish" : "done";
-  const flicker = Math.floor(now * 18) % 2;
   const heckle = heckleAt(now);
-
-  const tileStyle =
-    qx === "running"
-      ? {
-          transform: `translateX(${flicker}px)`,
-          filter: flicker
-            ? "drop-shadow(0 0 12px rgba(255, 45, 155, 0.45))"
-            : "drop-shadow(0 0 10px rgba(0, 171, 199, 0.55))",
-        }
-      : qx === "finish"
-        ? { filter: "drop-shadow(0 0 18px rgba(109, 40, 255, 0.6))" }
-        : { filter: "drop-shadow(0 4px 10px rgba(109, 40, 255, 0.25))" };
 
   return (
     <div ref={rootRef} className="sr-wrap">
@@ -232,7 +226,11 @@ export function SpeedRace({ copy }: { copy: RaceCopy }) {
                   <span key={logo.name} className="sr-logo">
                     <span className="sr-logo__tile">
                       <span>
-                        <Image src={logo.src} alt="" width={18} height={18} unoptimized />
+                        {logo.src ? (
+                          <Image src={logo.src} alt="" width={18} height={18} unoptimized />
+                        ) : (
+                          <b aria-hidden>{logo.mark}</b>
+                        )}
                       </span>
                     </span>
                     {logo.name}
@@ -257,21 +255,14 @@ export function SpeedRace({ copy }: { copy: RaceCopy }) {
 
             <div className="sr-col sr-col--qwixit" data-qx={qx}>
               <div className="sr-qx-head">
-                <span className="sr-tile" style={tileStyle}>
-                  <span className="sr-tile__edge">
-                    <span className="sr-tile__core">
-                      <Image
-                        src="/brand/qwixit-mark-white.svg"
-                        alt=""
-                        width={20}
-                        height={20}
-                        unoptimized
-                      />
-                      <i className="sr-tile__scan" aria-hidden />
-                    </span>
-                  </span>
-                </span>
-                <b className="sr-qx-name">QWIXIT</b>
+                <Image
+                  src="/brand/qwixit-lockup-light.svg"
+                  alt="Qwixit"
+                  width={186}
+                  height={50}
+                  unoptimized
+                  className="sr-qx-lockup"
+                />
                 <span className="sr-tag">{qx === "running" ? "LIVE" : "DONE"}</span>
               </div>
               <div
@@ -283,10 +274,12 @@ export function SpeedRace({ copy }: { copy: RaceCopy }) {
                 {clock(Math.min(now, QWIXIT_TOTAL))}
               </div>
               <StepList steps={QWIXIT} labels={copy.qwixitSteps} t={now} tone="qwixit" />
-              <p className="sr-done" data-visible={qx !== "running"}>
-                <b aria-hidden>[ ^_- ]</b>
-                {copy.done}
-              </p>
+              {qx !== "running" && (
+                <div className="sr-done">
+                  <ProductHud state="success" />
+                  <strong>{copy.done}</strong>
+                </div>
+              )}
             </div>
           </div>
 
