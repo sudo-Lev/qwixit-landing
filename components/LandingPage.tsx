@@ -41,6 +41,7 @@ type CopyKey =
   | "finalA"
   | "finalB"
   | "finalBody"
+  | "footerAgents"
   | "footerUtility";
 
 export type LandingCopy = Record<CopyKey, string> & { race: RaceCopy };
@@ -476,6 +477,13 @@ export function LandingPage({ locale, copy }: { locale: Locale; copy: LandingCop
           unoptimized
         />
         <span>QWIXIT © 2026</span>
+        <a className="agent-footer-link" href={`/${locale}/for-agents`}>
+          <span className="agent-footer-face" aria-hidden>
+            [ ^_- ]
+          </span>
+          <span>{copy.footerAgents}</span>
+          <span aria-hidden>→</span>
+        </a>
         <span>{copy.footerUtility}</span>
       </footer>
     </div>
