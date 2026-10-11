@@ -51,13 +51,27 @@ export async function generateMetadata({
     },
     openGraph: {
       type: "website",
-      siteName: "Qwixit",
+      siteName: "Tokiri",
       url: `/${locale}`,
       title: t("title"),
       description: t("description"),
       locale,
+      images: [
+        {
+          url: "/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: t("title"),
+        },
+      ],
     },
-    twitter: { card: "summary_large_image", title: t("title"), description: t("description") },
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("description"),
+      images: ["/og-image.png"],
+    },
+    manifest: "/site.webmanifest",
   };
 }
 

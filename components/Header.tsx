@@ -12,10 +12,10 @@ export async function Header() {
     <header className="relative mx-auto flex max-w-[1120px] items-center justify-between gap-4 px-7 py-[22px]">
       <a href={`/${locale}`} aria-label={t("home")} className="flex items-center gap-3.5">
         <Image
-          src="/brand/qwixit-lockup-dark.svg"
+          src="/brand/tokiri-lockup-integrated-dark.svg"
           alt=""
-          width={134}
-          height={36}
+          width={418}
+          height={162}
           priority
           unoptimized
           className="block h-9 w-auto flex-none"

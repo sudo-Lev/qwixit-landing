@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "Qwixit — Don't rewrite it. Qwixit.",
-    "description": "AI on the go for macOS. Select text in any app, hit ⌥⌘X — fixed, translated or rewritten in place.",
-    "ogHeadline": "DON'T REWRITE IT."
+    "title": "Tokiri — Your words. Sharper.",
+    "description": "A minimal macOS writing assistant. Select text anywhere, press a shortcut, and fix, rewrite, or translate it instantly.",
+    "ogHeadline": "YOUR WORDS. SHARPER."
   },
   "header": {
-    "home": "Qwixit home",
+    "home": "Tokiri home",
     "forMacos": "FOR MACOS",
     "modes": "MODES",
     "download": "DOWNLOAD",
@@ -13,17 +13,17 @@
   },
   "hero": {
     "eyebrow": "AI ON THE GO",
-    "h1a": "DON'T REWRITE IT.",
-    "h1b": "QWIXIT.",
-    "subLead": "You keep writing. Qwixit keeps up.",
-    "subBody": "AI on the go — in Slack, Mail, Notion, anywhere you type.",
-    "subAction": "Select, hit ⌥⌘X, done.",
+    "h1a": "YOUR WORDS.",
+    "h1b": "SHARPER.",
+    "subLead": "Sharper writing, without the detour.",
+    "subBody": "Select text anywhere on macOS, press one shortcut, and fix, rewrite, or translate it instantly.",
+    "subAction": "Select. Shortcut. Done.",
     "ctaDownload": "DOWNLOAD FREE",
     "ctaHow": "HOW IT WORKS"
   },
   "demo": {
     "live": "LIVE DEMO",
-    "label": "Animated demo: Qwixit rewriting text in place",
+    "label": "Animated demo: Tokiri rewriting text in place",
     "tabsLabel": "Demo cases",
     "cases": [
       {
@@ -31,8 +31,8 @@
         "app": "Slack — #beta",
         "before": "hey guys the beta build is almost redy, pls test it and tell me whats broken",
         "after": "Hey guys, the beta build is almost ready. Please test it and tell me what's broken.",
-        "verb": "QWIXING",
-        "done": "QWIXED",
+        "verb": "PROCESSING",
+        "done": "READY",
         "sub": "TEXT REPLACED"
       },
       {
@@ -40,8 +40,8 @@
         "app": "Mail — Re: sync",
         "before": "Привіт! Можемо перенести дзвінок на четвер?",
         "after": "Hi! Can we move the call to Thursday?",
-        "verb": "QWIXING",
-        "done": "QWIXED",
+        "verb": "PROCESSING",
+        "done": "READY",
         "sub": "UA → EN"
       },
       {
@@ -49,8 +49,8 @@
         "app": "Notion — Release notes",
         "before": "We wanted to let everyone know that the onboarding flow has been updated and it should now work correctly on all Intel-based Macs as well.",
         "after": "Onboarding now works on Intel Macs too.",
-        "verb": "QWIXING",
-        "done": "QWIXED",
+        "verb": "PROCESSING",
+        "done": "READY",
         "sub": "−71% LENGTH"
       },
       {
@@ -58,8 +58,8 @@
         "app": "Linear — KIR-214",
         "before": "the thing is kinda slow when u open big files and sometimes it just freezes",
         "after": "Performance degrades when opening large files, and the app occasionally freezes.",
-        "verb": "QWIXING",
-        "done": "QWIXED",
+        "verb": "PROCESSING",
+        "done": "READY",
         "sub": "FORMAL TONE"
       }
     ]
@@ -69,17 +69,17 @@
     "h2b": "EVERY APP.",
     "fixTitle": "FIX IT IN PLACE",
     "fixCopy": "Typos, tone, translation. Tap once — repeat last action. Tap twice — the palette. Replace, insert below, or open in a card.",
-    "fixMockLabel": "Qwixit action palette with Fix, Translate and Shorten actions.",
+    "fixMockLabel": "Tokiri action palette with Fix, Translate and Shorten actions.",
     "peekTitle": "PEEK, DON'T TOUCH",
     "peekCopy": "A floating card that translates, summarizes or clarifies the selection. Your text stays exactly as it is.",
-    "peekMockLabel": "Qwixit Peek card showing a Ukrainian to English translation."
+    "peekMockLabel": "Tokiri Peek card showing a Ukrainian to English translation."
   },
   "cta": {
     "privacy": "Text is sent only when you press the shortcut. No keystroke monitoring. Nothing retained.",
     "download": "DOWNLOAD FOR MACOS"
   },
   "footer": {
-    "copyright": "QWIXIT © 2026",
+    "copyright": "TOKIRI © 2026",
     "credit": "DEVELOPED AND DESIGNED BY LEV MISILIUK",
     "requirements": "MACOS 14+ · APPLE SILICON & INTEL"
   },
@@ -93,11 +93,11 @@
     "navPrivacy": "Privacy",
     "navPricing": "Pricing",
     "heroStatus": "MACOS · READY",
-    "heroA": "Select it.",
-    "heroB": "Qwix it.",
-    "heroC": "Keep working.",
-    "heroBody": "Fix writing anywhere on your Mac without opening another app.",
-    "heroNote": "FAST BY WORKFLOW · PRIVATE BY DESIGN",
+    "heroA": "YOUR WORDS.",
+    "heroB": "SHARPER.",
+    "heroC": "ANYWHERE.",
+    "heroBody": "Fix, rewrite, or translate text in any app on your Mac. Just select, press your shortcut, and keep going.",
+    "heroNote": "FAST & PRECISE · PRIVATE BY DESIGN",
     "race": {
       "eyebrow": "SPEED TEST · SAME TEXT · SAME FIX",
       "title": "Not even close.",
@@ -145,17 +145,17 @@
     "privacyTitleA": "Your text passes through.",
     "privacyTitleB": "It doesn’t move in.",
     "privacyBody": "Concrete privacy behavior. No magic words, no dramatic promises.",
-    "transient": "Selected text is processed only when you trigger Qwixit.",
+    "transient": "Selected text is processed only when you trigger Tokiri.",
     "notLogged": "Selected text and model output are not persisted or logged.",
     "noAccount": "Download, use your free actions, and keep moving.",
     "pricingTitleA": "Try the habit.",
     "pricingTitleB": "Then keep it.",
-    "pricingBody": "Thirty actions arrive each calendar month. Unlimited is there when Qwixit becomes muscle memory.",
+    "pricingBody": "Thirty actions arrive each calendar month. Unlimited is there when Tokiri becomes muscle memory.",
     "freeActions": "AI actions per calendar month",
     "unlimitedBody": "No action counter. Just the shortcut.",
     "finalA": "Stay in the app",
     "finalB": "you’re already using.",
-    "finalBody": "Select text. Press one shortcut. Keep working.",
+    "finalBody": "Select. Shortcut. Done.",
     "footerAgents": "For agents",
     "footerUtility": "FAST & SECURE · NATIVE MACOS WRITING UTILITY"
   }

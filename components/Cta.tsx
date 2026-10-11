@@ -10,7 +10,7 @@ export async function Cta() {
   return (
     <PauseOffscreen
       id="get"
-      aria-label="Qwixit"
+      aria-label="Tokiri"
       className="relative mx-auto flex max-w-[1120px] flex-col items-center gap-[26px] px-7 pt-[120px] pb-10 text-center"
     >
       <ScanLogo />

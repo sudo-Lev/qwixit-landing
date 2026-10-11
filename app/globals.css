@@ -152,6 +152,8 @@ a {
 
 .download-button {
   display: inline-flex;
+  min-width: 0;
+  max-width: 100%;
   padding: 1.5px;
   border: 0;
   background: linear-gradient(
@@ -176,6 +178,7 @@ a {
 }
 .download-button__inner {
   position: relative;
+  min-width: 0;
   width: 100%;
   min-height: 44px;
   display: flex;
@@ -1663,8 +1666,9 @@ a {
   background: var(--raised);
 }
 .palette-head img {
-  width: 27px;
-  height: 27px;
+  width: 62px;
+  height: auto;
+  flex: 0 0 auto;
   object-fit: contain;
 }
 .palette-head > span {
@@ -1774,8 +1778,9 @@ a {
   padding: 0 10px 0 16px;
 }
 .peek-head img {
-  width: 20px;
-  height: 20px;
+  width: 54px;
+  height: auto;
+  flex: 0 0 auto;
   margin-right: 10px;
   object-fit: contain;
 }
@@ -2826,7 +2831,7 @@ a {
     gap: 46px;
   }
   .hero-copy h1 {
-    font-size: clamp(42px, 14vw, 58px);
+    font-size: clamp(36px, 11.8vw, 48px);
   }
   .hero-copy > p {
     font-size: 16px;
@@ -2835,7 +2840,8 @@ a {
     align-items: stretch;
   }
   .hero-actions .download-button {
-    flex: 1 1 100%;
+    width: 100%;
+    flex: 0 1 100%;
   }
   .hero-note {
     font-size: 8px;

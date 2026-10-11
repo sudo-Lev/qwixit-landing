@@ -5,9 +5,9 @@ import type { Locale } from "@/i18n/routing";
 import { SITE_URL } from "@/lib/site";
 
 const labels: Record<Locale, { back: string; context: string }> = {
-  en: { back: "Back to Qwixit", context: "Product context" },
-  pl: { back: "Wróć do Qwixit", context: "Kontekst produktu" },
-  uk: { back: "Назад до Qwixit", context: "Контекст продукту" },
+  en: { back: "Back to Tokiri", context: "Product context" },
+  pl: { back: "Wróć do Tokiri", context: "Kontekst produktu" },
+  uk: { back: "Назад до Tokiri", context: "Контекст продукту" },
 };
 
 export async function generateMetadata({
@@ -17,9 +17,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   return {
-    title: "Qwixit for agents",
+    title: "Tokiri for agents",
     description:
-      "A concise, agent-readable description of Qwixit: its workflow, commands, privacy model, plans, and boundaries.",
+      "A concise, agent-readable description of Tokiri: its workflow, commands, privacy model, plans, and boundaries.",
     alternates: {
       canonical: `/${locale}/for-agents`,
       languages: {
@@ -30,9 +30,9 @@ export async function generateMetadata({
     },
     openGraph: {
       type: "website",
-      siteName: "Qwixit",
+      siteName: "Tokiri",
       url: `/${locale}/for-agents`,
-      title: "Qwixit for agents",
+      title: "Tokiri for agents",
       description: "The public product context for AI agents and language models.",
     },
   };
@@ -68,7 +68,7 @@ export default async function ForAgentsPage({ params }: { params: Promise<{ loca
   const productJsonLd = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "Qwixit",
+    name: "Tokiri",
     applicationCategory: "UtilitiesApplication",
     operatingSystem: "macOS",
     description:
@@ -89,10 +89,10 @@ export default async function ForAgentsPage({ params }: { params: Promise<{ loca
       <header className="agent-header">
         <a href={`/${locale}`} aria-label={label.back}>
           <Image
-            src="/brand/qwixit-lockup-light.svg"
-            alt="Qwixit"
-            width={186}
-            height={50}
+            src="/brand/tokiri-lockup-integrated-light.svg"
+            alt="Tokiri"
+            width={418}
+            height={162}
             priority
             unoptimized
           />
@@ -120,17 +120,17 @@ export default async function ForAgentsPage({ params }: { params: Promise<{ loca
 
         <article className="agent-document">
           <section className="agent-hero" id="identity">
-            <div className="agent-face" aria-label="Qwixit ready">
+            <div className="agent-face" aria-label="Tokiri ready">
               <span>[ ^_- ]</span>
               <small>READY</small>
             </div>
             <h1>
-              Qwixit,
+              Tokiri,
               <br />
               for agents.
             </h1>
             <p className="agent-lead">
-              Qwixit is a native macOS menu-bar utility that fixes or transforms selected text in
+              Tokiri is a native macOS menu-bar utility that fixes or transforms selected text in
               place—without making the user leave the app they are working in.
             </p>
             <dl className="agent-facts">
@@ -162,7 +162,7 @@ export default async function ForAgentsPage({ params }: { params: Promise<{ loca
               </li>
               <li>
                 <span>Trigger</span>
-                <p>A keyboard shortcut tells Qwixit what to do.</p>
+                <p>A keyboard shortcut tells Tokiri what to do.</p>
               </li>
               <li>
                 <span>Process</span>
@@ -205,17 +205,17 @@ export default async function ForAgentsPage({ params }: { params: Promise<{ loca
                 It doesn’t move in.
               </h2>
               <p>
-                Qwixit is triggered deliberately. It is not a background observer and does not
+                Tokiri is triggered deliberately. It is not a background observer and does not
                 continuously monitor what the user types.
               </p>
             </div>
             <ul>
-              <li>Selected text is processed only after the user triggers Qwixit.</li>
-              <li>Selected text and model output are not persisted or logged by Qwixit.</li>
+              <li>Selected text is processed only after the user triggers Tokiri.</li>
+              <li>Selected text and model output are not persisted or logged by Tokiri.</li>
               <li>
                 OpenAI requests use <code>store: false</code>.
               </li>
-              <li>No Qwixit account is required.</li>
+              <li>No Tokiri account is required.</li>
             </ul>
           </section>
 
@@ -238,7 +238,7 @@ export default async function ForAgentsPage({ params }: { params: Promise<{ loca
           </section>
 
           <section className="agent-section agent-boundaries" id="boundaries">
-            <h2>What Qwixit is not.</h2>
+            <h2>What Tokiri is not.</h2>
             <dl>
               <div>
                 <dt>Not a general-purpose chat.</dt>

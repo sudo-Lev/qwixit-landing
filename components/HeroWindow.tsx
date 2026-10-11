@@ -4,9 +4,9 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import { useActive } from "@/lib/useActive";
 import { ProductHud } from "./ProductHud";
 
-/** EDITING → SELECTED → QWIXING → POLISHED, in milliseconds. */
+/** EDITING → SELECTED → PROCESSING → POLISHED, in milliseconds. */
 const PHASE_MS = [1300, 900, 1500, 2600] as const;
-const STATUS = ["EDITING", "SELECTED", "QWIXING", "POLISHED"] as const;
+const STATUS = ["EDITING", "SELECTED", "PROCESSING", "POLISHED"] as const;
 const EDITS = [
   { draft: "recieved", polished: "received", kind: "typo" },
   { draft: "Thrusday", polished: "Thursday", kind: "typo" },
@@ -132,7 +132,7 @@ export function HeroWindow() {
       className="qx-window-wrap"
       data-phase={phase}
       role="img"
-      aria-label="A Notes draft with two typos and four awkward phrases. Select the text, press Option Command X, and Qwixit corrects and tightens it in place."
+      aria-label="A Notes draft with two typos and four awkward phrases. Select the text, press Option Command X, and Tokiri corrects and tightens it in place."
     >
       <div className="qx-window">
         <div className="qx-window__inner">

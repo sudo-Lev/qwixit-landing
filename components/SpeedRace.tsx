@@ -68,7 +68,7 @@ const QWIXIT_TOTAL = QWIXIT[QWIXIT.length - 1]?.end ?? 0;
 /** Reduced motion freezes here: both clocks finished, the closing heckle showing. */
 const FINAL_T = CHAT_TOTAL + 1;
 
-/** One heckle per chat step after Qwixit is done; x is % across the list, dy px, rot deg. */
+/** One heckle per chat step after Tokiri is done; x is % across the list, dy px, rot deg. */
 const HECKLES: Record<HeckleId, { face: string; x: number; dy: number; rot: number }> = {
   switch: { face: "[ ¬_¬ ]", x: 36, dy: -8, rot: 2 },
   paste: { face: "[ -__- ]", x: 6, dy: 6, rot: -1 },
@@ -256,10 +256,10 @@ export function SpeedRace({ copy }: { copy: RaceCopy }) {
             <div className="sr-col sr-col--qwixit" data-qx={qx}>
               <div className="sr-qx-head">
                 <Image
-                  src="/brand/qwixit-lockup-light.svg"
-                  alt="Qwixit"
-                  width={186}
-                  height={50}
+                  src="/brand/tokiri-lockup-integrated-light.svg"
+                  alt="Tokiri"
+                  width={418}
+                  height={162}
                   unoptimized
                   className="sr-qx-lockup"
                 />
@@ -268,7 +268,7 @@ export function SpeedRace({ copy }: { copy: RaceCopy }) {
               <div
                 className="sr-timer sr-timer--ink"
                 role="timer"
-                aria-label="Qwixit"
+                aria-label="Tokiri"
                 data-glitch={qx === "finish" ? Math.floor(now * 60) % 2 : undefined}
               >
                 {clock(Math.min(now, QWIXIT_TOTAL))}

@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "Qwixit — Nie przepisuj. Qwixit.",
-    "description": "AI w biegu na macOS. Zaznacz tekst w dowolnej aplikacji, wciśnij ⌥⌘X — poprawiony, przetłumaczony lub przepisany na miejscu.",
-    "ogHeadline": "NIE PRZEPISUJ."
+    "title": "Tokiri — Twoje słowa. Precyzyjniej.",
+    "description": "Minimalny asystent do pisania na macOS. Zaznacz tekst, naciśnij skrót i od razu go popraw, przeredaguj lub przetłumacz.",
+    "ogHeadline": "TWOJE SŁOWA. PRECYZYJNIEJ."
   },
   "header": {
-    "home": "Qwixit — strona główna",
+    "home": "Tokiri — strona główna",
     "forMacos": "NA MACOS",
     "modes": "TRYBY",
     "download": "POBIERZ",
@@ -13,17 +13,17 @@
   },
   "hero": {
     "eyebrow": "AI W BIEGU",
-    "h1a": "NIE PRZEPISUJ.",
-    "h1b": "QWIXIT.",
-    "subLead": "Ty piszesz dalej. Qwixit nadąża.",
-    "subBody": "AI w biegu — w Slacku, Mailu, Notion, wszędzie, gdzie piszesz.",
-    "subAction": "Zaznacz, wciśnij ⌥⌘X, gotowe.",
+    "h1a": "TWOJE SŁOWA.",
+    "h1b": "PRECYZYJNIEJ.",
+    "subLead": "Precyzyjniejsze pisanie, bez zbędnej drogi.",
+    "subBody": "Zaznacz tekst w dowolnej aplikacji na macOS, naciśnij skrót i od razu go popraw, przeredaguj lub przetłumacz.",
+    "subAction": "Zaznacz. Skrót. Gotowe.",
     "ctaDownload": "POBIERZ ZA DARMO",
     "ctaHow": "JAK TO DZIAŁA"
   },
   "demo": {
     "live": "DEMO NA ŻYWO",
-    "label": "Animowane demo: Qwixit przepisuje tekst na miejscu",
+    "label": "Animowane demo: Tokiri przeredagowuje tekst na miejscu",
     "tabsLabel": "Przykłady",
     "cases": [
       {
@@ -31,8 +31,8 @@
         "app": "Slack — #beta",
         "before": "hej wszystkim beta jest prawie gotowa, przetestujcie prosze i napiszcie co nie dziala",
         "after": "Hej wszystkim! Beta jest prawie gotowa — przetestujcie, proszę, i napiszcie, co nie działa.",
-        "verb": "QWIXING",
-        "done": "QWIXED",
+        "verb": "PROCESSING",
+        "done": "GOTOWE",
         "sub": "TEXT REPLACED"
       },
       {
@@ -40,8 +40,8 @@
         "app": "Mail — Re: sync",
         "before": "Hi! Can we move the call to Thursday?",
         "after": "Cześć! Możemy przełożyć rozmowę na czwartek?",
-        "verb": "QWIXING",
-        "done": "QWIXED",
+        "verb": "PROCESSING",
+        "done": "GOTOWE",
         "sub": "EN → PL"
       },
       {
@@ -49,8 +49,8 @@
         "app": "Notion — Release notes",
         "before": "Chcieliśmy poinformować wszystkich, że onboarding został zaktualizowany i teraz powinien poprawnie działać również na wszystkich Macach z procesorami Intel.",
         "after": "Onboarding działa teraz także na Macach z Intelem.",
-        "verb": "QWIXING",
-        "done": "QWIXED",
+        "verb": "PROCESSING",
+        "done": "GOTOWE",
         "sub": "−68% LENGTH"
       },
       {
@@ -58,8 +58,8 @@
         "app": "Linear — KIR-214",
         "before": "to coś muli jak otwierasz duże pliki i czasem się po prostu zawiesza",
         "after": "Przy otwieraniu dużych plików wydajność spada, a aplikacja czasami się zawiesza.",
-        "verb": "QWIXING",
-        "done": "QWIXED",
+        "verb": "PROCESSING",
+        "done": "GOTOWE",
         "sub": "FORMAL TONE"
       }
     ]
@@ -69,17 +69,17 @@
     "h2b": "KAŻDA APKA.",
     "fixTitle": "POPRAW NA MIEJSCU",
     "fixCopy": "Literówki, ton, tłumaczenie. Jedno stuknięcie — powtórz ostatnią akcję. Dwa — paleta. Zamień, wstaw poniżej lub otwórz w karcie.",
-    "fixMockLabel": "Paleta akcji Qwixit: Fix, Translate i Shorten.",
+    "fixMockLabel": "Paleta akcji Tokiri: Fix, Translate i Shorten.",
     "peekTitle": "PODEJRZYJ, NIE RUSZAJ",
     "peekCopy": "Pływająca karta, która tłumaczy, streszcza lub wyjaśnia zaznaczenie. Twój tekst zostaje dokładnie taki, jaki był.",
-    "peekMockLabel": "Karta Qwixit Peek z tłumaczeniem z ukraińskiego na angielski."
+    "peekMockLabel": "Karta Tokiri Peek z tłumaczeniem z ukraińskiego na angielski."
   },
   "cta": {
     "privacy": "Tekst jest wysyłany tylko po naciśnięciu skrótu. Żadnego monitorowania klawiszy. Nic nie jest przechowywane.",
     "download": "POBIERZ NA MACOS"
   },
   "footer": {
-    "copyright": "QWIXIT © 2026",
+    "copyright": "TOKIRI © 2026",
     "credit": "DEVELOPED AND DESIGNED BY LEV MISILIUK",
     "requirements": "MACOS 14+ · APPLE SILICON & INTEL"
   },
@@ -93,11 +93,11 @@
     "navPrivacy": "Prywatność",
     "navPricing": "Cennik",
     "heroStatus": "MACOS · GOTOWE",
-    "heroA": "Zaznacz.",
-    "heroB": "Qwix it.",
+    "heroA": "Twoje słowa.",
+    "heroB": "Precyzyjniej.",
     "heroC": "Pisz dalej.",
-    "heroBody": "Poprawiaj tekst w dowolnej aplikacji na Macu bez otwierania kolejnego okna.",
-    "heroNote": "SZYBKO Z NATURY · PRYWATNIE Z ZAŁOŻENIA",
+    "heroBody": "Poprawiaj, przeredagowuj lub tłumacz tekst w dowolnej aplikacji na Macu bez otwierania kolejnego okna.",
+    "heroNote": "SZYBKO I PRECYZYJNIE · PRYWATNIE Z ZAŁOŻENIA",
     "race": {
       "eyebrow": "TEST SZYBKOŚCI · TEN SAM TEKST · TA SAMA POPRAWKA",
       "title": "Nawet nie blisko.",
@@ -145,17 +145,17 @@
     "privacyTitleA": "Twój tekst przechodzi.",
     "privacyTitleB": "Nie zostaje na stałe.",
     "privacyBody": "Konkretne zasady prywatności. Bez magicznych słów i wielkich obietnic.",
-    "transient": "Zaznaczony tekst jest przetwarzany tylko po uruchomieniu Qwixit.",
+    "transient": "Zaznaczony tekst jest przetwarzany tylko po uruchomieniu Tokiri.",
     "notLogged": "Zaznaczony tekst i odpowiedź modelu nie są zapisywane ani logowane.",
     "noAccount": "Pobierz, wykorzystaj darmowe akcje i pracuj dalej.",
     "pricingTitleA": "Wypróbuj nawyk.",
     "pricingTitleB": "Potem go zachowaj.",
-    "pricingBody": "Co miesiąc dostajesz trzydzieści akcji. Unlimited czeka, gdy Qwixit wejdzie w pamięć mięśniową.",
+    "pricingBody": "Co miesiąc dostajesz trzydzieści akcji. Unlimited czeka, gdy Tokiri wejdzie w pamięć mięśniową.",
     "freeActions": "akcji AI na miesiąc kalendarzowy",
     "unlimitedBody": "Bez licznika akcji. Tylko skrót.",
     "finalA": "Zostań w aplikacji,",
     "finalB": "której już używasz.",
-    "finalBody": "Zaznacz tekst. Wciśnij skrót. Pracuj dalej.",
+    "finalBody": "Zaznacz. Skrót. Gotowe.",
     "footerAgents": "Dla agentów",
     "footerUtility": "FAST & SECURE · NATYWNE NARZĘDZIE DO PISANIA NA MACOS"
   }

@@ -16,12 +16,12 @@ export function PeekMock({ label }: { label: string }) {
       >
         <div className="flex h-[66px] items-center gap-1.5 overflow-hidden border-b border-[rgba(255,255,255,.1)] px-4">
           <Image
-            src="/brand/qwixit-mark-dark.svg"
+            src="/brand/tokiri-lockup-integrated-dark.svg"
             alt=""
-            width={31}
-            height={31}
+            width={418}
+            height={162}
             unoptimized
-            className="mr-2 hidden size-[31px] flex-none sm:block"
+            className="mr-2 hidden h-auto w-[72px] flex-none sm:block"
           />
           {tabs.map((t) => (
             <span

@@ -1,12 +1,12 @@
-export const agentContextText = `# Qwixit
+export const agentContextText = `# Tokiri
 
 > A native macOS menu-bar utility that fixes or transforms selected text in place, without making the user leave the app they are working in.
 
 ## Core workflow
 
 1. The user selects text in any macOS application.
-2. The user triggers Qwixit with a keyboard shortcut.
-3. Qwixit processes only that selection.
+2. The user triggers Tokiri with a keyboard shortcut.
+3. Tokiri processes only that selection.
 4. The result replaces the selection in place, or appears in a read-only Peek card.
 5. The user keeps working in the same application.
 
@@ -20,15 +20,15 @@ export const agentContextText = `# Qwixit
 
 - The default behavior is the smallest safe edit.
 - Transformations happen only when the user explicitly asks for them.
-- Qwixit stays out of the way: no chat window, prompt-writing, copy-paste loop, or context switch.
+- Tokiri stays out of the way: no chat window, prompt-writing, copy-paste loop, or context switch.
 - The product is keyboard-first and remains usable with a mouse.
 
 ## Privacy
 
-- Selected text is processed only after the user triggers Qwixit.
-- Selected text and model output are not persisted or logged by Qwixit.
+- Selected text is processed only after the user triggers Tokiri.
+- Selected text and model output are not persisted or logged by Tokiri.
 - OpenAI requests use store: false.
-- No Qwixit account is required.
+- No Tokiri account is required.
 
 ## Plans
 
@@ -38,12 +38,12 @@ export const agentContextText = `# Qwixit
 
 ## Positioning
 
-Qwixit sells a faster, quieter writing workflow rather than access to AI. Its shorthand is: “Select text. Press one shortcut. Keep working.” The supporting promise is: “Fast by workflow. Private by design.”
+Tokiri sells a faster, quieter writing workflow rather than access to AI. Its shorthand is: “Select. Shortcut. Done.” The supporting promise is: “Your words. Sharper.”
 
 ## Boundaries
 
-- Qwixit is not a general-purpose AI chat.
-- Qwixit does not continuously monitor typing.
+- Tokiri is not a general-purpose AI chat.
+- Tokiri does not continuously monitor typing.
 - Peek does not modify source text.
 - Do not claim compatibility, availability, benchmarks, customer counts, testimonials, or security guarantees beyond the facts listed here.
 

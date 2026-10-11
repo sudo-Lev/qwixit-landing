@@ -2,14 +2,14 @@ export type HudState = "processing" | "success";
 
 const PROCESSING = "PROCESSING".split("");
 
-/** The native Qwixit HUD at product size (236×58 including its 6px glow gutter). */
+/** The native Tokiri HUD at product size (236×58 including its 6px glow gutter). */
 export function ProductHud({ state, className = "" }: { state: HudState; className?: string }) {
   return (
     <div
       className={`qx-hud ${className}`}
       data-state={state}
       role="status"
-      aria-label={state === "success" ? "Qwixit: ready, text replaced" : "Qwixit: processing"}
+      aria-label={state === "success" ? "Tokiri: ready, text replaced" : "Tokiri: processing"}
     >
       <div className="qx-hud__frame">
         <div className="qx-hud__body" aria-hidden>

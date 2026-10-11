@@ -127,7 +127,7 @@ function FixDemo() {
     <div
       className="fix-demo product-panel"
       role="img"
-      aria-label="A Slack message with four typos corrected in place by Qwixit"
+      aria-label="A Slack message with four typos corrected in place by Tokiri"
     >
       <div className="fix-head">
         <span className="traffic">
@@ -157,9 +157,15 @@ function FixDemo() {
 
 function ActionPalette() {
   return (
-    <div className="action-palette product-panel" role="img" aria-label="Qwixit actions palette">
+    <div className="action-palette product-panel" role="img" aria-label="Tokiri actions palette">
       <div className="palette-head">
-        <Image src="/brand/qwixit-mark-light.svg" alt="" width={27} height={27} unoptimized />
+        <Image
+          src="/brand/tokiri-lockup-integrated-light.svg"
+          alt=""
+          width={418}
+          height={162}
+          unoptimized
+        />
         <span>Action or instruction…</span>
         <small>38 CHARS · EN</small>
       </div>
@@ -201,10 +207,16 @@ function PeekCard() {
     <div
       className="peek-card product-panel"
       role="img"
-      aria-label="Qwixit Peek card showing a Polish translation"
+      aria-label="Tokiri Peek card showing a Polish translation"
     >
       <div className="peek-head">
-        <Image src="/brand/qwixit-mark-light.svg" alt="" width={20} height={20} unoptimized />
+        <Image
+          src="/brand/tokiri-lockup-integrated-light.svg"
+          alt=""
+          width={418}
+          height={162}
+          unoptimized
+        />
         <span className="peek-source">EN →</span>
         <span className="peek-lang">UA</span>
         <span className="peek-lang is-active">PL</span>
@@ -302,7 +314,7 @@ function Trust({ copy }: { copy: LandingCopy }) {
         </div>
         <div className="trust-terminal">
           <div className="terminal-bar">
-            <span>QWIXIT / PRIVACY TRACE</span>
+            <span>TOKIRI / PRIVACY TRACE</span>
             <i>LIVE</i>
           </div>
           {facts.map(([title, copy], index) => (
@@ -327,10 +339,10 @@ function MenuBarPanel() {
     <div
       className="menubar-panel product-panel"
       role="img"
-      aria-label="Qwixit menu bar panel showing 12 of 30 free actions used"
+      aria-label="Tokiri menu bar panel showing 12 of 30 free actions used"
     >
       <div className="menubar-top">
-        <span>QWIXIT 1.4.2</span>
+        <span>TOKIRI 1.4.2</span>
         <span className="cloud-state">
           <i />
           Cloud
@@ -338,10 +350,10 @@ function MenuBarPanel() {
       </div>
       <div className="menubar-main">
         <Image
-          src="/brand/qwixit-lockup-light.svg"
-          alt="Qwixit"
-          width={186}
-          height={50}
+          src="/brand/tokiri-lockup-integrated-light.svg"
+          alt="Tokiri"
+          width={418}
+          height={162}
           unoptimized
         />
         <span className="shortcut-chip">⌥⌘X</span>
@@ -401,12 +413,12 @@ export function LandingPage({ locale, copy }: { locale: Locale; copy: LandingCop
   return (
     <div className="site-shell">
       <header className="site-header">
-        <a href={`/${locale}`} aria-label="Qwixit home">
+        <a href={`/${locale}`} aria-label="Tokiri home">
           <Image
-            src="/brand/qwixit-lockup-light.svg"
-            alt="Qwixit"
-            width={186}
-            height={50}
+            src="/brand/tokiri-lockup-integrated-light.svg"
+            alt="Tokiri"
+            width={418}
+            height={162}
             priority
             unoptimized
           />
@@ -454,7 +466,13 @@ export function LandingPage({ locale, copy }: { locale: Locale; copy: LandingCop
         <Trust copy={copy} />
         <Pricing copy={copy} />
         <section className="final-section">
-          <Image src="/brand/qwixit-mark-dark.svg" alt="" width={52} height={74} unoptimized />
+          <Image
+            src="/brand/tokiri-lockup-integrated-dark.svg"
+            alt="Tokiri"
+            width={418}
+            height={162}
+            unoptimized
+          />
           <h2>
             {copy.finalA}
             <br />
@@ -470,13 +488,13 @@ export function LandingPage({ locale, copy }: { locale: Locale; copy: LandingCop
       </main>
       <footer className="site-footer">
         <Image
-          src="/brand/qwixit-lockup-light.svg"
-          alt="Qwixit"
-          width={186}
-          height={50}
+          src="/brand/tokiri-lockup-integrated-light.svg"
+          alt="Tokiri"
+          width={418}
+          height={162}
           unoptimized
         />
-        <span>QWIXIT © 2026</span>
+        <span>TOKIRI © 2026</span>
         <a className="agent-footer-link" href={`/${locale}/for-agents`}>
           <span className="agent-footer-face" aria-hidden>
             [ ^_- ]
