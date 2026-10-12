@@ -1,15 +1,43 @@
 export type HudState = "processing" | "success";
 
-const PROCESSING = "PROCESSING".split("");
+export type HudLabels = {
+  processing: string;
+  ready: string;
+  textReplaced: string;
+  ai: string;
+  ok: string;
+};
+
+const DEFAULT_LABELS: HudLabels = {
+  processing: "PROCESSING",
+  ready: "READY",
+  textReplaced: "TEXT REPLACED",
+  ai: "AI",
+  ok: "OK",
+};
 
 /** The native Tokiri HUD at product size (236×58 including its 6px glow gutter). */
-export function ProductHud({ state, className = "" }: { state: HudState; className?: string }) {
+export function ProductHud({
+  state,
+  className = "",
+  labels = DEFAULT_LABELS,
+}: {
+  state: HudState;
+  className?: string;
+  labels?: HudLabels;
+}) {
+  const processingLetters = labels.processing.split("");
+
   return (
     <div
       className={`qx-hud ${className}`}
       data-state={state}
       role="status"
-      aria-label={state === "success" ? "Tokiri: ready, text replaced" : "Tokiri: processing"}
+      aria-label={
+        state === "success"
+          ? `Tokiri: ${labels.ready}, ${labels.textReplaced}`
+          : `Tokiri: ${labels.processing}`
+      }
     >
       <div className="qx-hud__frame">
         <div className="qx-hud__body" aria-hidden>
@@ -30,7 +58,7 @@ export function ProductHud({ state, className = "" }: { state: HudState; classNa
           <span className="qx-hud__label">
             <span className="qx-hud__processing">
               <strong className="qx-hud__wave">
-                {PROCESSING.map((letter, index) => (
+                {processingLetters.map((letter, index) => (
                   <b key={index} style={{ animationDelay: `${index * 40}ms` }}>
                     {letter}
                   </b>
@@ -41,13 +69,13 @@ export function ProductHud({ state, className = "" }: { state: HudState; classNa
               </i>
             </span>
             <span className="qx-hud__success">
-              <strong>READY</strong>
-              <small>— TEXT REPLACED</small>
+              <strong>{labels.ready}</strong>
+              <small>— {labels.textReplaced}</small>
             </span>
           </span>
           <span className="qx-hud__badge">
-            <b className="qx-hud__processing">AI</b>
-            <b className="qx-hud__success">OK</b>
+            <b className="qx-hud__processing">{labels.ai}</b>
+            <b className="qx-hud__success">{labels.ok}</b>
           </span>
         </div>
       </div>

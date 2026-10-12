@@ -2,19 +2,10 @@
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { useActive } from "@/lib/useActive";
-import { ProductHud } from "./ProductHud";
+import { ProductHud, type HudLabels } from "./ProductHud";
 
 /** EDITING → SELECTED → PROCESSING → POLISHED, in milliseconds. */
 const PHASE_MS = [1300, 900, 1500, 2600] as const;
-const STATUS = ["EDITING", "SELECTED", "PROCESSING", "POLISHED"] as const;
-const EDITS = [
-  { draft: "recieved", polished: "received", kind: "typo" },
-  { draft: "Thrusday", polished: "Thursday", kind: "typo" },
-  { draft: "just wanted to let you know", polished: "quick update:", kind: "meaning" },
-  { draft: "basically ready", polished: "ready", kind: "meaning" },
-  { draft: "take a look at", polished: "review", kind: "meaning" },
-  { draft: "let me know about", polished: "flag", kind: "meaning" },
-] as const;
 const NOISE = "#%&@$/<>*+=01アカサ";
 const STAGGER = 120;
 const GLITCH = 420;
@@ -22,6 +13,35 @@ const SETTLE = 560;
 const CLOCK_END = 1400;
 
 type Phase = 0 | 1 | 2 | 3;
+export type HeroEdit = { draft: string; polished: string; kind: "typo" | "meaning" };
+
+export type HeroWindowCopy = {
+  ariaLabel: string;
+  title: string;
+  date: string;
+  time: string;
+  status: {
+    editing: string;
+    selected: string;
+    processing: string;
+    polished: string;
+  };
+  hud: HudLabels;
+  titlePrefix: string;
+  titleConnector: string;
+  bodyLead: string;
+  bodyMiddle: string;
+  bodyTail: string;
+  bullet1Tail: string;
+  bullet2: string;
+  bullet3Tail: string;
+  thanks: string;
+  footer: {
+    select: string;
+    replaced: string;
+  };
+  edits: HeroEdit[];
+};
 
 function scramble(phrase: string, revealed: number) {
   let out = phrase.slice(0, revealed);
@@ -31,8 +51,15 @@ function scramble(phrase: string, revealed: number) {
   return out;
 }
 
-function setEdit(el: HTMLSpanElement, index: number, localTime: number) {
-  const { draft, polished } = EDITS[index] ?? EDITS[0];
+function setEdit(
+  el: HTMLSpanElement,
+  index: number,
+  localTime: number,
+  edits: readonly HeroEdit[],
+) {
+  const edit = edits[index] ?? edits[0];
+  if (!edit) return;
+  const { draft, polished } = edit;
   if (localTime < 0) {
     el.dataset.state = "draft";
     el.textContent = draft;
@@ -55,12 +82,19 @@ function setEdit(el: HTMLSpanElement, index: number, localTime: number) {
   }
 }
 
-export function HeroWindow() {
+export function HeroWindow({ copy }: { copy: HeroWindowCopy }) {
   const rootRef = useRef<HTMLDivElement>(null);
   const editRefs = useRef<(HTMLSpanElement | null)[]>([]);
   const [phase, setPhase] = useState<Phase>(0);
   const [reduced, setReduced] = useState(false);
   const active = useActive(rootRef);
+  const edits = copy.edits;
+  const status = [
+    copy.status.editing,
+    copy.status.selected,
+    copy.status.processing,
+    copy.status.polished,
+  ][phase];
 
   useEffect(() => {
     const query = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -83,11 +117,11 @@ export function HeroWindow() {
   useEffect(() => {
     const elements = editRefs.current;
     if (phase !== 3) {
-      elements.forEach((element, index) => element && setEdit(element, index, -1));
+      elements.forEach((element, index) => element && setEdit(element, index, -1, edits));
       return;
     }
     if (reduced) {
-      elements.forEach((element, index) => element && setEdit(element, index, SETTLE));
+      elements.forEach((element, index) => element && setEdit(element, index, SETTLE, edits));
       return;
     }
     let raf = 0;
@@ -95,13 +129,13 @@ export function HeroWindow() {
     const tick = (now: number) => {
       const elapsed = now - start;
       elements.forEach(
-        (element, index) => element && setEdit(element, index, elapsed - index * STAGGER),
+        (element, index) => element && setEdit(element, index, elapsed - index * STAGGER, edits),
       );
       if (elapsed < CLOCK_END) raf = requestAnimationFrame(tick);
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [phase, reduced]);
+  }, [edits, phase, reduced]);
 
   const edit = (index: number) => (
     <span
@@ -110,10 +144,10 @@ export function HeroWindow() {
       }}
       className="qx-edit"
       data-state="draft"
-      data-kind={EDITS[index]?.kind}
+      data-kind={edits[index]?.kind}
       suppressHydrationWarning
     >
-      {EDITS[index]?.draft}
+      {edits[index]?.draft}
     </span>
   );
 
@@ -132,7 +166,7 @@ export function HeroWindow() {
       className="qx-window-wrap"
       data-phase={phase}
       role="img"
-      aria-label="A Notes draft with two typos and four awkward phrases. Select the text, press Option Command X, and Tokiri corrects and tightens it in place."
+      aria-label={copy.ariaLabel}
     >
       <div className="qx-window">
         <div className="qx-window__inner">
@@ -142,34 +176,53 @@ export function HeroWindow() {
               <i />
               <i />
             </span>
-            <span className="qx-titlebar__title">Notes — Launch draft</span>
+            <span className="qx-titlebar__title">{copy.title}</span>
             <span className="qx-status">
               <i />
-              {STATUS[phase]}
+              {status}
             </span>
           </div>
           <div className="qx-body">
             <div className="qx-meta">
-              <span>OCT 08</span>
-              <span>11:42</span>
+              <span>{copy.date}</span>
+              <span>{copy.time}</span>
             </div>
             <div className="qx-doc">
               <p className="qx-row qx-row--title">
                 <span className="qx-row__text">
                   <span className="qx-sel">
-                    Client files {edit(0)} — review by {edit(1)}
+                    {copy.titlePrefix}
+                    {edit(0)}
+                    {copy.titleConnector}
+                    {edit(1)}
                   </span>
                 </span>
               </p>
               {row(
                 <>
-                  Hi team, {edit(2)} the client files are {edit(3)}. Before Friday’s launch, please:
+                  {copy.bodyLead}
+                  {edit(2)}
+                  {copy.bodyMiddle}
+                  {edit(3)}
+                  {copy.bodyTail}
                 </>,
               )}
-              {row(<>{edit(4)} the three final exports;</>, true)}
-              {row(<>confirm the file names with Design by Thursday;</>, true)}
-              {row(<>{edit(5)} any blockers as soon as they appear.</>, true)}
-              {row(<>Thanks!</>)}
+              {row(
+                <>
+                  {edit(4)}
+                  {copy.bullet1Tail}
+                </>,
+                true,
+              )}
+              {row(<>{copy.bullet2}</>, true)}
+              {row(
+                <>
+                  {edit(5)}
+                  {copy.bullet3Tail}
+                </>,
+                true,
+              )}
+              {row(<>{copy.thanks}</>)}
             </div>
             <div className="qx-bottom">
               <span className="qx-keys" aria-hidden>
@@ -188,13 +241,14 @@ export function HeroWindow() {
               <ProductHud
                 state={phase === 3 ? "success" : "processing"}
                 className="qx-window__hud"
+                labels={copy.hud}
               />
             </div>
           </div>
           <div className="qx-footer" aria-hidden>
             <span className="qx-step qx-step--select">
               <i />
-              SELECT
+              {copy.footer.select}
             </span>
             <i className="qx-link qx-link--1" />
             <span className="qx-step qx-step--keys">
@@ -204,7 +258,7 @@ export function HeroWindow() {
             <i className="qx-link qx-link--2" />
             <span className="qx-step qx-step--replaced">
               <i />
-              REPLACED IN PLACE
+              {copy.footer.replaced}
             </span>
           </div>
         </div>

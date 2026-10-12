@@ -64,6 +64,46 @@
       }
     ]
   },
+  "heroWindow": {
+    "ariaLabel": "A Notes draft with two typos and four awkward phrases. Select the text, press Option Command X, and Tokiri corrects and tightens it in place.",
+    "title": "Notes — Launch draft",
+    "date": "OCT 08",
+    "time": "11:42",
+    "status": {
+      "editing": "EDITING",
+      "selected": "SELECTED",
+      "processing": "PROCESSING",
+      "polished": "POLISHED"
+    },
+    "hud": {
+      "processing": "PROCESSING",
+      "ready": "READY",
+      "textReplaced": "TEXT REPLACED",
+      "ai": "AI",
+      "ok": "OK"
+    },
+    "titlePrefix": "Client files ",
+    "titleConnector": " — review by ",
+    "bodyLead": "Hi team, ",
+    "bodyMiddle": " the client files are ",
+    "bodyTail": ". Before Friday’s launch, please:",
+    "bullet1Tail": " the three final exports;",
+    "bullet2": "confirm the file names with Design by Thursday;",
+    "bullet3Tail": " any blockers as soon as they appear.",
+    "thanks": "Thanks!",
+    "footer": {
+      "select": "SELECT",
+      "replaced": "REPLACED IN PLACE"
+    },
+    "edits": [
+      { "draft": "recieved", "polished": "received", "kind": "typo" },
+      { "draft": "Thrusday", "polished": "Thursday", "kind": "typo" },
+      { "draft": "just wanted to let you know", "polished": "quick update:", "kind": "meaning" },
+      { "draft": "basically ready", "polished": "ready", "kind": "meaning" },
+      { "draft": "take a look at", "polished": "review", "kind": "meaning" },
+      { "draft": "let me know about", "polished": "flag", "kind": "meaning" }
+    ]
+  },
   "modes": {
     "h2a": "ONE HOTKEY.",
     "h2b": "EVERY APP.",

@@ -64,6 +64,46 @@
       }
     ]
   },
+  "heroWindow": {
+    "ariaLabel": "Szkic w Notatkach z dwiema literówkami i czterema niezgrabnymi frazami. Zaznacz tekst, naciśnij Option Command X, a Tokiri poprawi go na miejscu.",
+    "title": "Notatki — szkic releasu",
+    "date": "08 PAŹ",
+    "time": "11:42",
+    "status": {
+      "editing": "EDYCJA",
+      "selected": "ZAZNACZONE",
+      "processing": "PRZETWARZANIE",
+      "polished": "GOTOWE"
+    },
+    "hud": {
+      "processing": "PRZETWARZANIE",
+      "ready": "GOTOWE",
+      "textReplaced": "TEKST ZAMIENIONY",
+      "ai": "AI",
+      "ok": "OK"
+    },
+    "titlePrefix": "Pliki klienta ",
+    "titleConnector": " — sprawdź do ",
+    "bodyLead": "Cześć, ekipo, ",
+    "bodyMiddle": " pliki są już ",
+    "bodyTail": ". Przed piątkowym releasem, proszę:",
+    "bullet1Tail": " trzy finalne eksporty;",
+    "bullet2": "potwierdź nazwy plików z Designem do czwartku;",
+    "bullet3Tail": ", gdy tylko się pojawią.",
+    "thanks": "Dzięki!",
+    "footer": {
+      "select": "ZAZNACZ",
+      "replaced": "ZAMIENIONO NA MIEJSCU"
+    },
+    "edits": [
+      { "draft": "wpadly", "polished": "wpadły", "kind": "typo" },
+      { "draft": "czwartkuu", "polished": "czwartku", "kind": "typo" },
+      { "draft": "mały update:", "polished": "krótki update:", "kind": "meaning" },
+      { "draft": "prawie gotowe", "polished": "gotowe", "kind": "meaning" },
+      { "draft": "rzuć okiem na", "polished": "sprawdź", "kind": "meaning" },
+      { "draft": "daj znać o wszystkich blockerach", "polished": "zgłoś wszystkie blockery", "kind": "meaning" }
+    ]
+  },
   "modes": {
     "h2a": "JEDEN SKRÓT.",
     "h2b": "KAŻDA APKA.",

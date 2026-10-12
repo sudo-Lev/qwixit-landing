@@ -2,7 +2,7 @@ import Image from "next/image";
 import type { Locale } from "@/i18n/routing";
 import { LocaleSwitcher } from "./LocaleSwitcher";
 import { TapLink } from "./TapLink";
-import { HeroWindow } from "./HeroWindow";
+import { HeroWindow, type HeroWindowCopy } from "./HeroWindow";
 import { ProductHud } from "./ProductHud";
 import { SpeedRace, type RaceCopy } from "./SpeedRace";
 
@@ -409,7 +409,15 @@ function Pricing({ copy }: { copy: LandingCopy }) {
   );
 }
 
-export function LandingPage({ locale, copy }: { locale: Locale; copy: LandingCopy }) {
+export function LandingPage({
+  locale,
+  copy,
+  heroWindow,
+}: {
+  locale: Locale;
+  copy: LandingCopy;
+  heroWindow: HeroWindowCopy;
+}) {
   return (
     <div className="site-shell">
       <header className="site-header">
@@ -459,7 +467,7 @@ export function LandingPage({ locale, copy }: { locale: Locale; copy: LandingCop
             </div>
             <small className="hero-note">{copy.heroNote}</small>
           </div>
-          <HeroWindow />
+          <HeroWindow copy={heroWindow} />
         </section>
         <RoundTrip copy={copy} />
         <Workflows copy={copy} />
