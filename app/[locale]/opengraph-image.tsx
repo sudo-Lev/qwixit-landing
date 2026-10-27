@@ -3,7 +3,7 @@ import { join } from "node:path";
 import { ImageResponse } from "next/og";
 import { routing } from "@/i18n/routing";
 
-export const alt = "Tokiri — Your words. Sharper.";
+export const alt = "hotkeygo — Your words. Sharper.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -23,7 +23,7 @@ export default async function OpengraphImage() {
         display: "flex",
       }}
     >
-      <img src={ogImageSrc} width={1200} height={630} alt="Tokiri — Your words. Sharper." />
+      <img src={ogImageSrc} width={1200} height={630} alt="hotkeygo — Your words. Sharper." />
     </div>,
     size,
   );

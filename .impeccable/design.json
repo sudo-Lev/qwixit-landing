@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "generatedAt": "2026-10-08T13:08:11Z",
-  "title": "Design System: Qwixit",
+  "title": "Design System: hotkeygo",
   "extensions": {
     "colorMeta": {
       "ink": { "role": "neutral", "displayName": "Near-Black Ink", "canonical": "#16131f", "tonalRamp": ["oklch(15% 0.02 300)", "oklch(27% 0.02 300)", "oklch(39% 0.02 300)", "oklch(51% 0.02 300)", "oklch(63% 0.02 300)", "oklch(75% 0.02 300)", "oklch(87% 0.02 300)", "oklch(95% 0.02 300)"] },
@@ -107,14 +107,14 @@
     {
       "name": "Menu-Bar Pricing Panel",
       "kind": "card",
-      "description": "Canonical 318px menu panel with QWIXIT 1.4.2, Cloud, Access, and 12/30 ACTIONS.",
-      "html": "<div class=\"ds-menu\"><header><span>QWIXIT 1.4.2</span><b>● Cloud</b></header><main><strong>▣ qwixit</strong><kbd>⌥⌘X</kbd><em>● Access</em></main><section><span>FREE PLAN</span><b>12/30 ACTIONS</b></section><footer><span>Settings</span><i></i><span>Onboarding</span><i></i><span>Quit</span></footer></div>",
+      "description": "Canonical 318px menu panel with HOTKEYGO 1.4.2, Cloud, Access, and 12/30 ACTIONS.",
+      "html": "<div class=\"ds-menu\"><header><span>HOTKEYGO 1.4.2</span><b>● Cloud</b></header><main><strong>▣ hotkeygo</strong><kbd>⌥⌘X</kbd><em>● Access</em></main><section><span>FREE PLAN</span><b>12/30 ACTIONS</b></section><footer><span>Settings</span><i></i><span>Onboarding</span><i></i><span>Quit</span></footer></div>",
       "css": ".ds-menu{width:318px;overflow:hidden;border:1px solid var(--border,#dfdaec);border-radius:12px;background:var(--canvas,#f9f8fc);color:var(--ink,#16131f);box-shadow:0 0 0 .5px rgba(22,19,31,.1),0 14px 36px rgba(22,19,31,.16)}.ds-menu header{height:28px;display:flex;align-items:center;justify-content:space-between;padding:0 12px;border-bottom:1px solid var(--border,#dfdaec);background:var(--raised,#fdfcff);color:var(--muted,#6e6b7d);font:700 9px/1 var(--font-mono,monospace);letter-spacing:.35px}.ds-menu header b{color:var(--cyan-text,#006f80)}.ds-menu main{height:68px;display:flex;align-items:center;gap:8px;padding:0 14px}.ds-menu main strong{font:800 15px/1 var(--font-sys,sans-serif)}.ds-menu kbd{margin-left:auto;height:25px;display:flex;align-items:center;padding:0 7px;border:1px solid var(--border,#dfdaec);border-radius:7px;background:var(--hover,#f6f4fd);font:700 10px/1 var(--font-mono,monospace)}.ds-menu main em{height:24px;display:flex;align-items:center;padding:0 9px;border:1px solid rgba(20,145,69,.4);border-radius:12px;color:var(--green-text,#0a6d33);background:rgba(20,145,69,.12);font:700 10px/1 var(--font-sys,sans-serif);font-style:normal}.ds-menu section{height:34px;display:flex;align-items:center;gap:8px;padding:0 14px;border-top:1px solid var(--border,#dfdaec);font:700 9px/1 var(--font-mono,monospace)}.ds-menu section span{color:var(--muted,#6e6b7d)}.ds-menu section b{flex:1;font-size:10px}.ds-menu footer{height:43px;display:flex;align-items:center;justify-content:space-around;border-top:1px solid var(--border,#dfdaec);background:var(--raised,#fdfcff);color:var(--muted,#6e6b7d);font:700 11px/1 var(--font-sys,sans-serif)}.ds-menu footer i{width:1px;height:24px;background:var(--border,#dfdaec)}.ds-menu footer span:last-child{color:var(--danger,#e6293d)}"
     }
   ],
   "narrative": {
     "northStar": "The Native Shortcut Workbench",
-    "overview": "Qwixit is a compact macOS instrument shown at working scale. Pale paper carries the marketing narrative, while the product is demonstrated through real light HUDs, result cards, action palettes, Peek cards, and the menu-bar panel—not illustrative substitutes. The system feels native, fast, slightly punk, and trustworthy because every decorative choice also explains state.\n\nThe landing surface follows six blocks with one job each: hero mechanism, copy-paste detour, Fix/Actions/Peek, privacy, pricing with the menu-bar panel, and final CTA. System sans explains, Unbounded turns short localized statements into landmarks, and JetBrains Mono carries state, shortcuts, metadata, and controls. The anti-reference remains a centered generic AI slogan above a detached dashboard screenshot.",
+    "overview": "hotkeygo is a compact macOS instrument shown at working scale. Pale paper carries the marketing narrative, while the product is demonstrated through real light HUDs, result cards, action palettes, Peek cards, and the menu-bar panel—not illustrative substitutes. The system feels native, fast, slightly punk, and trustworthy because every decorative choice also explains state.\n\nThe landing surface follows six blocks with one job each: hero mechanism, copy-paste detour, Fix/Actions/Peek, privacy, pricing with the menu-bar panel, and final CTA. System sans explains, Unbounded turns short localized statements into landmarks, and JetBrains Mono carries state, shortcuts, metadata, and controls. The anti-reference remains a centered generic AI slogan above a detached dashboard screenshot.",
     "keyCharacteristics": [
       "Light, real-scale product fragments on cool macOS paper.",
       "Six blocks, each anchored by one product behavior or component.",
@@ -148,7 +148,7 @@
       "Don't use bright cyan, magenta, or green for small text on pale surfaces.",
       "Don't use pills or opposing-corner cuts for the primary CTA.",
       "Don't invent download availability, proof, compatibility, privacy, or performance claims.",
-      "Don't redraw, trace, typeset, or reinterpret supplied Qwixit logo assets."
+      "Don't redraw, trace, typeset, or reinterpret supplied hotkeygo logo assets."
     ]
   }
 }

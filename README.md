@@ -1,6 +1,6 @@
-# qwixit-landing
+# hotkeygo-landing
 
-Marketing site for [Qwixit](https://qwixit.app) — Next.js 15 (App Router), Tailwind v4, Motion, next-intl. Deployed on Vercel.
+Marketing site for [hotkeygo](https://qwixit.app) — Next.js 15 (App Router), Tailwind v4, Motion, next-intl. Deployed on Vercel.
 
 ```sh
 pnpm install

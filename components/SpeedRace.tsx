@@ -6,26 +6,28 @@ import { useActive } from "@/lib/useActive";
 import { ProductHud } from "./ProductHud";
 
 /**
- * Illustrative timings in seconds. Swap in measured numbers here; everything else derives from them.
- * Steps both workflows share (selecting the text) must carry the same duration on both sides.
+ * Both lanes start together. HotkeyGo completes at the midpoint of its measured 3–5 second range;
+ * the illustrative chat process keeps progressing after it finishes.
  */
 export const RACE = {
   loop: 28,
+  chatDuration: 24,
+  hotkeygoDuration: 4,
   chat: [
-    { id: "select", seconds: 1.0, shared: true },
-    { id: "copy", seconds: 0.3 },
-    { id: "switch", seconds: 2.0, appSwitch: true },
-    { id: "paste", seconds: 1.0 },
-    { id: "prompt", seconds: 6.0 },
-    { id: "wait", seconds: 7.0 },
-    { id: "copyBack", seconds: 1.5 },
-    { id: "switchBack", seconds: 2.0, appSwitch: true },
-    { id: "pasteFix", seconds: 3.0 },
+    { id: "select", shared: true },
+    { id: "copy" },
+    { id: "switch", appSwitch: true },
+    { id: "paste" },
+    { id: "prompt" },
+    { id: "wait" },
+    { id: "copyBack" },
+    { id: "switchBack", appSwitch: true },
+    { id: "pasteFix" },
   ],
-  qwixit: [
-    { id: "select", seconds: 1.0, shared: true },
-    { id: "press", seconds: 0.3 },
-    { id: "replaced", seconds: 1.1 },
+  hotkeygo: [
+    { id: "select", shared: true },
+    { id: "press" },
+    { id: "replaced" },
   ],
   heckleDelay: 0.3,
   heckleIn: 0.18,
@@ -34,7 +36,7 @@ export const RACE = {
 } as const;
 
 type ChatId = (typeof RACE.chat)[number]["id"];
-type QwixitId = (typeof RACE.qwixit)[number]["id"];
+type HotkeygoId = (typeof RACE.hotkeygo)[number]["id"];
 type HeckleId = Exclude<ChatId, "select" | "copy"> | "end";
 
 export type RaceCopy = {
@@ -42,33 +44,35 @@ export type RaceCopy = {
   title: string;
   lead: string;
   chatSteps: Record<ChatId, string>;
-  qwixitSteps: Record<QwixitId, string>;
-  heckles: Record<HeckleId, string>;
+  chatReasons: Record<HeckleId, string>;
+  hotkeygoSteps: Record<HotkeygoId, string>;
   done: string;
+  actionTime: string;
   footer: string;
   footerMeta: string;
 };
 
-type Step = { id: string; seconds: number; appSwitch?: boolean; shared?: boolean };
+type Step = { id: string; appSwitch?: boolean; shared?: boolean };
 type Timed = Step & { start: number; end: number };
 
-function schedule(steps: readonly Step[]): Timed[] {
-  let at = 0;
-  return steps.map((step) => {
-    const start = at;
-    at += step.seconds;
-    return { ...step, start, end: at };
-  });
+function schedule(steps: readonly Step[], duration: number): Timed[] {
+  const stepDuration = duration / Math.max(1, steps.length);
+  return steps.map((step, index) => ({
+    ...step,
+    start: index * stepDuration,
+    end: (index + 1) * stepDuration,
+  }));
 }
 
-const CHAT = schedule(RACE.chat);
-const QWIXIT = schedule(RACE.qwixit);
+// The chat duration only paces the illustrative process map; it is not a measured competitor claim.
+const CHAT = schedule(RACE.chat, RACE.chatDuration);
+const HOTKEYGO = schedule(RACE.hotkeygo, RACE.hotkeygoDuration);
 const CHAT_TOTAL = CHAT[CHAT.length - 1]?.end ?? 0;
-const QWIXIT_TOTAL = QWIXIT[QWIXIT.length - 1]?.end ?? 0;
-/** Reduced motion freezes here: both clocks finished, the closing heckle showing. */
-const FINAL_T = CHAT_TOTAL + 1;
+const HOTKEYGO_TOTAL = HOTKEYGO[HOTKEYGO.length - 1]?.end ?? 0;
+/** Reduced motion freezes with both flows complete. */
+const FINAL_T = Math.max(CHAT_TOTAL, HOTKEYGO_TOTAL) + 1;
 
-/** One heckle per chat step after Tokiri is done; x is % across the list, dy px, rot deg. */
+/** One face for each extra chat step after HotkeyGo finishes; x is %, dy px, rot degrees. */
 const HECKLES: Record<HeckleId, { face: string; x: number; dy: number; rot: number }> = {
   switch: { face: "[ ¬_¬ ]", x: 36, dy: -8, rot: 2 },
   paste: { face: "[ -__- ]", x: 6, dy: 6, rot: -1 },
@@ -93,12 +97,6 @@ const LOGOS = [
   { name: "Meta AI", mark: "M" },
 ];
 
-function clock(seconds: number) {
-  const tenths = Math.round(seconds * 10);
-  const whole = Math.floor(tenths / 10);
-  return `00:${String(whole).padStart(2, "0")}.${tenths % 10}`;
-}
-
 type Heckle = { id: HeckleId; row: number; enter: number; exit: number };
 
 function heckleAt(t: number): Heckle | null {
@@ -108,7 +106,7 @@ function heckleAt(t: number): Heckle | null {
   for (let i = 0; i < CHAT.length; i++) {
     const step = CHAT[i];
     if (!step || !(step.id in HECKLES)) continue;
-    const appear = Math.max(step.start, QWIXIT_TOTAL + RACE.heckleDelay);
+    const appear = Math.max(step.start, HOTKEYGO_TOTAL + RACE.heckleDelay);
     if (t >= appear && t < step.end) {
       return { id: step.id as HeckleId, row: i, enter: t - appear, exit: step.end - t };
     }
@@ -125,13 +123,13 @@ function StepList({
   steps: Timed[];
   labels: Record<string, string>;
   t: number;
-  tone: "chat" | "qwixit";
+  tone: "chat" | "hotkeygo";
 }) {
   return (
     <ol className={`sr-steps sr-steps--${tone}`}>
       {steps.map((step, index) => {
         const state = t >= step.end ? "done" : t >= step.start ? "current" : "pending";
-        const progress = state === "current" ? (t - step.start) / step.seconds : 0;
+        const progress = state === "current" ? (t - step.start) / (step.end - step.start) : 0;
         return (
           <li
             key={step.id}
@@ -141,10 +139,6 @@ function StepList({
           >
             <b>{String(index).padStart(2, "0")}</b>
             <span>{labels[step.id]}</span>
-            <em>
-              {state === "current" ? "+" : ""}
-              {step.seconds.toFixed(1)}s
-            </em>
           </li>
         );
       })}
@@ -165,9 +159,9 @@ function Bubble({ heckle, line, still }: { heckle: Heckle; line: string; still: 
     opacity: Math.min(pop, fade),
   } as CSSProperties;
   return (
-    <div className="sr-bubble" style={style} aria-hidden>
+    <div className="sr-bubble" style={style}>
       <div className="sr-bubble__inner">
-        <b>{face}</b>
+        <b aria-hidden>{face}</b>
         <span>{line}</span>
       </div>
     </div>
@@ -203,7 +197,7 @@ export function SpeedRace({ copy }: { copy: RaceCopy }) {
   }, [active, reduced]);
 
   const now = reduced ? FINAL_T : t;
-  const qx = now < QWIXIT_TOTAL ? "running" : now < QWIXIT_TOTAL + RACE.finishFlash ? "finish" : "done";
+  const hotkeygoState = now < HOTKEYGO_TOTAL ? "running" : now < HOTKEYGO_TOTAL + RACE.finishFlash ? "finish" : "done";
   const heckle = heckleAt(now);
 
   return (
@@ -237,44 +231,26 @@ export function SpeedRace({ copy }: { copy: RaceCopy }) {
                   </span>
                 ))}
               </div>
-              <div className="sr-timer" role="timer" aria-label="Chat app round trip">
-                {clock(Math.min(now, CHAT_TOTAL))}
-              </div>
               <div className="sr-list">
                 <StepList steps={CHAT} labels={copy.chatSteps} t={now} tone="chat" />
-                {heckle && (
-                  <Bubble
-                    key={heckle.id}
-                    heckle={heckle}
-                    line={copy.heckles[heckle.id]}
-                    still={reduced}
-                  />
-                )}
+                {heckle && <Bubble heckle={heckle} line={copy.chatReasons[heckle.id]} still={reduced} />}
               </div>
             </div>
 
-            <div className="sr-col sr-col--qwixit" data-qx={qx}>
-              <div className="sr-qx-head">
+            <div className="sr-col sr-col--hotkeygo" data-hotkeygo={hotkeygoState}>
+              <div className="sr-hotkeygo-head">
                 <Image
-                  src="/brand/tokiri-lockup-integrated-light.svg"
-                  alt="Tokiri"
-                  width={418}
-                  height={162}
+                  src="/brand/hotkeygo/wordmark-light.svg"
+                  alt="hotkeygo"
+                  width={698}
+                  height={174}
                   unoptimized
-                  className="sr-qx-lockup"
+                  className="sr-hotkeygo-wordmark"
                 />
-                <span className="sr-tag">{qx === "running" ? "LIVE" : "DONE"}</span>
+                <span className="sr-tag">{copy.actionTime}</span>
               </div>
-              <div
-                className="sr-timer sr-timer--ink"
-                role="timer"
-                aria-label="Tokiri"
-                data-glitch={qx === "finish" ? Math.floor(now * 60) % 2 : undefined}
-              >
-                {clock(Math.min(now, QWIXIT_TOTAL))}
-              </div>
-              <StepList steps={QWIXIT} labels={copy.qwixitSteps} t={now} tone="qwixit" />
-              {qx !== "running" && (
+              <StepList steps={HOTKEYGO} labels={copy.hotkeygoSteps} t={now} tone="hotkeygo" />
+              {hotkeygoState !== "running" && (
                 <div className="sr-done">
                   <ProductHud state="success" />
                   <strong>{copy.done}</strong>

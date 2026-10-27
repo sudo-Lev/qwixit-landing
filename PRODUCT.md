@@ -12,24 +12,24 @@ Mac users who write in many applications and want to correct or transform select
 
 ## Product Purpose
 
-Qwixit is a native macOS menu-bar utility that removes the trip to an AI chat and back. The core workflow is: select text in any application, press ⌥⌘X, and continue working as Qwixit makes the smallest safe correction in place.
+hotkeygo is a native macOS menu-bar utility that removes the trip to an AI chat and back. The core workflow is: select text in any application, press ⌥⌘X, and continue working as hotkeygo makes the smallest safe correction in place.
 
 ## Positioning
 
-Qwixit sells a fast, private workflow rather than access to AI: “Select text. Press one shortcut. Keep working.” The supporting promise is “Fast by workflow. Private by design.” It is a quiet, keyboard-first companion, not a general-purpose chat product.
+hotkeygo sells a fast, private workflow rather than access to AI: “Select text. Press one shortcut. Keep working.” The supporting promise is “Fast by workflow. Private by design.” It is a quiet, keyboard-first companion, not a general-purpose chat product.
 
 ## Operating Context
 
 - **Fix — ⌥⌘X:** conservative corrections to typos, grammar, punctuation, and clearly awkward wording, replacing the selection in place.
 - **Actions — ⌥⌘A:** explicit transformations such as translation or tone changes that replace selected text.
 - **Peek — ⌥⌘Z:** read-only translation and explanation without changing the source text.
-- Qwixit runs as a menu-bar utility, stays in the current app, and does not steal focus.
+- hotkeygo runs as a menu-bar utility, stays in the current app, and does not steal focus.
 - It is keyboard-first and remains fully usable with a mouse.
 
 ## Capabilities and Constraints
 
 - Selected text is processed transiently.
-- Qwixit does not persist or log selected text or model output.
+- hotkeygo does not persist or log selected text or model output.
 - OpenAI requests use `store: false`.
 - No user account is required.
 - The product supports light and dark themes and Reduce Motion.
@@ -38,7 +38,7 @@ Qwixit sells a fast, private workflow rather than access to AI: “Select text. 
 
 ## Brand Commitments
 
-- Use the supplied Qwixit logo assets without redrawing, typesetting, tracing, or reinterpreting them.
+- Use the supplied hotkeygo logo assets without redrawing, typesetting, tracing, or reinterpreting them.
 - Voice is concise, calm, slightly cheeky, and confident. Avoid vague AI-product language and exaggerated security claims.
 - The product should feel native to macOS, extremely fast and unobtrusive, stylish, compact, punk, trustworthy, and like a small alert cyber companion.
 

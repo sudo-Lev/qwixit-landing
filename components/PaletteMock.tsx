@@ -23,12 +23,12 @@ export function PaletteMock({ label }: { label: string }) {
       >
         <div className="flex h-[62px] items-center gap-3.5 border-b border-[rgba(255,255,255,.1)] px-5">
           <Image
-            src="/brand/tokiri-lockup-integrated-dark.svg"
+            src="/brand/hotkeygo/appicon-dark-128.png"
             alt=""
-            width={418}
-            height={162}
+            width={128}
+            height={128}
             unoptimized
-            className="block h-auto w-[72px] flex-none"
+            className="block size-8 flex-none"
           />
           <span className="h-[22px] w-0.5 flex-none animate-caret bg-[#3B82F6]" />
           <span className="min-w-0 flex-1 truncate text-[15px] leading-none font-bold text-[#6B6679] sm:text-[17px]">

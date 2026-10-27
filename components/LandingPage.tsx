@@ -106,13 +106,13 @@ function RoundTrip({ copy }: { copy: LandingCopy }) {
       <SpeedRace copy={copy.race} />
       <div className="promise-pair" aria-label="Fast and private by design">
         <article className="promise-card promise-card--fast">
-          <span className="promise-code">FAST / 01</span>
+          <span className="promise-code">FAST / WORKFLOW</span>
           <h3>{copy.fastTitle}</h3>
           <p>{copy.fastBody}</p>
           <i aria-hidden />
         </article>
         <article className="promise-card promise-card--private">
-          <span className="promise-code">SECURE / 02</span>
+          <span className="promise-code">PRIVATE / DESIGN</span>
           <h3>{copy.privateTitle}</h3>
           <p>{copy.privateBody}</p>
           <i aria-hidden />
@@ -127,7 +127,7 @@ function FixDemo() {
     <div
       className="fix-demo product-panel"
       role="img"
-      aria-label="A Slack message with four typos corrected in place by Tokiri"
+      aria-label="A Slack message with four typos corrected in place by hotkeygo"
     >
       <div className="fix-head">
         <span className="traffic">
@@ -157,46 +157,39 @@ function FixDemo() {
 
 function ActionPalette() {
   return (
-    <div className="action-palette product-panel" role="img" aria-label="Tokiri actions palette">
+    <div
+      className="action-palette product-panel"
+      role="img"
+      aria-label="hotkeygo Actions palette with searchable translation and writing choices. Choosing an action replaces the selection."
+    >
       <div className="palette-head">
-        <Image
-          src="/brand/tokiri-lockup-integrated-light.svg"
-          alt=""
-          width={418}
-          height={162}
-          unoptimized
-        />
-        <span>Action or instruction…</span>
-        <small>38 CHARS · EN</small>
+        <i className="palette-caret" aria-hidden />
+        <span className="palette-search">Search…</span>
+        <small>ENGLISH · 18 WORDS</small>
       </div>
       <div className="palette-list">
         <div className="palette-row is-active">
-          <i />
-          <b>Translate</b>
-          <span className="palette-langs">
-            <em>UKRAINIAN</em>
-            <em>ENGLISH</em>
-          </span>
-          <small>REPLACE</small>
+          <div className="palette-row__inner">
+            <b>Українська</b>
+            <span>↵</span>
+          </div>
         </div>
         <div className="palette-row">
-          <i />
+          <b>Polski</b>
+          <span>2</span>
+        </div>
+        <div className="palette-separator" />
+        <div className="palette-row">
           <b>Slack style</b>
-          <span>Clear, concise, human</span>
-          <small>REPLACE</small>
+          <span>3</span>
         </div>
         <div className="palette-row">
-          <i />
           <b>Make formal</b>
-          <span>Polished professional tone</span>
-          <small>REPLACE</small>
+          <span>4</span>
         </div>
       </div>
       <div className="palette-foot">
-        <span>↑↓ MOVE · 1–3 RUN · ⌘Z UNDO</span>
-        <span>
-          <kbd>↵</kbd> RUN <kbd>esc</kbd> CLOSE
-        </span>
+        <span>Replaces selection · ⌘Z undo</span>
       </div>
     </div>
   );
@@ -207,44 +200,26 @@ function PeekCard() {
     <div
       className="peek-card product-panel"
       role="img"
-      aria-label="Tokiri Peek card showing a Polish translation"
+      aria-label="hotkeygo Peek showing an English translation of Ukrainian text. The source remains unchanged."
     >
       <div className="peek-head">
-        <Image
-          src="/brand/tokiri-lockup-integrated-light.svg"
-          alt=""
-          width={418}
-          height={162}
-          unoptimized
-        />
-        <span className="peek-source">EN →</span>
-        <span className="peek-lang">UA</span>
-        <span className="peek-lang is-active">PL</span>
-        <span className="peek-lang">DE</span>
-        <span className="peek-lang">EN</span>
+        <span className="peek-source">Ukrainian →</span>
+        <span className="peek-target">
+          <span>English</span>
+        </span>
         <span className="panel-control" aria-hidden>
-          ×
+          <svg viewBox="0 0 12 12" focusable="false">
+            <path d="M3.5 3.5 8.5 8.5M8.5 3.5 3.5 8.5" />
+          </svg>
         </span>
       </div>
       <div className="peek-body">
-        <h4>Przegląd kwartalny przenosimy na czwartek</h4>
         <p>
-          Dwóch liderów jest w podróży, więc przegląd odbędzie się w czwartek. Prześlijcie
-          zaktualizowane liczby do środy do południa — dział finansów potrzebuje czasu, by je zebrać
-          przed spotkaniem.
+          Hi everyone — the beta build is almost ready. Please test it and tell me what’s broken.
         </p>
-        <ul>
-          <li>Slajdy są opcjonalne.</li>
-          <li>Każdy zespół dodaje podsumowanie w jednym zdaniu.</li>
-        </ul>
       </div>
       <div className="peek-foot">
-        <span>42 words · Esc</span>
-        <span className="peek-foot-spacer" />
-        <span className="panel-button">Pin</span>
-        <span className="panel-button panel-button--violet">
-          Copy <b>⌘C</b>
-        </span>
+        <span>↵ copy · Esc close</span>
       </div>
     </div>
   );
@@ -314,7 +289,7 @@ function Trust({ copy }: { copy: LandingCopy }) {
         </div>
         <div className="trust-terminal">
           <div className="terminal-bar">
-            <span>TOKIRI / PRIVACY TRACE</span>
+            <span>hotkeygo / PRIVACY TRACE</span>
             <i>LIVE</i>
           </div>
           {facts.map(([title, copy], index) => (
@@ -339,44 +314,92 @@ function MenuBarPanel() {
     <div
       className="menubar-panel product-panel"
       role="img"
-      aria-label="Tokiri menu bar panel showing 12 of 30 free actions used"
+      aria-label="hotkeygo menu bar popup, version 1.0, Cloud, Free plan with 20 of 30 actions used, shortcut Option Command X, Accessibility access granted, Preview and Approve off, Settings, Quit, and Onboarding"
     >
       <div className="menubar-top">
-        <span>TOKIRI 1.4.2</span>
-        <span className="cloud-state">
-          <i />
-          Cloud
+        <span className="menubar-info" aria-hidden>
+          <svg viewBox="0 0 16 16" focusable="false">
+            <circle cx="8" cy="8" r="6.25" />
+            <path d="M8 7v4" />
+            <circle cx="8" cy="4.75" r=".55" className="menubar-info__dot" />
+          </svg>
+        </span>
+        <span className="menubar-version">v1.0</span>
+        <span className="menubar-top-spacer" />
+        <span className="menubar-cloud">
+          <span>Cloud</span>
+          <svg viewBox="0 0 12 12" focusable="false" aria-hidden>
+            <path d="m2 4 4 4 4-4" />
+          </svg>
         </span>
       </div>
-      <div className="menubar-main">
-        <Image
-          src="/brand/tokiri-lockup-integrated-light.svg"
-          alt="Tokiri"
-          width={418}
-          height={162}
-          unoptimized
-        />
-        <span className="shortcut-chip">⌥⌘X</span>
-        <span className="access-badge">
-          <i />
-          ACCESS
+      <div className="menubar-status-row">
+        <span className="menubar-face" aria-hidden>[ ^_^ ]</span>
+        <span className="menubar-plan">
+          <strong>Free</strong>
+          <small>20 / 30 used</small>
+        </span>
+        <span className="menubar-status-spacer" />
+        <span className="menubar-shortcut">
+          <span>⌥⌘</span>
+          <b>X</b>
+        </span>
+        <span className="menubar-access" aria-hidden>
+          <svg viewBox="0 0 16 16" focusable="false">
+            <path d="m3.5 8.5 3 3 6-7" />
+          </svg>
         </span>
       </div>
-      <div className="menubar-usage">
-        <span>FREE PLAN</span>
-        <b>12/30 ACTIONS</b>
+      <div className="menubar-review">
+        <span className="menubar-review__icon" aria-hidden>
+          <svg viewBox="0 0 24 16" focusable="false">
+            <path d="M2 8c2.7-4 6-6 10-6s7.3 2 10 6c-2.7 4-6 6-10 6S4.7 12 2 8Z" />
+            <circle cx="12" cy="8" r="2.2" />
+          </svg>
+        </span>
+        <span className="menubar-review__copy">
+          <strong>Preview &amp; Approve</strong>
+          <small>Nothing changes until you approve</small>
+        </span>
+        <span className="menubar-toggle" aria-hidden>
+          <i>−</i>
+          <b>OFF</b>
+        </span>
       </div>
-      <div className="menubar-foot">
-        <span>Settings</span>
-        <i />
-        <span>Onboarding</span>
-        <i />
-        <span>Quit</span>
+      <div className="menubar-actions">
+        <div className="menubar-actions__top">
+          <span className="menubar-action">
+            <span className="menubar-action__inner">
+              <svg viewBox="0 0 16 16" focusable="false" aria-hidden>
+                <path d="M6.7 1.5h2.6l.4 1.8c.5.2.9.4 1.3.8l1.8-.5 1.3 2.3-1.4 1.2a5 5 0 0 1 0 1.5l1.4 1.2-1.3 2.3-1.8-.5c-.4.4-.8.6-1.3.8l-.4 1.8H6.7l-.4-1.8a5 5 0 0 1-1.3-.8l-1.8.5-1.3-2.3 1.4-1.2a5 5 0 0 1 0-1.5L1.9 5.9l1.3-2.3 1.8.5c.4-.4.8-.6 1.3-.8l.4-1.8Z" />
+                <circle cx="8" cy="7.9" r="1.8" />
+              </svg>
+              <b>Settings</b>
+            </span>
+          </span>
+          <span className="menubar-action menubar-action--quit">
+            <span className="menubar-action__inner">
+              <svg viewBox="0 0 16 16" focusable="false" aria-hidden>
+                <path d="M8 1.5v6" />
+                <path d="M4.1 3.8a6 6 0 1 0 7.8 0" />
+              </svg>
+              <b>Quit</b>
+            </span>
+          </span>
+        </div>
+        <span className="menubar-action menubar-action--wide">
+          <span className="menubar-action__inner">
+            <svg viewBox="0 0 16 16" focusable="false" aria-hidden>
+              <path d="m8 1 1.5 5.5L15 8l-5.5 1.5L8 15l-1.5-5.5L1 8l5.5-1.5L8 1Z" />
+              <path d="m13 1 .6 2.4L16 4l-2.4.6L13 7l-.6-2.4L10 4l2.4-.6L13 1Z" />
+            </svg>
+            <b>Onboarding</b>
+          </span>
+        </span>
       </div>
     </div>
   );
 }
-
 function Pricing({ copy }: { copy: LandingCopy }) {
   return (
     <section className="section pricing-section" id="pricing">
@@ -421,12 +444,12 @@ export function LandingPage({
   return (
     <div className="site-shell">
       <header className="site-header">
-        <a href={`/${locale}`} aria-label="Tokiri home">
+        <a href={`/${locale}`} aria-label="hotkeygo home">
           <Image
-            src="/brand/tokiri-lockup-integrated-light.svg"
-            alt="Tokiri"
-            width={418}
-            height={162}
+            src="/brand/hotkeygo/wordmark-light.svg"
+            alt="hotkeygo"
+            width={698}
+            height={174}
             priority
             unoptimized
           />
@@ -475,10 +498,10 @@ export function LandingPage({
         <Pricing copy={copy} />
         <section className="final-section">
           <Image
-            src="/brand/tokiri-lockup-integrated-dark.svg"
-            alt="Tokiri"
-            width={418}
-            height={162}
+            src="/brand/hotkeygo/wordmark-dark.svg"
+            alt="hotkeygo"
+            width={698}
+            height={174}
             unoptimized
           />
           <h2>
@@ -496,13 +519,13 @@ export function LandingPage({
       </main>
       <footer className="site-footer">
         <Image
-          src="/brand/tokiri-lockup-integrated-light.svg"
-          alt="Tokiri"
-          width={418}
-          height={162}
+          src="/brand/hotkeygo/wordmark-light.svg"
+          alt="hotkeygo"
+          width={698}
+          height={174}
           unoptimized
         />
-        <span>TOKIRI © 2026</span>
+        <span>hotkeygo © 2026</span>
         <a className="agent-footer-link" href={`/${locale}/for-agents`}>
           <span className="agent-footer-face" aria-hidden>
             [ ^_- ]

@@ -1,5 +1,5 @@
 ---
-name: Qwixit
+name: hotkeygo
 description: A native macOS shortcut workbench built from real, light product surfaces.
 colors:
   ink: "#16131f"
@@ -100,17 +100,17 @@ components:
     height: "58px"
 ---
 
-# Design System: Qwixit
+# Design System: hotkeygo
 
 ## Overview
 
 **Creative North Star: "The Native Shortcut Workbench"**
 
-Qwixit is a compact macOS instrument shown at working scale. Pale paper carries the marketing narrative, while the product is demonstrated through real light HUDs, result cards, action palettes, Peek cards, and the menu-bar panel—not illustrative substitutes. The system feels native, fast, slightly punk, and trustworthy because every decorative choice also explains state.
+hotkeygo is a compact macOS instrument shown at working scale. Pale paper carries the marketing narrative, while the product is demonstrated through real light HUDs, result cards, action palettes, Peek cards, and the menu-bar panel—not illustrative substitutes. The system feels native, fast, slightly punk, and trustworthy because every decorative choice also explains state.
 
 The landing surface follows six blocks with one job each: hero mechanism, copy-paste detour, Fix/Actions/Peek, privacy, pricing with the menu-bar panel, and final CTA. System sans explains, Unbounded turns short localized statements into landmarks, and JetBrains Mono carries state, shortcuts, metadata, and controls. The anti-reference remains a centered generic AI slogan above a detached dashboard screenshot.
 
-The detour block closes with a connected two-card proof pair: “Fast by workflow” and “Private by design.” The light cyan-traced speed card and dark green-traced privacy card use the same opposing chamfers and registration details as product controls, so “Fast & Secure” reads as product behavior rather than an unsupported slogan.
+The “Skip the round trip” block closes with a connected two-card proof pair: “Fast by workflow” and “Private by design.” The speed comparison states the measured typical action range of 3–5 seconds and animates both lanes in parallel. HotkeyGo completes in 4 seconds, the range midpoint, while the illustrative chat process continues; no numeric chat duration is shown. The light cyan-traced workflow card and dark green-traced privacy card use the same opposing chamfers and registration details as product controls.
 
 **Key Characteristics:**
 
@@ -247,11 +247,11 @@ Hero and detour share one synchronized 4.5-second loop with three discrete 1.5-s
 
 ### Result, Actions, and Peek
 
-These are real light product fragments, each with its own information structure. Result includes corrected text and insertion controls. The canonical Actions Palette is 432×260px, with an exact 50px header and 38px footer around its scrollable action list. Canonical translated Peek is 440px wide and capped at 380px tall while unpinned; it has EN-to-UA/PL/DE/EN language tabs, a scrollable text body, word count, Pin, and Copy controls. Pinned Peek may grow to 560px. Preserve this product chrome instead of normalizing the fragments into generic marketing cards.
+These are real light product fragments, each with its own information structure. Result includes corrected text and insertion controls. The landing Actions mock scales the native 360 pt searchable palette to 432 px: a query and detected-language header, one column of numbered choices with a divider between translation and writing actions, and the native replacement/undo footer. Its height follows the visible choices. The Peek mock shows its current result state at 440 × 380 px: source language, selected target-language control, read-only result text, and the copy/close footer. Keep both shells light, with the app’s 12 pt top-left and bottom-right cuts, adaptive product colors, and restrained panel shadow.
 
 ### Menu-Bar Pricing Panel
 
-Pricing includes the canonical 318px-wide menu panel. Its header identifies `QWIXIT 1.4.2` and Cloud state; the main row shows the lockup, shortcut, and Access; billing shows FREE PLAN and `12/30 ACTIONS`; the footer holds Settings, Onboarding, and Quit. It makes the free limit concrete and replaces a separate native-behavior section.
+Pricing includes a 318 × 190 px preview of the actual menu-bar popup: an info/version and Cloud utility bar; Free usage, shortcut, and Accessibility status; the Preview & Approve toggle in its off state; and Settings and Quit beside a full-width Onboarding action. Keep the native top-left and bottom-right cuts, light rows, gradient-edged dark actions, and restrained shadow.
 
 ## Do's and Don'ts
 
@@ -272,4 +272,4 @@ Pricing includes the canonical 318px-wide menu panel. Its header identifies `QWI
 - **Don't** use bright cyan, magenta, or green for small text on pale surfaces.
 - **Don't** use pills or opposing-corner cuts for the primary CTA.
 - **Don't** invent download availability, proof, compatibility, privacy, or performance claims.
-- **Don't** redraw, trace, typeset, or reinterpret supplied Qwixit logo assets.
+- **Don't** redraw, trace, typeset, or reinterpret supplied hotkeygo logo assets.

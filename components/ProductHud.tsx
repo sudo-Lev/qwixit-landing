@@ -16,7 +16,7 @@ const DEFAULT_LABELS: HudLabels = {
   ok: "OK",
 };
 
-/** The native Tokiri HUD at product size (236×58 including its 6px glow gutter). */
+/** The native hotkeygo HUD at product size (236×58 including its 6px glow gutter). */
 export function ProductHud({
   state,
   className = "",
@@ -35,8 +35,8 @@ export function ProductHud({
       role="status"
       aria-label={
         state === "success"
-          ? `Tokiri: ${labels.ready}, ${labels.textReplaced}`
-          : `Tokiri: ${labels.processing}`
+          ? `hotkeygo: ${labels.ready}, ${labels.textReplaced}`
+          : `hotkeygo: ${labels.processing}`
       }
     >
       <div className="qx-hud__frame">

@@ -1,12 +1,12 @@
-export const agentContextText = `# Tokiri
+export const agentContextText = `# hotkeygo
 
 > A native macOS menu-bar utility that fixes or transforms selected text in place, without making the user leave the app they are working in.
 
 ## Core workflow
 
 1. The user selects text in any macOS application.
-2. The user triggers Tokiri with a keyboard shortcut.
-3. Tokiri processes only that selection.
+2. The user triggers hotkeygo with a keyboard shortcut.
+3. hotkeygo processes only that selection.
 4. The result replaces the selection in place, or appears in a read-only Peek card.
 5. The user keeps working in the same application.
 
@@ -20,15 +20,15 @@ export const agentContextText = `# Tokiri
 
 - The default behavior is the smallest safe edit.
 - Transformations happen only when the user explicitly asks for them.
-- Tokiri stays out of the way: no chat window, prompt-writing, copy-paste loop, or context switch.
+- hotkeygo stays out of the way: no chat window, prompt-writing, copy-paste loop, or context switch.
 - The product is keyboard-first and remains usable with a mouse.
 
 ## Privacy
 
-- Selected text is processed only after the user triggers Tokiri.
-- Selected text and model output are not persisted or logged by Tokiri.
+- Selected text is processed only after the user triggers hotkeygo.
+- Selected text and model output are not persisted or logged by hotkeygo.
 - OpenAI requests use store: false.
-- No Tokiri account is required.
+- No hotkeygo account is required.
 
 ## Plans
 
@@ -38,12 +38,12 @@ export const agentContextText = `# Tokiri
 
 ## Positioning
 
-Tokiri sells a faster, quieter writing workflow rather than access to AI. Its shorthand is: “Select. Shortcut. Done.” The supporting promise is: “Your words. Sharper.”
+hotkeygo sells a faster, quieter writing workflow rather than access to AI. Its shorthand is: “Select. Shortcut. Done.” The supporting promise is: “Your words. Sharper.”
 
 ## Boundaries
 
-- Tokiri is not a general-purpose AI chat.
-- Tokiri does not continuously monitor typing.
+- hotkeygo is not a general-purpose AI chat.
+- hotkeygo does not continuously monitor typing.
 - Peek does not modify source text.
 - Do not claim compatibility, availability, benchmarks, customer counts, testimonials, or security guarantees beyond the facts listed here.
 

@@ -10,12 +10,12 @@ export async function Header() {
 
   return (
     <header className="relative mx-auto flex max-w-[1120px] items-center justify-between gap-4 px-7 py-[22px]">
-      <a href={`/${locale}`} aria-label={t("home")} className="flex items-center gap-3.5">
+      <a href={`/${locale}`} aria-label={t("home")} className="flex items-center gap-6">
         <Image
-          src="/brand/tokiri-lockup-integrated-dark.svg"
+          src="/brand/hotkeygo/wordmark-dark.svg"
           alt=""
-          width={418}
-          height={162}
+          width={698}
+          height={174}
           priority
           unoptimized
           className="block h-9 w-auto flex-none"

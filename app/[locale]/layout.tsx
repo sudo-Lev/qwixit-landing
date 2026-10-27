@@ -51,7 +51,7 @@ export async function generateMetadata({
     },
     openGraph: {
       type: "website",
-      siteName: "Tokiri",
+      siteName: "hotkeygo",
       url: `/${locale}`,
       title: t("title"),
       description: t("description"),
@@ -70,6 +70,16 @@ export async function generateMetadata({
       title: t("title"),
       description: t("description"),
       images: ["/og-image.png"],
+    },
+    icons: {
+      icon: [
+        { url: "/favicon.svg", type: "image/svg+xml" },
+        { url: "/favicon.ico", sizes: "any" },
+        { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
+        { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+        { url: "/favicon-48.png", sizes: "48x48", type: "image/png" },
+      ],
+      apple: "/favicon-180.png",
     },
     manifest: "/site.webmanifest",
   };

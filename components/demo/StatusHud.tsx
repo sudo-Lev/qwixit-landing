@@ -9,7 +9,7 @@ const CARD =
 function Mark({ className }: { className?: string }) {
   return (
     <Image
-      src="/brand/tokiri-appicon.svg"
+      src="/brand/hotkeygo/appicon-dark-1024.svg"
       alt=""
       width={1024}
       height={1024}
@@ -43,10 +43,7 @@ export function ProcessingHud({
           className="absolute top-3.5 bottom-3.5 left-0 w-0.5 rounded-sm bg-violet-glow shadow-[0_0_10px_#8B5CFF]"
         />
         <div className="relative flex size-[42px] flex-none items-center justify-center overflow-hidden rounded-full border border-[rgba(139,92,255,.55)] bg-bg">
-          <Mark className="q-jitter opacity-50" />
-          <span aria-hidden className="q-scan-y absolute inset-0">
-            <span className="q-scan-line absolute inset-x-0 top-1/2 h-px" />
-          </span>
+          <Mark className="opacity-50" />
         </div>
         <div className="flex min-w-0 flex-1 flex-col gap-[9px]">
           <span className="text-[16px] leading-none font-extrabold tracking-[.1em] whitespace-nowrap text-white sm:text-[18px]">

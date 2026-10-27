@@ -34,7 +34,7 @@ export function ComingSoonToast({ title, body }: { title: string; body: string }
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.13, ease: "easeOut" }}
-            className="qwixit-toast"
+            className="hotkeygo-toast"
           >
             <span className="toast-rail" />
             <strong>{title}</strong>

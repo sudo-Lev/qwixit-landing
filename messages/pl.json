@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "Tokiri — Twoje słowa. Precyzyjniej.",
-    "description": "Minimalny asystent do pisania na macOS. Zaznacz tekst, naciśnij skrót i od razu go popraw, przeredaguj lub przetłumacz.",
+    "title": "hotkeygo — Twoje słowa. Precyzyjniej.",
+    "description": "Natywne narzędzie w pasku menu macOS do pracy z zaznaczonym tekstem. Poprawiaj go na miejscu, wybieraj zmianę w Actions lub tłumacz i wyjaśniaj tekst w tylko do odczytu Peek.",
     "ogHeadline": "TWOJE SŁOWA. PRECYZYJNIEJ."
   },
   "header": {
-    "home": "Tokiri — strona główna",
+    "home": "hotkeygo — strona główna",
     "forMacos": "NA MACOS",
     "modes": "TRYBY",
     "download": "POBIERZ",
@@ -23,7 +23,7 @@
   },
   "demo": {
     "live": "DEMO NA ŻYWO",
-    "label": "Animowane demo: Tokiri przeredagowuje tekst na miejscu",
+    "label": "Animowane demo: hotkeygo przeredagowuje tekst na miejscu",
     "tabsLabel": "Przykłady",
     "cases": [
       {
@@ -65,7 +65,7 @@
     ]
   },
   "heroWindow": {
-    "ariaLabel": "Szkic w Notatkach z dwiema literówkami i czterema niezgrabnymi frazami. Zaznacz tekst, naciśnij Option Command X, a Tokiri poprawi go na miejscu.",
+    "ariaLabel": "Szkic w Notatkach z dwiema literówkami i czterema niezgrabnymi frazami. Zaznacz tekst, naciśnij Option Command X, a hotkeygo poprawi go na miejscu.",
     "title": "Notatki — szkic releasu",
     "date": "08 PAŹ",
     "time": "11:42",
@@ -109,17 +109,17 @@
     "h2b": "KAŻDA APKA.",
     "fixTitle": "POPRAW NA MIEJSCU",
     "fixCopy": "Literówki, ton, tłumaczenie. Jedno stuknięcie — powtórz ostatnią akcję. Dwa — paleta. Zamień, wstaw poniżej lub otwórz w karcie.",
-    "fixMockLabel": "Paleta akcji Tokiri: Fix, Translate i Shorten.",
+    "fixMockLabel": "Paleta akcji hotkeygo: Fix, Translate i Shorten.",
     "peekTitle": "PODEJRZYJ, NIE RUSZAJ",
     "peekCopy": "Pływająca karta, która tłumaczy, streszcza lub wyjaśnia zaznaczenie. Twój tekst zostaje dokładnie taki, jaki był.",
-    "peekMockLabel": "Karta Tokiri Peek z tłumaczeniem z ukraińskiego na angielski."
+    "peekMockLabel": "Karta hotkeygo Peek z tłumaczeniem z ukraińskiego na angielski."
   },
   "cta": {
     "privacy": "Tekst jest wysyłany tylko po naciśnięciu skrótu. Żadnego monitorowania klawiszy. Nic nie jest przechowywane.",
     "download": "POBIERZ NA MACOS"
   },
   "footer": {
-    "copyright": "TOKIRI © 2026",
+    "copyright": "hotkeygo © 2026",
     "credit": "DEVELOPED AND DESIGNED BY LEV MISILIUK",
     "requirements": "MACOS 14+ · APPLE SILICON & INTEL"
   },
@@ -132,16 +132,16 @@
     "navHow": "Jak to działa",
     "navPrivacy": "Prywatność",
     "navPricing": "Cennik",
-    "heroStatus": "MACOS · GOTOWE",
+    "heroStatus": "MACOS · WKRÓTCE",
     "heroA": "Twoje słowa.",
     "heroB": "Precyzyjniej.",
     "heroC": "Pisz dalej.",
-    "heroBody": "Poprawiaj, przeredagowuj lub tłumacz tekst w dowolnej aplikacji na Macu bez otwierania kolejnego okna.",
-    "heroNote": "SZYBKO I PRECYZYJNIE · PRYWATNIE Z ZAŁOŻENIA",
+    "heroBody": "Poprawiaj zaznaczony tekst na miejscu, wybieraj konkretne zmiany albo użyj Peek, by go zrozumieć bez naruszania oryginału. Pracuj dalej.",
+    "heroNote": "SZYBKO DZIĘKI PROCESOWI · PRYWATNIE Z ZAŁOŻENIA",
     "race": {
-      "eyebrow": "TEST SZYBKOŚCI · TEN SAM TEKST · TA SAMA POPRAWKA",
-      "title": "Nawet nie blisko.",
-      "lead": "Pod maską te same modele. Jesteśmy błyskawiczni, bo usunęliśmy drogę tam i z powrotem, a nie dlatego, że znaleźliśmy szybszy mózg.",
+      "eyebrow": "OBJAZD PRZEZ KOPIUJ–WKLEJ",
+      "title": "Bez drogi tam i z powrotem.",
+      "lead": "Czat wymaga kopiowania, przełączania aplikacji, promptu i powrotu. Typowa akcja hotkeygo trwa 3–5 sekund, zależnie od wybranej akcji.",
       "chatSteps": {
         "select": "Zaznacz tekst",
         "copy": "Skopiuj (⌘C)",
@@ -153,12 +153,7 @@
         "switchBack": "Wróć",
         "pasteFix": "Wklej i popraw format"
       },
-      "qwixitSteps": {
-        "select": "Zaznacz tekst",
-        "press": "Naciśnij ⌥⌘X",
-        "replaced": "Zamienione w miejscu"
-      },
-      "heckles": {
+      "chatReasons": {
         "switch": "Już gotowe. A ty wciąż szukasz karty.",
         "paste": "Wklejanie. Wow. Ale szybko.",
         "prompt": "„Popraw gramatykę, zachowaj mój ton…” lol.",
@@ -168,35 +163,41 @@
         "pasteFix": "Punktory się rozjechały. Klasyka.",
         "end": "Witaj z powrotem. Trzymaliśmy ci miejsce."
       },
-      "done": "PONIŻEJ 3 SEKUND. BEZ WYCHODZENIA Z APLIKACJI.",
+      "hotkeygoSteps": {
+        "select": "Zaznacz tekst",
+        "press": "Naciśnij ⌥⌘X",
+        "replaced": "Zamienione w miejscu"
+      },
+      "actionTime": "3–5 SEK / AKCJĘ",
+      "done": "ZAZNACZ. SKRÓT. PRACUJ DALEJ.",
       "footer": "To cały proces.",
-      "footerMeta": "8 KROKÓW · 2 PRZEŁĄCZENIA → 1 SKRÓT"
+      "footerMeta": "BEZ OKNA CZATU · BEZ POWROTNEGO KOPIUJ–WKLEJ"
     },
     "fastTitle": "Szybko dzięki procesowi",
     "fastBody": "Bez czatu. Bez promptów. Bez pętli kopiuj–wklej. Zaznacz, skrót, dalej.",
     "privateTitle": "Prywatnie z założenia",
-    "privateBody": "Zaznaczony tekst ani wyniki nie są logowane ani przechowywane. Konto nie jest potrzebne.",
+    "privateBody": "Zaznaczony tekst, prompty i wyniki nie trafiają do pamięci aplikacji hotkeygo ani jej logów. Konto nie jest potrzebne.",
     "workTitleA": "Trzy ruchy.",
     "workTitleB": "Zero okien czatu.",
-    "workBody": "Domyślnie poprawiaj. Zmieniaj tylko na życzenie. Podglądaj bez ruszania źródła.",
+    "workBody": "Fix wprowadza najmniejszą bezpieczną poprawkę. Actions zmienia tekst tylko na twoje życzenie. Peek pomaga go zrozumieć bez zmian w oryginale.",
     "fixBody": "Twój głos, tylko bez literówki. Ostrożna korekta zastępuje zaznaczenie na miejscu.",
-    "actionsBody": "Tłumacz, skracaj lub zmieniaj ton tylko wtedy, gdy świadomie to wybierzesz.",
-    "peekBody": "Przetłumacz lub wyjaśnij zaznaczenie w karcie tylko do odczytu. Tekst zostaje na miejscu.",
+    "actionsBody": "Wybierz tłumaczenie lub zmianę stylu. Actions zastępuje zaznaczenie wynikiem.",
+    "peekBody": "Przetłumacz lub wyjaśnij zaznaczony tekst w karcie tylko do odczytu. Oryginał pozostaje bez zmian.",
     "privacyTitleA": "Twój tekst przechodzi.",
     "privacyTitleB": "Nie zostaje na stałe.",
     "privacyBody": "Konkretne zasady prywatności. Bez magicznych słów i wielkich obietnic.",
-    "transient": "Zaznaczony tekst jest przetwarzany tylko po uruchomieniu Tokiri.",
-    "notLogged": "Zaznaczony tekst i odpowiedź modelu nie są zapisywane ani logowane.",
-    "noAccount": "Pobierz, wykorzystaj darmowe akcje i pracuj dalej.",
+    "transient": "Zaznaczony tekst jest przetwarzany tylko po uruchomieniu hotkeygo.",
+    "notLogged": "hotkeygo nie zapisuje ani nie loguje zaznaczonego tekstu, promptów i wyników modelu.",
+    "noAccount": "Nie potrzebujesz konta ani logowania.",
     "pricingTitleA": "Wypróbuj nawyk.",
     "pricingTitleB": "Potem go zachowaj.",
-    "pricingBody": "Co miesiąc dostajesz trzydzieści akcji. Unlimited czeka, gdy Tokiri wejdzie w pamięć mięśniową.",
+    "pricingBody": "Co miesiąc dostajesz trzydzieści akcji. Unlimited czeka, gdy hotkeygo wejdzie w pamięć mięśniową.",
     "freeActions": "akcji AI na miesiąc kalendarzowy",
     "unlimitedBody": "Bez licznika akcji. Tylko skrót.",
     "finalA": "Zostań w aplikacji,",
     "finalB": "której już używasz.",
     "finalBody": "Zaznacz. Skrót. Gotowe.",
     "footerAgents": "Dla agentów",
-    "footerUtility": "FAST & SECURE · NATYWNE NARZĘDZIE DO PISANIA NA MACOS"
+    "footerUtility": "SZYBKO DZIĘKI PROCESOWI · PRYWATNIE Z ZAŁOŻENIA"
   }
 }
