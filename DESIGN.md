@@ -251,7 +251,7 @@ These are real light product fragments, each with its own information structure.
 
 ### Menu-Bar Pricing Panel
 
-Pricing includes a 318 × 190 px preview of the actual menu-bar popup: an info/version and Cloud utility bar; Free usage, shortcut, and Accessibility status; the Preview & Approve toggle in its off state; and Settings and Quit beside a full-width Onboarding action. Keep the native top-left and bottom-right cuts, light rows, gradient-edged dark actions, and restrained shadow.
+Pricing includes a 360 × 218 px preview of the production menu-bar popover: an About/version and Accessibility utility bar; the Free plan meter, usage ticks, and close shortcut; the Preview & Approve toggle in its off state; and Settings and Quit beside a full-width Onboarding action. Match the app’s light raised rows, compact controls, native chamfers, and restrained shadow.
 
 ## Do's and Don'ts
 

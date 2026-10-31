@@ -1949,12 +1949,15 @@ a {
   line-height: 1.6;
 }
 .menubar-panel {
-  width: min(100%, 318px);
+  width: min(100%, 360px);
+  height: 218px;
   justify-self: start;
 }
 .menubar-panel.product-panel {
+  border: 0;
   border-radius: 0;
-  box-shadow: none;
+  background: var(--canvas);
+  box-shadow: inset 0 0 0 1px var(--border);
   clip-path: polygon(
     16px 0,
     100% 0,
@@ -1965,7 +1968,7 @@ a {
   );
   filter: drop-shadow(0 10px 22px rgba(22, 19, 31, 0.14));
 }
-.menubar-top {
+.menubar-utility {
   height: 26px;
   display: flex;
   align-items: center;
@@ -1976,13 +1979,15 @@ a {
   color: var(--muted);
 }
 .menubar-info {
-  width: 16px;
-  height: 16px;
+  width: 28px;
+  height: 26px;
   flex: 0 0 auto;
+  display: grid;
+  place-items: center;
 }
 .menubar-info svg {
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   fill: none;
   stroke: currentColor;
   stroke-width: 1.7;
@@ -1993,97 +1998,109 @@ a {
 }
 .menubar-version {
   color: var(--ink);
-  font: 800 10px/1 var(--font-mono);
+  font: 700 9px/1 var(--font-mono);
 }
-.menubar-top-spacer,
-.menubar-status-spacer {
+.menubar-utility-spacer {
   flex: 1;
 }
-.menubar-cloud {
+.menubar-access {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  color: var(--cyan-text);
-  font: 800 10px/1 var(--font-mono);
+  gap: 4px;
+  color: var(--green-text);
+  font: 700 7.5px/1 var(--font-mono);
 }
-.menubar-cloud svg {
-  width: 10px;
-  height: 10px;
-  fill: none;
-  stroke: var(--muted);
-  stroke-width: 1.8;
+.menubar-access i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--green);
 }
-.menubar-status-row {
-  height: 42px;
+.menubar-plan-row {
+  position: relative;
+  height: 66px;
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 0 12px;
-  background: var(--surface);
+  gap: 14px;
+  padding: 0 12px 0 20px;
   border-bottom: 1px solid var(--border);
+  background: var(--raised);
 }
 .menubar-face {
-  width: 56px;
-  height: 30px;
+  min-width: 52px;
   flex: 0 0 auto;
-  display: grid;
-  place-items: center;
   color: var(--ink);
-  font: 800 10px/1 var(--font-mono);
-  letter-spacing: -0.04em;
-  text-shadow: -1.5px 0 var(--cyan), 1.5px 0 var(--magenta);
+  font: 900 14px/1 var(--font-mono);
+  letter-spacing: -0.06em;
+  text-shadow: -1.2px 0 var(--cyan), 1.2px 0 var(--magenta);
+  white-space: nowrap;
 }
 .menubar-plan {
   min-width: 0;
+  flex: 1;
   display: grid;
-  gap: 2px;
+  gap: 3px;
+}
+.menubar-plan-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 .menubar-plan strong {
   color: var(--ink);
-  font: 800 12px/1 var(--font-sys);
+  font: 700 15px/1 var(--font-sys);
 }
 .menubar-plan small {
   color: var(--muted);
-  font: 700 10px/1 var(--font-mono);
+  font: 500 11px/1 var(--font-mono);
   white-space: nowrap;
+}
+.menubar-meter {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+.menubar-meter i {
+  width: 9px;
+  height: 9px;
+  background: #e3e2e8;
+  clip-path: polygon(3px 0, 100% 0, calc(100% - 3px) 100%, 0 100%);
+}
+.menubar-meter .is-filled {
+  background: #d17308;
 }
 .menubar-shortcut {
   height: 25px;
   flex: 0 0 auto;
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
   padding: 0 7px;
   border: 1px solid var(--border);
-  border-radius: 7px;
   background: var(--hover);
-  color: var(--ink);
-  font: 700 10px/1 var(--font-mono);
-  letter-spacing: 0.04em;
+  color: var(--muted);
+  clip-path: polygon(5px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px);
+  font: 700 10.5px/1 var(--font-mono);
 }
 .menubar-shortcut b {
   color: var(--violet);
   font: inherit;
 }
-.menubar-access {
-  width: 26px;
-  height: 26px;
-  flex: 0 0 auto;
+.menubar-usage-ticks {
+  position: absolute;
+  right: 12px;
+  bottom: 0;
+  left: 20px;
+  height: 2px;
   display: grid;
-  place-items: center;
-  border: 1px solid color-mix(in srgb, var(--terminal) 42%, var(--border));
-  background: color-mix(in srgb, var(--terminal) 10%, var(--surface));
-  clip-path: polygon(7px 0, 100% 0, 100% calc(100% - 7px), calc(100% - 7px) 100%, 0 100%, 0 7px);
-  color: var(--terminal);
+  grid-template-columns: repeat(30, minmax(0, 1fr));
+  gap: 2px;
 }
-.menubar-access svg {
-  width: 14px;
-  height: 14px;
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: square;
-  stroke-linejoin: miter;
-  stroke-width: 2;
+.menubar-usage-ticks i {
+  background: #e3e2e8;
+}
+.menubar-usage-ticks .is-used {
+  background: #d17308;
 }
 .menubar-review {
   height: 46px;
@@ -2091,23 +2108,19 @@ a {
   align-items: center;
   gap: 9px;
   padding: 0 14px;
-  border-bottom: 1px solid color-mix(in srgb, var(--terminal) 38%, var(--border));
-  background: linear-gradient(
-    90deg,
-    color-mix(in srgb, var(--violet) 7%, var(--surface)),
-    var(--surface)
-  );
+  border-bottom: 1px solid var(--border);
+  background: var(--raised);
 }
 .menubar-review__icon {
-  width: 22px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   flex: 0 0 auto;
   display: grid;
   place-items: center;
   color: var(--violet);
 }
 .menubar-review__icon svg {
-  width: 22px;
+  width: 16px;
   height: 16px;
   fill: none;
   stroke: currentColor;
@@ -2120,57 +2133,54 @@ a {
 .menubar-review__copy {
   min-width: 0;
   display: grid;
-  gap: 3px;
+  gap: 2px;
 }
 .menubar-review__copy strong {
   overflow: hidden;
   color: var(--ink);
-  font: 800 10.5px/1.05 var(--font-sys);
-  letter-spacing: -0.01em;
+  font: 600 10.5px/1.05 var(--font-sys);
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 .menubar-review__copy small {
   overflow: hidden;
   color: var(--muted);
-  font: 700 7px/1 var(--font-mono);
-  letter-spacing: 0.04em;
+  font: 700 8px/1 var(--font-mono);
+  letter-spacing: 0.1px;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 .menubar-toggle {
-  width: 67px;
-  height: 32px;
+  position: relative;
+  width: 66px;
+  height: 28px;
   flex: 0 0 auto;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 7px;
   margin-left: auto;
-  padding: 3px 5px 3px 3px;
+  padding: 0 8px;
   border: 1px solid var(--border);
   background: var(--hover);
-  clip-path: polygon(9px 0, 100% 0, 100% calc(100% - 9px), calc(100% - 9px) 100%, 0 100%, 0 9px);
   color: var(--muted);
-  font: 800 9px/1 var(--font-mono);
+  clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+  font: 900 8.5px/1 var(--font-mono);
 }
 .menubar-toggle i {
-  width: 25px;
-  height: 24px;
-  flex: 0 0 auto;
-  display: grid;
-  place-items: center;
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  width: 23px;
+  height: 22px;
   border: 1px solid var(--border);
   background: var(--surface);
-  clip-path: polygon(7px 0, 100% 0, 100% calc(100% - 7px), calc(100% - 7px) 100%, 0 100%, 0 7px);
-  color: var(--muted);
-  font: 600 13px/1 var(--font-sys);
-  font-style: normal;
+  clip-path: polygon(5px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px);
 }
 .menubar-toggle b {
+  margin-left: auto;
   font: inherit;
 }
 .menubar-actions {
-  height: 76px;
+  height: 80px;
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -2183,12 +2193,12 @@ a {
   gap: 8px;
 }
 .menubar-action {
-  height: 28px;
+  height: 30px;
   min-width: 0;
   display: flex;
   padding: 1.5px;
-  background: linear-gradient(110deg, var(--cyan), var(--violet) 34%, var(--magenta));
-  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  background: linear-gradient(110deg, #00c2e0, var(--violet) 34%, var(--magenta));
+  clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
 }
 .menubar-action__inner {
   position: relative;
@@ -2199,7 +2209,7 @@ a {
   justify-content: center;
   gap: 5px;
   background: var(--ink);
-  clip-path: polygon(8.5px 0, 100% 0, 100% calc(100% - 8.5px), calc(100% - 8.5px) 100%, 0 100%, 0 8.5px);
+  clip-path: polygon(6.5px 0, 100% 0, 100% calc(100% - 6.5px), calc(100% - 6.5px) 100%, 0 100%, 0 6.5px);
   color: #fff;
   font: 800 10px/1 var(--font-sys);
 }
@@ -2214,7 +2224,7 @@ a {
   stroke-width: 1.7;
 }
 .menubar-action--quit {
-  background: linear-gradient(110deg, #ff7653, var(--danger));
+  background: linear-gradient(110deg, #ff8a5c, #f0284a, var(--magenta));
 }
 .menubar-action--quit .menubar-action__inner {
   background: color-mix(in srgb, var(--danger) 5%, var(--surface));
@@ -2223,10 +2233,6 @@ a {
 .menubar-action--wide {
   width: 100%;
 }
-.menubar-action--wide .menubar-action__inner {
-  gap: 6px;
-}
-
 .price-table {
   display: grid;
   grid-template-columns: 1fr 1.12fr;
@@ -2931,7 +2937,7 @@ a {
     max-width: 680px;
   }
   .menubar-panel {
-    width: 318px;
+    width: min(100%, 360px);
   }
   .agent-page {
     grid-template-columns: 140px minmax(0, 1fr);
@@ -3100,7 +3106,7 @@ a {
     gap: 50px;
   }
   .menubar-panel {
-    width: min(100%, 318px);
+    width: min(100%, 360px);
   }
   .price-table {
     grid-template-columns: 1fr;

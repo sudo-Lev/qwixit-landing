@@ -382,9 +382,9 @@ function MenuBarPanel() {
     <div
       className="menubar-panel product-panel"
       role="img"
-      aria-label="hotkeygo menu bar popup, version 1.0, Cloud, Free plan with 20 of 30 actions used, shortcut Option Command X, Accessibility access granted, Preview and Approve off, Settings, Quit, and Onboarding"
+      aria-label="hotkeygo menu bar popover with About, version 1.0, Accessibility access granted, Free plan and 20 of 30 actions used, close shortcut Option Command X, Preview & Approve off, Settings, Quit, and Onboarding"
     >
-      <div className="menubar-top">
+      <div className="menubar-utility">
         <span className="menubar-info" aria-hidden>
           <svg viewBox="0 0 16 16" focusable="false">
             <circle cx="8" cy="8" r="6.25" />
@@ -393,29 +393,33 @@ function MenuBarPanel() {
           </svg>
         </span>
         <span className="menubar-version">v1.0</span>
-        <span className="menubar-top-spacer" />
-        <span className="menubar-cloud">
-          <span>Cloud</span>
-          <svg viewBox="0 0 12 12" focusable="false" aria-hidden>
-            <path d="m2 4 4 4 4-4" />
-          </svg>
+        <span className="menubar-utility-spacer" />
+        <span className="menubar-access" aria-hidden>
+          <span>Access</span>
+          <i />
         </span>
       </div>
-      <div className="menubar-status-row">
+      <div className="menubar-plan-row">
         <span className="menubar-face" aria-hidden>[ ^_^ ]</span>
-        <span className="menubar-plan">
-          <strong>Free</strong>
+        <div className="menubar-plan">
+          <span className="menubar-plan-heading">
+            <strong>Free</strong>
+            <span className="menubar-meter" aria-hidden>
+              <i className="is-filled" />
+              <i className="is-filled" />
+              <i />
+            </span>
+          </span>
           <small>20 / 30 used</small>
-        </span>
-        <span className="menubar-status-spacer" />
-        <span className="menubar-shortcut">
+        </div>
+        <span className="menubar-shortcut" aria-hidden>
           <span>⌥⌘</span>
           <b>X</b>
         </span>
-        <span className="menubar-access" aria-hidden>
-          <svg viewBox="0 0 16 16" focusable="false">
-            <path d="m3.5 8.5 3 3 6-7" />
-          </svg>
+        <span className="menubar-usage-ticks" aria-hidden>
+          {Array.from({ length: 30 }, (_, index) => (
+            <i className={index < 20 ? "is-used" : ""} key={index} />
+          ))}
         </span>
       </div>
       <div className="menubar-review">
@@ -430,7 +434,7 @@ function MenuBarPanel() {
           <small>Nothing changes until you approve</small>
         </span>
         <span className="menubar-toggle" aria-hidden>
-          <i>−</i>
+          <i />
           <b>OFF</b>
         </span>
       </div>
