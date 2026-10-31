@@ -155,77 +155,145 @@ function FixDemo() {
   );
 }
 
-function ActionPalette() {
+const workflowMockCopy = {
+  en: {
+    search: "Search…",
+    source: "English · 18 words",
+    actionFooter: "Replaces selection · ⌘Z undo",
+    peekSearch: "Search…",
+    peekSource: "Ukrainian · 18 words",
+    peekFooter: "↵ copy · ⇥ / 1–7 switch · Esc close",
+    actionAria: "hotkeygo Actions palette with numbered language chips and one Casual rewrite choice. Choosing an action replaces the selection.",
+    peekAria: "hotkeygo Peek with searchable language chips above an English translation of Ukrainian text. The source remains unchanged.",
+  },
+  uk: {
+    search: "Пошук…",
+    source: "Англійська · 18 слів",
+    actionFooter: "Замінює виділення · ⌘Z скасувати",
+    peekSearch: "Пошук…",
+    peekSource: "Українська · 18 слів",
+    peekFooter: "↵ копіювати · ⇥ / 1–7 змінити · Esc закрити",
+    actionAria: "Палітра Actions hotkeygo з нумерованими мовними чипами й одним стилем Casual. Вибір дії замінює виділений текст.",
+    peekAria: "Peek hotkeygo з пошуком і мовними чипами над англійським перекладом українського тексту. Оригінал не змінюється.",
+  },
+  pl: {
+    search: "Szukaj…",
+    source: "Angielski · 18 słów",
+    actionFooter: "Zastępuje zaznaczenie · ⌘Z cofnij",
+    peekSearch: "Szukaj…",
+    peekSource: "Ukraiński · 18 słów",
+    peekFooter: "↵ kopiuj · ⇥ / 1–7 zmień · Esc zamknij",
+    actionAria: "Paleta Actions hotkeygo z ponumerowanymi językami i jednym stylem Casual. Wybór działania zastępuje zaznaczony tekst.",
+    peekAria: "Peek hotkeygo z wyszukiwaniem i językami nad angielskim tłumaczeniem ukraińskiego tekstu. Oryginał pozostaje bez zmian.",
+  },
+} satisfies Record<Locale, {
+  search: string;
+  source: string;
+  actionFooter: string;
+  peekSearch: string;
+  peekSource: string;
+  peekFooter: string;
+  actionAria: string;
+  peekAria: string;
+}>;
+
+function ActionPalette({ locale }: { locale: Locale }) {
+  const labels = workflowMockCopy[locale];
+  const languages = locale === "pl"
+    ? ["Polski", "Українська", "Français", "Русский", "Español", "Português (Brasil)"]
+    : ["Українська", "Polski", "Français", "Русский", "Español", "Português (Brasil)"];
+
   return (
     <div
       className="action-palette product-panel"
       role="img"
-      aria-label="hotkeygo Actions palette with searchable translation and writing choices. Choosing an action replaces the selection."
+      aria-label={labels.actionAria}
     >
       <div className="palette-head">
         <i className="palette-caret" aria-hidden />
-        <span className="palette-search">Search…</span>
-        <small>ENGLISH · 18 WORDS</small>
+        <span className="palette-search">{labels.search}</span>
+        <small>{labels.source}</small>
       </div>
       <div className="palette-list">
-        <div className="palette-row is-active">
-          <div className="palette-row__inner">
-            <b>Українська</b>
-            <span>↵</span>
-          </div>
-        </div>
-        <div className="palette-row">
-          <b>Polski</b>
-          <span>2</span>
+        <div className="palette-chip-group">
+          {languages.map((language, index) => (
+            <span
+              className={`mock-chip ${index === 0 ? "is-active" : ""}`}
+              key={language}
+            >
+              <span className="mock-chip__inner">
+                <b>{language}</b>
+                <span>{index === 0 ? "↵" : index + 1}</span>
+              </span>
+            </span>
+          ))}
         </div>
         <div className="palette-separator" />
-        <div className="palette-row">
-          <b>Slack style</b>
-          <span>3</span>
-        </div>
-        <div className="palette-row">
-          <b>Make formal</b>
-          <span>4</span>
+        <div className="palette-chip-group">
+          <span className="mock-chip mock-chip--persona">
+            <span className="mock-chip__inner">
+              <span className="mock-chip__face" aria-hidden>[ ^‿^ ]</span>
+              <b>Casual</b>
+              <span>7</span>
+            </span>
+          </span>
         </div>
       </div>
       <div className="palette-foot">
-        <span>Replaces selection · ⌘Z undo</span>
+        <span>{labels.actionFooter}</span>
       </div>
     </div>
   );
 }
 
-function PeekCard() {
+function PeekCard({ locale }: { locale: Locale }) {
+  const labels = workflowMockCopy[locale];
+  const languages = ["English", "Українська", "Polski", "Français", "Русский", "Español", "Português (Brasil)"];
+
   return (
     <div
       className="peek-card product-panel"
       role="img"
-      aria-label="hotkeygo Peek showing an English translation of Ukrainian text. The source remains unchanged."
+      aria-label={labels.peekAria}
     >
       <div className="peek-head">
-        <span className="peek-source">Ukrainian →</span>
-        <span className="peek-target">
-          <span>English</span>
-        </span>
+        <strong className="peek-title">Peek</strong>
+        <i className="peek-caret" aria-hidden />
+        <span className="peek-search">{labels.peekSearch}</span>
+        <small>{labels.peekSource}</small>
         <span className="panel-control" aria-hidden>
           <svg viewBox="0 0 12 12" focusable="false">
             <path d="M3.5 3.5 8.5 8.5M8.5 3.5 3.5 8.5" />
           </svg>
         </span>
       </div>
+      <div className="peek-language-group">
+        {languages.map((language, index) => (
+          <span
+            className={`mock-chip ${index === 0 ? "is-active" : ""}`}
+            key={language}
+          >
+            <span className="mock-chip__inner">
+              <b>{language}</b>
+              <span>{index === 0 ? "↵" : index + 1}</span>
+            </span>
+          </span>
+        ))}
+      </div>
+      <div className="peek-divider" />
       <div className="peek-body">
         <p>
           Hi everyone — the beta build is almost ready. Please test it and tell me what’s broken.
         </p>
       </div>
       <div className="peek-foot">
-        <span>↵ copy · Esc close</span>
+        <span>{labels.peekFooter}</span>
       </div>
     </div>
   );
 }
 
-function Workflows({ copy }: { copy: LandingCopy }) {
+function Workflows({ copy, locale }: { copy: LandingCopy; locale: Locale }) {
   return (
     <section className="section workflows" id="workflows">
       <div className="section-heading">
@@ -253,7 +321,7 @@ function Workflows({ copy }: { copy: LandingCopy }) {
             <p>{copy.actionsBody}</p>
             <Status tone="transform">INTENTIONAL TRANSFORM</Status>
           </div>
-          <ActionPalette />
+          <ActionPalette locale={locale} />
         </article>
         <article className="workflow-row">
           <div className="workflow-copy">
@@ -262,7 +330,7 @@ function Workflows({ copy }: { copy: LandingCopy }) {
             <p>{copy.peekBody}</p>
             <Status tone="unchanged">SOURCE UNCHANGED</Status>
           </div>
-          <PeekCard />
+          <PeekCard locale={locale} />
         </article>
       </div>
     </section>
@@ -493,7 +561,7 @@ export function LandingPage({
           <HeroWindow copy={heroWindow} />
         </section>
         <RoundTrip copy={copy} />
-        <Workflows copy={copy} />
+        <Workflows copy={copy} locale={locale} />
         <Trust copy={copy} />
         <Pricing copy={copy} />
         <section className="final-section">

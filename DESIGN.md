@@ -247,7 +247,7 @@ Hero and detour share one synchronized 4.5-second loop with three discrete 1.5-s
 
 ### Result, Actions, and Peek
 
-These are real light product fragments, each with its own information structure. Result includes corrected text and insertion controls. The landing Actions mock scales the native 360 pt searchable palette to 432 px: a query and detected-language header, one column of numbered choices with a divider between translation and writing actions, and the native replacement/undo footer. Its height follows the visible choices. The Peek mock shows its current result state at 440 × 380 px: source language, selected target-language control, read-only result text, and the copy/close footer. Keep both shells light, with the app’s 12 pt top-left and bottom-right cuts, adaptive product colors, and restrained panel shadow.
+These are real light product fragments, each with its own information structure. Result includes corrected text and insertion controls. The landing Actions mock scales the native 320 pt searchable palette to 384 px: a query and detected-language header, wrapped numbered language chips, one Casual persona chip after a divider, and the replacement/undo footer. Its height follows the visible chip rows. The Peek mock scales the native 320 pt panel to 384 px and shows a searchable header, wrapped target-language chips above the read-only result, and the copy/switch/close footer. Keep both shells light, with the app’s 12 pt top-left and bottom-right cuts, adaptive product colors, and restrained panel shadow.
 
 ### Menu-Bar Pricing Panel
 
