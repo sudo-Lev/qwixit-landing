@@ -38,7 +38,7 @@ export const agentContextText = `# hotkeygo
 
 ## Positioning
 
-hotkeygo sells a faster, quieter writing workflow rather than access to AI. Its shorthand is: “Select. Shortcut. Done.” The supporting promise is: “Your words. Sharper.”
+hotkeygo sells a faster, quieter writing workflow rather than access to AI. Its shorthand is: “One shortcut. Back to work.” Select text, trigger a hotkey, and keep working in the same app.
 
 ## Boundaries
 
@@ -52,5 +52,5 @@ hotkeygo sells a faster, quieter writing workflow rather than access to AI. Its 
 - Website: https://qwixit.app/
 - Agent-readable context: https://qwixit.app/llms.txt
 
-Last updated: 2026-10-09
+Last updated: 2026-11-04
 `;

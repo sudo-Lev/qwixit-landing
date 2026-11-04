@@ -14,7 +14,6 @@ type CopyKey =
   | "heroStatus"
   | "heroA"
   | "heroB"
-  | "heroC"
   | "heroBody"
   | "heroNote"
   | "fastTitle"
@@ -544,8 +543,6 @@ export function LandingPage({
               {copy.heroA}
               <br />
               <span>{copy.heroB}</span>
-              <br />
-              {copy.heroC}
             </h1>
             <p>{copy.heroBody}</p>
             <div className="hero-promises" aria-label="Fast and private by design">

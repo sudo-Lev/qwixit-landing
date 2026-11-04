@@ -348,8 +348,9 @@ a {
 }
 .hero-copy h1 {
   margin: 26px 0 24px;
-  font: 900 clamp(48px, 5.5vw, 76px)/0.94 var(--font-display);
+  font: 900 clamp(42px, 4.8vw, 64px)/0.98 var(--font-display);
   letter-spacing: -0.035em;
+  text-wrap: balance;
 }
 .hero-copy h1 span {
   color: var(--ink);

@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "hotkeygo — Twoje słowa. Precyzyjniej.",
+    "title": "hotkeygo — Jeden skrót klawiszowy. Wracasz do pracy.",
     "description": "Natywne narzędzie w pasku menu macOS do pracy z zaznaczonym tekstem. Poprawiaj go na miejscu, wybieraj zmianę w Actions lub tłumacz i wyjaśniaj tekst w tylko do odczytu Peek.",
-    "ogHeadline": "TWOJE SŁOWA. PRECYZYJNIEJ."
+    "ogHeadline": "JEDEN SKRÓT KLAWISZOWY. WRACASZ DO PRACY."
   },
   "header": {
     "home": "hotkeygo — strona główna",
@@ -13,9 +13,9 @@
   },
   "hero": {
     "eyebrow": "AI W BIEGU",
-    "h1a": "TWOJE SŁOWA.",
-    "h1b": "PRECYZYJNIEJ.",
-    "subLead": "Precyzyjniejsze pisanie, bez zbędnej drogi.",
+    "h1a": "JEDEN SKRÓT KLAWISZOWY.",
+    "h1b": "WRACASZ DO PRACY.",
+    "subLead": "Poprawiaj tekst bez opuszczania aplikacji.",
     "subBody": "Zaznacz tekst w dowolnej aplikacji na macOS, naciśnij skrót i od razu go popraw, przeredaguj lub przetłumacz.",
     "subAction": "Zaznacz. Skrót. Gotowe.",
     "ctaDownload": "POBIERZ ZA DARMO",
@@ -133,9 +133,8 @@
     "navPrivacy": "Prywatność",
     "navPricing": "Cennik",
     "heroStatus": "MACOS · WKRÓTCE",
-    "heroA": "Twoje słowa.",
-    "heroB": "Precyzyjniej.",
-    "heroC": "Pisz dalej.",
+    "heroA": "Jeden skrót klawiszowy.",
+    "heroB": "Wracasz do pracy.",
     "heroBody": "Poprawiaj zaznaczony tekst na miejscu, wybieraj konkretne zmiany albo użyj Peek, by go zrozumieć bez naruszania oryginału. Pracuj dalej.",
     "heroNote": "SZYBKO DZIĘKI PROCESOWI · PRYWATNIE Z ZAŁOŻENIA",
     "race": {

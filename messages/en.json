@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "hotkeygo — Your words. Sharper.",
+    "title": "hotkeygo — One shortcut. Back to work.",
     "description": "A native macOS menu-bar utility for selected text. Fix it in place, transform it with Actions, or understand it with read-only Peek.",
-    "ogHeadline": "YOUR WORDS. SHARPER."
+    "ogHeadline": "ONE SHORTCUT. BACK TO WORK."
   },
   "header": {
     "home": "hotkeygo home",
@@ -13,9 +13,9 @@
   },
   "hero": {
     "eyebrow": "AI ON THE GO",
-    "h1a": "YOUR WORDS.",
-    "h1b": "SHARPER.",
-    "subLead": "Sharper writing, without the detour.",
+    "h1a": "ONE SHORTCUT.",
+    "h1b": "BACK TO WORK.",
+    "subLead": "Your text, fixed without leaving the app.",
     "subBody": "Select text anywhere on macOS, press one shortcut, and fix, rewrite, or translate it instantly.",
     "subAction": "Select. Shortcut. Done.",
     "ctaDownload": "DOWNLOAD FREE",
@@ -133,9 +133,8 @@
     "navPrivacy": "Privacy",
     "navPricing": "Pricing",
     "heroStatus": "MACOS · COMING SOON",
-    "heroA": "YOUR WORDS.",
-    "heroB": "SHARPER.",
-    "heroC": "ANYWHERE.",
+    "heroA": "One shortcut.",
+    "heroB": "Back to work.",
     "heroBody": "Fix selected text in place, choose an intentional transformation, or use read-only Peek to understand it. Then keep working.",
     "heroNote": "FAST BY WORKFLOW · PRIVATE BY DESIGN",
     "race": {
