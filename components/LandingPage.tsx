@@ -162,7 +162,7 @@ const workflowMockCopy = {
     actionFooter: "Replaces selection · ⌘Z undo",
     peekSearch: "Search…",
     peekSource: "Ukrainian · 18 words",
-    peekFooter: "↵ copy · ⇥ / 1–7 switch · Esc close",
+    peekFooter: "↵ copy · ⇥ / 1–8 switch · Esc close",
     actionAria: "hotkeygo Actions palette with numbered language chips and one Casual rewrite choice. Choosing an action replaces the selection.",
     peekAria: "hotkeygo Peek with searchable language chips above an English translation of Ukrainian text. The source remains unchanged.",
   },
@@ -172,7 +172,7 @@ const workflowMockCopy = {
     actionFooter: "Замінює виділення · ⌘Z скасувати",
     peekSearch: "Пошук…",
     peekSource: "Українська · 18 слів",
-    peekFooter: "↵ копіювати · ⇥ / 1–7 змінити · Esc закрити",
+    peekFooter: "↵ копіювати · ⇥ / 1–8 змінити · Esc закрити",
     actionAria: "Палітра Actions hotkeygo з нумерованими мовними чипами й одним стилем Casual. Вибір дії замінює виділений текст.",
     peekAria: "Peek hotkeygo з пошуком і мовними чипами над англійським перекладом українського тексту. Оригінал не змінюється.",
   },
@@ -182,7 +182,7 @@ const workflowMockCopy = {
     actionFooter: "Zastępuje zaznaczenie · ⌘Z cofnij",
     peekSearch: "Szukaj…",
     peekSource: "Ukraiński · 18 słów",
-    peekFooter: "↵ kopiuj · ⇥ / 1–7 zmień · Esc zamknij",
+    peekFooter: "↵ kopiuj · ⇥ / 1–8 zmień · Esc zamknij",
     actionAria: "Paleta Actions hotkeygo z ponumerowanymi językami i jednym stylem Casual. Wybór działania zastępuje zaznaczony tekst.",
     peekAria: "Peek hotkeygo z wyszukiwaniem i językami nad angielskim tłumaczeniem ukraińskiego tekstu. Oryginał pozostaje bez zmian.",
   },
@@ -200,8 +200,8 @@ const workflowMockCopy = {
 function ActionPalette({ locale }: { locale: Locale }) {
   const labels = workflowMockCopy[locale];
   const languages = locale === "pl"
-    ? ["Polski", "Українська", "Français", "Русский", "Español", "Português (Brasil)"]
-    : ["Українська", "Polski", "Français", "Русский", "Español", "Português (Brasil)"];
+    ? ["Polski", "Українська", "Français", "日本語", "한국어", "Español", "Português (Brasil)"]
+    : ["Українська", "Polski", "Français", "日本語", "한국어", "Español", "Português (Brasil)"];
 
   return (
     <div
@@ -234,7 +234,7 @@ function ActionPalette({ locale }: { locale: Locale }) {
             <span className="mock-chip__inner">
               <span className="mock-chip__face" aria-hidden>[ ^‿^ ]</span>
               <b>Casual</b>
-              <span>7</span>
+              <span>8</span>
             </span>
           </span>
         </div>
@@ -248,7 +248,7 @@ function ActionPalette({ locale }: { locale: Locale }) {
 
 function PeekCard({ locale }: { locale: Locale }) {
   const labels = workflowMockCopy[locale];
-  const languages = ["English", "Українська", "Polski", "Français", "Русский", "Español", "Português (Brasil)"];
+  const languages = ["English", "Українська", "Polski", "Français", "日本語", "한국어", "Español", "Português (Brasil)"];
 
   return (
     <div
