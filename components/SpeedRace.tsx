@@ -240,7 +240,7 @@ export function SpeedRace({ copy }: { copy: RaceCopy }) {
             <div className="sr-col sr-col--hotkeygo" data-hotkeygo={hotkeygoState}>
               <div className="sr-hotkeygo-head">
                 <Image
-                  src="/brand/hotkeygo/wordmark-light.svg"
+                  src="/brand/hotkeygo/hotkeygo-logo-for-light-bg.svg"
                   alt="hotkeygo"
                   width={698}
                   height={174}

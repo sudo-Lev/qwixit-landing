@@ -517,7 +517,7 @@ export function LandingPage({
       <header className="site-header">
         <a href={`/${locale}`} aria-label="hotkeygo home">
           <Image
-            src="/brand/hotkeygo/wordmark-light.svg"
+            src="/brand/hotkeygo/hotkeygo-logo-for-light-bg.svg"
             alt="hotkeygo"
             width={698}
             height={174}
@@ -567,7 +567,7 @@ export function LandingPage({
         <Pricing copy={copy} />
         <section className="final-section">
           <Image
-            src="/brand/hotkeygo/wordmark-dark.svg"
+            src="/brand/hotkeygo/hotkeygo-logo-for-dark-bg.svg"
             alt="hotkeygo"
             width={698}
             height={174}
@@ -588,7 +588,7 @@ export function LandingPage({
       </main>
       <footer className="site-footer">
         <Image
-          src="/brand/hotkeygo/wordmark-light.svg"
+          src="/brand/hotkeygo/hotkeygo-logo-for-light-bg.svg"
           alt="hotkeygo"
           width={698}
           height={174}

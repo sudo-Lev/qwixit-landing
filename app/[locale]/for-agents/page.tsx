@@ -89,7 +89,7 @@ export default async function ForAgentsPage({ params }: { params: Promise<{ loca
       <header className="agent-header">
         <a href={`/${locale}`} aria-label={label.back}>
           <Image
-            src="/brand/hotkeygo/wordmark-light.svg"
+            src="/brand/hotkeygo/hotkeygo-logo-for-light-bg.svg"
             alt="hotkeygo"
             width={698}
             height={174}

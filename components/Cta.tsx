@@ -14,7 +14,7 @@ export async function Cta() {
       className="relative mx-auto flex max-w-[1120px] flex-col items-center gap-[26px] px-7 pt-[120px] pb-10 text-center"
     >
       <Image
-        src="/brand/hotkeygo/wordmark-dark.svg"
+        src="/brand/hotkeygo/hotkeygo-logo-for-dark-bg.svg"
         alt=""
         width={698}
         height={174}

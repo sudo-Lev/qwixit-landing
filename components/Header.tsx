@@ -12,7 +12,7 @@ export async function Header() {
     <header className="relative mx-auto flex max-w-[1120px] items-center justify-between gap-4 px-7 py-[22px]">
       <a href={`/${locale}`} aria-label={t("home")} className="flex items-center gap-6">
         <Image
-          src="/brand/hotkeygo/wordmark-dark.svg"
+          src="/brand/hotkeygo/hotkeygo-logo-for-dark-bg.svg"
           alt=""
           width={698}
           height={174}
