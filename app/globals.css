@@ -3341,6 +3341,10 @@ a {
   animation: coach-fade 260ms ease;
 }
 .coach[data-layout="mobile"] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 80;
   width: min(258px, calc(100vw - 30px));
   transition: transform 620ms cubic-bezier(0.22, 1, 0.36, 1), opacity 220ms ease;
 }
@@ -3376,6 +3380,9 @@ a {
   .price-table { margin-bottom: 112px; }
   .final-face { display: inline-block; margin-bottom: 112px; }
 
+}
+.coach[data-travel="0"] {
+  transition: opacity 220ms ease;
 }
 .is-coached {
   outline: 1.5px solid rgba(0, 171, 199, 0.9) !important;

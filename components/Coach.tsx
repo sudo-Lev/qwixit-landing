@@ -175,6 +175,7 @@ export function Coach({ copy }: { copy: CoachCopy }) {
   const [faceIndex, setFaceIndex] = useState(0);
   const [reduced, setReduced] = useState(false);
   const [narrow, setNarrow] = useState(false);
+  const [motionLayout, setMotionLayout] = useState<boolean | null>(null);
 
   const beat = useMemo(() => (stop ? beatFor(stop, heroPolished, copy) : null), [stop, heroPolished, copy]);
 
@@ -194,13 +195,27 @@ export function Coach({ copy }: { copy: CoachCopy }) {
   }, []);
 
   useEffect(() => {
+    // A breakpoint changes coordinate systems (page vs viewport). Settle the new
+    // position before enabling travel, so it cannot fly in from an offscreen point.
+    let settledFrame = 0;
+    const frame = requestAnimationFrame(() => {
+      settledFrame = requestAnimationFrame(() => setMotionLayout(narrow));
+    });
+    return () => {
+      cancelAnimationFrame(frame);
+      cancelAnimationFrame(settledFrame);
+    };
+  }, [narrow]);
+
+  useEffect(() => {
     let frame = 0;
     const update = () => {
       frame = 0;
       const viewport = document.documentElement.clientWidth;
       let next: Stop | null;
       if (viewport < NARROW) {
-        const probe = window.innerHeight * 0.45;
+        const distanceToEnd = document.documentElement.scrollHeight - window.scrollY - window.innerHeight;
+        const probe = window.innerHeight * (distanceToEnd < 48 ? 0.8 : 0.45);
         const height = bubbleRef.current?.offsetHeight ?? 76;
         const candidates = MOBILE_ANCHORS.flatMap((anchor) => {
           const element = document.querySelector<HTMLElement>(anchor.selector);
@@ -268,9 +283,17 @@ export function Coach({ copy }: { copy: CoachCopy }) {
       if (!landing || !anchor) return;
       const rect = anchor.getBoundingClientRect();
       const x = landing.right ? rect.right - bubble.offsetWidth : rect.left;
+      const visualViewport = window.visualViewport;
+      const viewTop = visualViewport?.offsetTop ?? 0;
+      const viewHeight = visualViewport?.height ?? window.innerHeight;
+      // Keep both ends of every flight on screen, even between distant anchors.
+      // Extra height allows a longer message to arrive without clipping mid-flight.
+      const flightHeight = Math.max(bubble.offsetHeight, 112);
+      const minY = viewTop + EDGE;
+      const maxY = Math.max(minY, viewTop + viewHeight - flightHeight - 32);
       next = {
         x: Math.max(EDGE, Math.min(x, viewport - bubble.offsetWidth - EDGE)),
-        y: window.scrollY + mobileAnchorY(landing, rect, bubble.offsetHeight),
+        y: Math.max(minY, Math.min(mobileAnchorY(landing, rect, bubble.offsetHeight), maxY)),
       };
     } else {
       next = place(
@@ -280,10 +303,11 @@ export function Coach({ copy }: { copy: CoachCopy }) {
         viewport,
       );
     }
+    const y = viewport < NARROW ? next.y : next.y - shellTop;
     setPosition((current) =>
-      current && Math.abs(current.x - next.x) < 1 && Math.abs(current.y - (next.y - shellTop)) < 1
+      current && Math.abs(current.x - next.x) < 1 && Math.abs(current.y - y) < 1
         ? current
-        : { x: next.x, y: next.y - shellTop },
+        : { x: next.x, y },
     );
   }, [stop, beat, mobileAnchor]);
 
@@ -292,12 +316,28 @@ export function Coach({ copy }: { copy: CoachCopy }) {
   }, [reposition, beat?.message, narrow]);
 
   useEffect(() => {
+    let frame = 0;
+    const follow = () => {
+      if (window.innerWidth >= NARROW || frame) return;
+      frame = requestAnimationFrame(() => {
+        frame = 0;
+        reposition();
+      });
+    };
     const observer = new ResizeObserver(() => reposition());
     observer.observe(document.body);
+    if (bubbleRef.current) observer.observe(bubbleRef.current);
+    window.addEventListener("scroll", follow, { passive: true });
     window.addEventListener("resize", reposition);
+    window.visualViewport?.addEventListener("resize", reposition);
+    window.visualViewport?.addEventListener("scroll", follow);
     return () => {
+      if (frame) cancelAnimationFrame(frame);
       observer.disconnect();
+      window.removeEventListener("scroll", follow);
       window.removeEventListener("resize", reposition);
+      window.visualViewport?.removeEventListener("resize", reposition);
+      window.visualViewport?.removeEventListener("scroll", follow);
     };
   }, [reposition]);
 
@@ -343,6 +383,7 @@ export function Coach({ copy }: { copy: CoachCopy }) {
       data-visible={beat && position ? "1" : "0"}
       data-flying={flying ? "1" : "0"}
       data-layout={narrow ? "mobile" : "desktop"}
+      data-travel={motionLayout === narrow ? "1" : "0"}
       data-stop={stop ?? undefined}
       data-anchor={narrow ? mobileAnchor ?? undefined : undefined}
       style={position ? { transform: `translate3d(${position.x}px, ${position.y}px, 0)` } : undefined}
