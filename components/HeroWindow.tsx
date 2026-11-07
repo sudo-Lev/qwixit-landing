@@ -164,6 +164,7 @@ export function HeroWindow({ copy }: { copy: HeroWindowCopy }) {
     <div
       ref={rootRef}
       className="qx-window-wrap"
+      data-coach="hero"
       data-phase={phase}
       role="img"
       aria-label={copy.ariaLabel}

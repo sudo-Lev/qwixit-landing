@@ -201,7 +201,7 @@ export function SpeedRace({ copy }: { copy: RaceCopy }) {
   const heckle = heckleAt(now);
 
   return (
-    <div ref={rootRef} className="sr-wrap">
+    <div ref={rootRef} className="sr-wrap" data-coach="race">
       <div className="sr-frame">
         <div className="sr-panel">
           <header className="sr-head">

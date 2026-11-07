@@ -198,5 +198,18 @@
     "finalBody": "Select. Shortcut. Done.",
     "footerAgents": "For agents",
     "footerUtility": "FAST BY WORKFLOW · PRIVATE BY DESIGN"
+  },
+  "coach": {
+    "hero": {
+      "draft": "Typos mid-flow? Select, hit ⌥⌘X, keep typing.",
+      "polished": "Whoa. Fixed right where you wrote it. Your voice stays."
+    },
+    "race": "Copy, switch, prompt, paste back… while you're still finding the tab, I'm done.",
+    "fix": "Only what's wrong gets fixed. Your slang and tone stay yours.",
+    "actions": "Want it in Polish or more casual? ⌥⌘A, pick one, it replaces the selection.",
+    "peek": "Can't read it? ⌥⌘Z translates in a card. The original stays untouched.",
+    "privacy": "Your text passes through. Not stored, not logged. Not even by me.",
+    "pricing": "30 free actions a month. Nervous? Turn on Preview & Approve first.",
+    "final": "See you in your menu bar soon."
   }
 }

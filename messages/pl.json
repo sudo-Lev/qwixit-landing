@@ -198,5 +198,18 @@
     "finalBody": "Zaznacz. Skrót. Gotowe.",
     "footerAgents": "Dla agentów",
     "footerUtility": "SZYBKO DZIĘKI PROCESOWI · PRYWATNIE Z ZAŁOŻENIA"
+  },
+  "coach": {
+    "hero": {
+      "draft": "Literówki w trakcie pisania? Zaznacz, ⌥⌘X, pisz dalej.",
+      "polished": "Wow. Poprawione dokładnie tam, gdzie piszesz. Twój styl zostaje."
+    },
+    "race": "Kopiuj, przełącz, prompt, wklej z powrotem… Zanim znajdziesz kartę, ja już skończyłem.",
+    "fix": "Poprawiam tylko błędy. Twój slang i ton zostają twoje.",
+    "actions": "Po ukraińsku albo luźniej? ⌥⌘A, wybierz akcję, a zastąpi zaznaczenie.",
+    "peek": "Nie rozumiesz? ⌥⌘Z przetłumaczy w karcie. Oryginał zostaje nietknięty.",
+    "privacy": "Tekst tylko przechodzi. Nie jest zapisywany ani logowany. Nawet przeze mnie.",
+    "pricing": "30 darmowych akcji miesięcznie. Stresujesz się? Najpierw włącz Preview & Approve.",
+    "final": "Do zobaczenia wkrótce na pasku menu."
   }
 }

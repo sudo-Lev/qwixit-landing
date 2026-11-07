@@ -5,6 +5,7 @@ import { TapLink } from "./TapLink";
 import { HeroWindow, type HeroWindowCopy } from "./HeroWindow";
 import { ProductHud } from "./ProductHud";
 import { SpeedRace, type RaceCopy } from "./SpeedRace";
+import { Coach, type CoachCopy } from "./Coach";
 
 type CopyKey =
   | "cta"
@@ -125,6 +126,7 @@ function FixDemo() {
   return (
     <div
       className="fix-demo product-panel"
+      data-coach="fix"
       role="img"
       aria-label="A Slack message with four typos corrected in place by hotkeygo"
     >
@@ -205,6 +207,7 @@ function ActionPalette({ locale }: { locale: Locale }) {
   return (
     <div
       className="action-palette product-panel"
+      data-coach="actions"
       role="img"
       aria-label={labels.actionAria}
     >
@@ -252,6 +255,7 @@ function PeekCard({ locale }: { locale: Locale }) {
   return (
     <div
       className="peek-card product-panel"
+      data-coach="peek"
       role="img"
       aria-label={labels.peekAria}
     >
@@ -354,7 +358,7 @@ function Trust({ copy }: { copy: LandingCopy }) {
           </h2>
           <p>{copy.privacyBody}</p>
         </div>
-        <div className="trust-terminal">
+        <div className="trust-terminal" data-coach="privacy">
           <div className="terminal-bar">
             <span>hotkeygo / PRIVACY TRACE</span>
             <i>LIVE</i>
@@ -380,6 +384,7 @@ function MenuBarPanel() {
   return (
     <div
       className="menubar-panel product-panel"
+      data-coach="pricing"
       role="img"
       aria-label="hotkeygo menu bar popover with About, version 1.0, Accessibility access granted, Free plan and 20 of 30 actions used, close shortcut Option Command X, Preview & Approve off, Settings, Quit, and Onboarding"
     >
@@ -507,13 +512,16 @@ export function LandingPage({
   locale,
   copy,
   heroWindow,
+  coach,
 }: {
   locale: Locale;
   copy: LandingCopy;
   heroWindow: HeroWindowCopy;
+  coach: CoachCopy;
 }) {
   return (
     <div className="site-shell">
+      <Coach copy={coach} />
       <header className="site-header">
         <a href={`/${locale}`} aria-label="hotkeygo home">
           <Image
@@ -579,7 +587,7 @@ export function LandingPage({
             <span>{copy.finalB}</span>
           </h2>
           <p>{copy.finalBody}</p>
-          <div className="final-actions">
+          <div className="final-actions" data-coach="final">
             <Download label={copy.cta} inverse />
             <Shortcut letter="X" inverse />
           </div>
