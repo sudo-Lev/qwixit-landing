@@ -6,6 +6,7 @@ import { HeroWindow, type HeroWindowCopy } from "./HeroWindow";
 import { ProductHud } from "./ProductHud";
 import { SpeedRace, type RaceCopy } from "./SpeedRace";
 import { Coach, type CoachCopy } from "./Coach";
+import { ShortcutBadge } from "./ShortcutBadge";
 
 type CopyKey =
   | "cta"
@@ -46,20 +47,11 @@ type CopyKey =
 
 export type LandingCopy = Record<CopyKey, string> & { race: RaceCopy };
 
-function Shortcut({ letter, inverse = false }: { letter: string; inverse?: boolean }) {
-  return (
-    <span
-      className={`shortcut ${inverse ? "shortcut--inverse" : ""}`}
-      aria-label={`Option Command ${letter}`}
-    >
-      <span className="shortcut__inner">
-        <kbd>⌥</kbd>
-        <kbd>⌘</kbd>
-        <kbd className="shortcut__letter">{letter}</kbd>
-      </span>
-    </span>
-  );
-}
+const legalFooter: Record<Locale, { privacy: string; terms: string; label: string }> = {
+  en: { privacy: "Privacy Policy", terms: "Terms of Service", label: "Legal" },
+  pl: { privacy: "Prywatność", terms: "Regulamin", label: "Informacje prawne" },
+  uk: { privacy: "Конфіденційність", terms: "Умови використання", label: "Правова інформація" },
+};
 
 function Download({
   label,
@@ -137,7 +129,7 @@ function FixDemo() {
           <i />
         </span>
         <span>Slack — #launch</span>
-        <small>⌥⌘X</small>
+        <ShortcutBadge letter="X" size="compact" />
       </div>
       <p className="fix-text">
         <del>hey</del>
@@ -310,7 +302,7 @@ function Workflows({ copy, locale }: { copy: LandingCopy; locale: Locale }) {
       <div className="workflow-list">
         <article className="workflow-row">
           <div className="workflow-copy">
-            <Shortcut letter="X" />
+            <ShortcutBadge letter="X" size="standard" />
             <h3>Fix</h3>
             <p>{copy.fixBody}</p>
             <Status>SMALLEST SAFE EDIT</Status>
@@ -319,7 +311,7 @@ function Workflows({ copy, locale }: { copy: LandingCopy; locale: Locale }) {
         </article>
         <article className="workflow-row">
           <div className="workflow-copy">
-            <Shortcut letter="A" />
+            <ShortcutBadge letter="A" size="standard" />
             <h3>Actions</h3>
             <p>{copy.actionsBody}</p>
             <Status tone="transform">INTENTIONAL TRANSFORM</Status>
@@ -328,7 +320,7 @@ function Workflows({ copy, locale }: { copy: LandingCopy; locale: Locale }) {
         </article>
         <article className="workflow-row">
           <div className="workflow-copy">
-            <Shortcut letter="Z" />
+            <ShortcutBadge letter="Z" size="standard" />
             <h3>Peek</h3>
             <p>{copy.peekBody}</p>
             <Status tone="unchanged">SOURCE UNCHANGED</Status>
@@ -416,10 +408,7 @@ function MenuBarPanel() {
           </span>
           <small>20 / 30 used</small>
         </div>
-        <span className="menubar-shortcut" aria-hidden>
-          <span>⌥⌘</span>
-          <b>X</b>
-        </span>
+        <ShortcutBadge letter="X" size="standard" />
         <span className="menubar-usage-ticks" aria-hidden>
           {Array.from({ length: 30 }, (_, index) => (
             <i className={index < 20 ? "is-used" : ""} key={index} />
@@ -563,7 +552,7 @@ export function LandingPage({
             </div>
             <div className="hero-actions">
               <Download label={copy.cta} />
-              <Shortcut letter="X" />
+              <ShortcutBadge letter="X" size="large" />
             </div>
             <small className="hero-note">{copy.heroNote}</small>
           </div>
@@ -589,7 +578,7 @@ export function LandingPage({
           <p>{copy.finalBody}</p>
           <div className="final-actions" data-coach="final">
             <Download label={copy.cta} inverse />
-            <Shortcut letter="X" inverse />
+            <ShortcutBadge letter="X" size="large" inverse />
           </div>
           <span className="final-face">[ ^_- ] &nbsp; READY WHEN YOU ARE</span>
         </section>
@@ -603,6 +592,10 @@ export function LandingPage({
           unoptimized
         />
         <span>hotkeygo © 2026</span>
+        <nav className="legal-footer-nav" aria-label={legalFooter[locale].label}>
+          <a href={`/${locale}/privacy`}>{legalFooter[locale].privacy}</a>
+          <a href={`/${locale}/terms`}>{legalFooter[locale].terms}</a>
+        </nav>
         <a className="agent-footer-link" href={`/${locale}/for-agents`}>
           <span className="agent-footer-face" aria-hidden>
             [ ^_- ]

@@ -1,7 +1,15 @@
 import { localeLabels, routing, type Locale } from "@/i18n/routing";
 
 /** Plain links: a full navigation lets the middleware persist the choice in NEXT_LOCALE. */
-export function LocaleSwitcher({ current, label }: { current: Locale; label: string }) {
+export function LocaleSwitcher({
+  current,
+  label,
+  path = "",
+}: {
+  current: Locale;
+  label: string;
+  path?: string;
+}) {
   return (
     <nav aria-label={label} className="locale-switcher">
       {routing.locales.map((locale, i) => (
@@ -12,7 +20,7 @@ export function LocaleSwitcher({ current, label }: { current: Locale; label: str
             </span>
           )}
           <a
-            href={`/${locale}`}
+            href={`/${locale}${path}`}
             hrefLang={locale}
             lang={locale}
             aria-current={locale === current ? "true" : undefined}

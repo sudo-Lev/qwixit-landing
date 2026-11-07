@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
+import { ShortcutBadge } from "@/components/ShortcutBadge";
 import { SITE_URL } from "@/lib/site";
 
 const labels: Record<Locale, { back: string; context: string }> = {
@@ -39,17 +40,17 @@ export async function generateMetadata({
 }
 
 function Command({
-  shortcut,
+  letter,
   title,
   children,
 }: {
-  shortcut: string;
+  letter: string;
   title: string;
   children: React.ReactNode;
 }) {
   return (
     <div className="agent-command">
-      <code>{shortcut}</code>
+      <ShortcutBadge letter={letter} />
       <div>
         <h3>{title}</h3>
         <p>{children}</p>
@@ -182,15 +183,15 @@ export default async function ForAgentsPage({ params }: { params: Promise<{ loca
               Three clear contracts.
             </h2>
             <div className="agent-commands">
-              <Command shortcut="⌥⌘X" title="Fix">
+              <Command letter="X" title="Fix">
                 Conservatively corrects typos, grammar, punctuation, and clearly awkward wording. It
                 replaces the selection in place while preserving the user’s voice.
               </Command>
-              <Command shortcut="⌥⌘A" title="Actions">
+              <Command letter="A" title="Actions">
                 Runs an explicit transformation such as translation, shortening, or a tone change.
                 Transformations happen only when the user asks for them.
               </Command>
-              <Command shortcut="⌥⌘Z" title="Peek">
+              <Command letter="Z" title="Peek">
                 Translates or explains the selection in a read-only card. The source text stays
                 exactly where it is and remains unchanged.
               </Command>

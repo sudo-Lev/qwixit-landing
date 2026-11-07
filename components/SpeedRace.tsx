@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { useActive } from "@/lib/useActive";
 import { ProductHud } from "./ProductHud";
+import { ShortcutBadge, ShortcutText } from "./ShortcutBadge";
 
 /**
  * Both lanes start together. HotkeyGo completes at the midpoint of its measured 3–5 second range;
@@ -138,7 +139,9 @@ function StepList({
             style={{ "--p": progress } as CSSProperties}
           >
             <b>{String(index).padStart(2, "0")}</b>
-            <span>{labels[step.id]}</span>
+            <span>
+              <ShortcutText text={labels[step.id] ?? ""} />
+            </span>
           </li>
         );
       })}
@@ -261,19 +264,7 @@ export function SpeedRace({ copy }: { copy: RaceCopy }) {
 
           <footer className="sr-foot">
             <span className="sr-foot__lead">
-              <span className="qx-keys qx-keys--lg" aria-label="Option Command X">
-                <span className="qx-keys__inner">
-                  <kbd className="qx-key">
-                    <span>⌥</span>
-                  </kbd>
-                  <kbd className="qx-key">
-                    <span>⌘</span>
-                  </kbd>
-                  <kbd className="qx-key qx-key--x">
-                    <span>X</span>
-                  </kbd>
-                </span>
-              </span>
+              <ShortcutBadge letter="X" size="large" />
               <strong>{copy.footer}</strong>
             </span>
             <span className="sr-foot__meta">{copy.footerMeta}</span>

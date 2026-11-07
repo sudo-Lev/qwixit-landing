@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { advanceCoachMotion, type CoachMotion, type CoachPoint } from "@/lib/coach-motion";
+import { ShortcutText } from "./ShortcutBadge";
 
 export type CoachCopy = {
   hero: { draft: string; polished: string };
@@ -455,7 +456,7 @@ export function Coach({ copy }: { copy: CoachCopy }) {
           <b>{FACES[face]}</b>
         </span>
         <span className="coach__message" key={beatKey}>
-          {beat?.message}
+          {beat && <ShortcutText text={beat.message} />}
         </span>
       </div>
     </div>

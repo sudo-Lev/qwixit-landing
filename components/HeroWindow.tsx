@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { useActive } from "@/lib/useActive";
 import { ProductHud, type HudLabels } from "./ProductHud";
+import { ShortcutBadge } from "./ShortcutBadge";
 
 /** EDITING → SELECTED → PROCESSING → POLISHED, in milliseconds. */
 const PHASE_MS = [1300, 900, 1500, 2600] as const;
@@ -226,19 +227,7 @@ export function HeroWindow({ copy }: { copy: HeroWindowCopy }) {
               {row(<>{copy.thanks}</>)}
             </div>
             <div className="qx-bottom">
-              <span className="qx-keys" aria-hidden>
-                <span className="qx-keys__inner">
-                  <kbd className="qx-key">
-                    <span>⌥</span>
-                  </kbd>
-                  <kbd className="qx-key">
-                    <span>⌘</span>
-                  </kbd>
-                  <kbd className="qx-key qx-key--x">
-                    <span>X</span>
-                  </kbd>
-                </span>
-              </span>
+              <ShortcutBadge letter="X" size="hero" className="qx-window__shortcut" />
               <ProductHud
                 state={phase === 3 ? "success" : "processing"}
                 className="qx-window__hud"
@@ -254,7 +243,7 @@ export function HeroWindow({ copy }: { copy: HeroWindowCopy }) {
             <i className="qx-link qx-link--1" />
             <span className="qx-step qx-step--keys">
               <i />
-              ⌥⌘X
+              <ShortcutBadge letter="X" size="compact" />
             </span>
             <i className="qx-link qx-link--2" />
             <span className="qx-step qx-step--replaced">
