@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import { routing, type Locale } from "@/i18n/routing";
 import { legalCopy } from "@/lib/legal";
+import { LEGAL_EFFECTIVE_DATE } from "@/lib/legal/operator";
 import type { LegalKind } from "@/lib/legal/types";
 import { LocaleSwitcher } from "./LocaleSwitcher";
 
@@ -12,6 +13,12 @@ const referencesLabel: Record<Locale, string> = {
   pl: "Informacje dostawców i organu ochrony danych",
   uk: "Інформація провайдерів та органу захисту даних",
 };
+
+function formatEffectiveDate(locale: Locale) {
+  return new Intl.DateTimeFormat(locale, { dateStyle: "long", timeZone: "UTC" }).format(
+    new Date(`${LEGAL_EFFECTIVE_DATE}T00:00:00Z`),
+  );
+}
 
 export function legalMetadata(locale: Locale, kind: LegalKind): Metadata {
   const document = legalCopy[locale].documents[kind];
@@ -28,7 +35,7 @@ export function legalMetadata(locale: Locale, kind: LegalKind): Metadata {
       description: document.intro,
       url: `/${locale}${path}`,
     },
-    robots: { index: false, follow: false },
+    robots: { index: true, follow: true },
   };
 }
 
@@ -74,11 +81,11 @@ export function LegalPage({ locale, kind }: { locale: Locale; kind: LegalKind })
           <header className="legal-intro">
             <h1>{document.title}</h1>
             <p>{document.intro}</p>
-            <span className="legal-effective">{copy.effective}</span>
+            <span className="legal-effective">
+              {copy.effective}:{" "}
+              <time dateTime={LEGAL_EFFECTIVE_DATE}>{formatEffectiveDate(locale)}</time>
+            </span>
           </header>
-          <div className="legal-draft" role="note">
-            {copy.draft}
-          </div>
           <details className="legal-mobile-index">
             <summary>{copy.contents}</summary>
             <nav aria-label={copy.contents}>

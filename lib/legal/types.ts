@@ -16,7 +16,6 @@ export type LegalLocale = {
   back: string;
   language: string;
   contents: string;
-  draft: string;
   effective: string;
   contact: string;
   other: Record<LegalKind, string>;

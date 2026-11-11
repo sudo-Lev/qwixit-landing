@@ -485,7 +485,7 @@ function Pricing({ copy }: { copy: LandingCopy }) {
           <b>FREE · $0</b>
         </div>
         <div className="price-featured">
-          <span className="mono-label">UNLIMITED</span>
+          <span className="mono-label">ADVANCED</span>
           <strong>
             $10<small>/month</small>
           </strong>
