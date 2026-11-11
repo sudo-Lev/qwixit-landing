@@ -1,12 +1,11 @@
+import { OPERATOR_ADDRESS } from "./operator";
 import type { LegalLocale } from "./types";
 
 export const pl: LegalLocale = {
   back: "Wróć do hotkeygo",
   language: "Język",
   contents: "Na tej stronie",
-  draft:
-    "Projekt do weryfikacji. Nie obowiązuje przed oficjalną premierą. Przed publikacją należy potwierdzić dane kontaktowe, ustawienia produktu, płatności i wymogi prawne.",
-  effective: "Data wejścia w życie: oficjalna premiera (data do potwierdzenia)",
+  effective: "Data wejścia w życie",
   contact: "Pytania? Napisz na support@hotkeygo.app",
   other: { privacy: "Przeczytaj regulamin", terms: "Przeczytaj politykę prywatności" },
   documents: {
@@ -18,8 +17,8 @@ export const pl: LegalLocale = {
           id: "who",
           title: "Kim jesteśmy",
           paragraphs: [
-            "Operatorem hotkeygo jest Lev Misiliuk, przedsiębiorca prowadzący działalność gospodarczą w Polsce. Polityka opisuje przetwarzanie danych podczas korzystania ze strony hotkeygo.app, aplikacji macOS, subskrypcji i kontaktu z nami.",
-            "W sprawach prywatności i realizacji praw napisz na support@hotkeygo.app. Adres pocztowy przedsiębiorcy i data wejścia w życie zostaną potwierdzone przed premierą.",
+            "Operatorem hotkeygo jest Lev Misiliuk, przedsiębiorca prowadzący jednoosobową działalność gospodarczą zarejestrowaną w Polsce. Niniejsza polityka opisuje, jak przetwarzamy dane osobowe, gdy odwiedzasz hotkeygo.app, korzystasz z aplikacji na macOS, kupujesz subskrypcję lub kontaktujesz się z nami.",
+            `W sprawach prywatności i wniosków napisz na support@hotkeygo.app. Adres przedsiębiorcy: ${OPERATOR_ADDRESS}.`,
           ],
         },
         {
@@ -35,16 +34,16 @@ export const pl: LegalLocale = {
           id: "providers",
           title: "Dostawcy AI i przechowywanie",
           paragraphs: [
-            "Anthropic i OpenAI działają na podstawie własnych umów i ustawień przetwarzania danych. W żądaniach do OpenAI hotkeygo ustawia store: false. To ustawienie wyłącza przechowywanie odpowiedzi do późniejszego pobrania przez API, ale samo w sobie nie gwarantuje braku przechowywania danych przez dostawcę na potrzeby bezpieczeństwa i wykrywania nadużyć.",
-            "Okresy przechowywania, przetwarzanie bezpieczeństwa i ewentualne dodatkowe zabezpieczenia zależą od dostawcy, używanego punktu API oraz konfiguracji naszego konta. Przed premierą zweryfikujemy te warunki i zaktualizujemy politykę, gdy ulegną zmianie.",
+            "Anthropic i OpenAI przetwarzają żądania API na podstawie własnych warunków handlowych i ustawień danych. Zgodnie z tymi warunkami dane przesyłane przez ich API domyślnie nie są wykorzystywane do trenowania modeli. W żądaniach do OpenAI hotkeygo ustawia store: false, więc odpowiedzi nie są przechowywane do późniejszego pobrania przez API.",
+            "Dostawcy mogą przez ograniczony czas przechowywać dane wejściowe i odpowiedzi API na potrzeby bezpieczeństwa i wykrywania nadużyć, zgodnie z własnymi zasadami. Jeśli nasze ustalenia z dostawcami się zmienią, zaktualizujemy tę politykę.",
           ],
         },
         {
           id: "installation",
           title: "Instalacja, użytkowanie i diagnostyka",
           paragraphs: [
-            "Bezpłatna instalacja nie wymaga konta hotkeygo ani adresu email. Aplikacja tworzy losowy identyfikator instalacji w Pęku kluczy macOS. Nasza usługa korzysta z danych instalacji i subskrypcji, aby zapewnić dostęp, rozliczać bezpłatny limit, przeciwdziałać nadużyciom i utrzymywać uprawnienia.",
-            "Nasza diagnostyka obejmuje informacje operacyjne, takie jak użyta funkcja i dostawca, status planu, liczba żądań, wyniki, ustalone kategorie błędów i czasy. Analiza poszczególnych instalacji używa skrótu identyfikatora instalacji. Nie jest przeznaczona do zbierania zaznaczonego tekstu, promptów, wyników modelu ani adresów IP. Dzienne podsumowania i profile instalacji są przechowywane do 365 dni. Planujemy dodać język interfejsu do analityki; konfigurację na premierę należy potwierdzić.",
+            "Bezpłatna instalacja nie wymaga konta hotkeygo ani adresu e-mail. Aplikacja używa pseudonimowego identyfikatora instalacji, który nie jest powiązany z Twoim imieniem i nazwiskiem ani adresem e-mail. Nasza usługa używa go wraz z informacjami o subskrypcji, aby zapewnić dostęp, liczyć bezpłatny limit, zapobiegać nadużyciom i obsługiwać Twoją subskrypcję.",
+            "Nasza diagnostyka rejestruje dane operacyjne, takie jak użyta funkcja i dostawca, status planu, język interfejsu aplikacji, liczba i wyniki żądań, ustalone kategorie błędów oraz czas przetwarzania. Analityka poszczególnych instalacji używa skrótu (hash) identyfikatora. Nie obejmuje zaznaczonego tekstu, promptów, odpowiedzi modelu ani adresów IP. Dzienne podsumowania i profile instalacji przechowujemy do 365 dni.",
           ],
         },
         {
@@ -52,7 +51,7 @@ export const pl: LegalLocale = {
           title: "Analityka strony i cookies",
           paragraphs: [
             "Strona korzysta z Vercel Web Analytics, aby rozumieć odwiedziny i ją ulepszać. Według Vercel narzędzie nie używa cookies do analityki odwiedzających, lecz krótkotrwałego skrótu żądania. Może raportować m.in. odwiedzoną stronę, źródło wejścia, przybliżoną lokalizację, przeglądarkę i rodzaj urządzenia.",
-            "Strona może używać pliku NEXT_LOCALE do zapamiętania preferowanego języka. Dostawcy hostingu i bezpieczeństwa mogą przetwarzać dane sieciowe, w tym adres IP, na potrzeby dostarczania i ochrony usługi. Przed premierą sprawdzimy konfigurację produkcyjną i dodatkowe technologie.",
+            "Strona używa pliku cookie NEXT_LOCALE, aby zapamiętać wybrany język. Jest on potrzebny tylko do tej funkcji i nie służy do analityki ani reklamy. Dostawcy hostingu i zabezpieczeń mogą przetwarzać dane sieciowe, w tym adres IP, aby dostarczać i chronić stronę.",
           ],
         },
         {
@@ -67,8 +66,8 @@ export const pl: LegalLocale = {
           id: "payments",
           title: "Płatności i wiadomości",
           paragraphs: [
-            "W przypadku płatnej subskrypcji Paddle lub Apple mogą zbierać dane potrzebne do transakcji, takie jak email, dane rozliczeniowe, szczegóły płatności i transakcji. Dostawca płatności przetwarza je zgodnie z własnymi warunkami i polityką prywatności. Możemy otrzymywać dane zakupu, subskrypcji i uprawnień potrzebne do zapewnienia dostępu i wsparcia; nie potrzebujemy pełnego numeru karty.",
-            "Możemy wysyłać niezbędne wiadomości o zakupie, subskrypcji i istotnych zmianach usługi. Jeśli zaoferujemy osobną, dobrowolną subskrypcję nowości, wiadomości marketingowe będą wysyłane zgodnie z zapisanym wyborem i obowiązującym prawem, z możliwością rezygnacji. Funkcja jest planowana i wymaga wdrożenia przed użyciem.",
+            "Zakupy bezpośrednie obsługuje Paddle, nasz odsprzedawca i Merchant of Record. Paddle zbiera dane potrzebne do transakcji, takie jak e-mail, adres rozliczeniowy, dane płatnicze i historia transakcji, i przetwarza je na podstawie własnych warunków i polityki prywatności. Otrzymujemy informacje o zakupie i subskrypcji potrzebne do zapewnienia dostępu i wsparcia; nigdy nie otrzymujemy pełnego numeru karty.",
+            "Potwierdzenia i wiadomości o subskrypcji wysyła Paddle. Kontaktujemy się z Tobą tylko w sprawie zakupu, zgłoszenia do wsparcia lub istotnej zmiany usługi. Nie wysyłamy wiadomości marketingowych.",
           ],
         },
         {
@@ -83,8 +82,8 @@ export const pl: LegalLocale = {
           id: "sharing",
           title: "Dostawcy i przekazywanie danych",
           paragraphs: [
-            "Nasi dostawcy mogą obejmować Cloudflare — infrastruktura i dostarczanie emaili, Anthropic i OpenAI — przetwarzanie AI, Vercel — hosting i analityka strony, oraz Paddle lub Apple — płatności. Dostawca Twojej poczty i macOS mogą również przetwarzać dane na własnych zasadach.",
-            "Dostawcy mogą przetwarzać informacje poza Europejskim Obszarem Gospodarczym. Przed premierą ustalimy właściwe mechanizmy i zabezpieczenia transferu wymagane przez europejskie prawo, np. odpowiednią decyzję stwierdzającą odpowiedni stopień ochrony lub zabezpieczenia umowne.",
+            "Naszymi dostawcami usług są Cloudflare (infrastruktura i dostarczanie e-maili), Anthropic i OpenAI (przetwarzanie AI), Vercel (hosting i analityka strony) oraz Paddle (płatności). Twój dostawca poczty i macOS mogą również przetwarzać informacje na własnych warunkach.",
+            "Niektórzy dostawcy przetwarzają dane poza Europejskim Obszarem Gospodarczym, w tym w Stanach Zjednoczonych. Gdy mają zastosowanie europejskie przepisy o ochronie danych, takie przekazania opierają się na decyzji stwierdzającej odpowiedni stopień ochrony, np. EU–US Data Privacy Framework dla certyfikowanych dostawców, lub na standardowych klauzulach umownych w warunkach przetwarzania danych dostawców.",
           ],
         },
         {
@@ -99,7 +98,7 @@ export const pl: LegalLocale = {
           id: "minors",
           title: "Wiek, bezpieczeństwo i zmiany",
           paragraphs: [
-            "hotkeygo jest przeznaczony dla osób od 16 lat, z uwzględnieniem prawa lokalnego oraz wymaganej zgody rodzica lub opiekuna. Zabezpieczenia i wymagania dostawców dla osób poniżej 18 lat muszą zostać zweryfikowane przed premierą.",
+            "hotkeygo jest przeznaczone dla osób, które ukończyły 16 lat. Jeśli wymaga tego prawo lokalne, osoby poniżej 18 lat potrzebują zgody rodzica lub opiekuna.",
             "Stosujemy rozsądne środki techniczne i organizacyjne, ale żadna usługa internetowa nie zapewnia absolutnego bezpieczeństwa. Możemy aktualizować tę politykę w związku ze zmianami usługi lub prawa i poinformujemy o istotnych zmianach, gdy będzie to właściwe lub wymagane.",
           ],
         },
@@ -113,15 +112,15 @@ export const pl: LegalLocale = {
           id: "about",
           title: "Usługa i regulamin",
           paragraphs: [
-            "hotkeygo to narzędzie do pracy z tekstem na macOS, prowadzone przez Leva Misiliuka, przedsiębiorcę w Polsce. Regulamin dotyczy aplikacji i strony internetowej. Polityka prywatności wyjaśnia przetwarzanie danych osobowych.",
-            "To projekt przedpremierowy, który wejdzie w życie dopiero w dniu oficjalnej premiery; data zostanie potwierdzona przed publikacją. Jeśli korzystasz z usługi w imieniu organizacji, musisz mieć uprawnienie do zaakceptowania warunków w jej imieniu.",
+            "hotkeygo to narzędzie do pracy z tekstem na macOS, którego operatorem jest Lev Misiliuk, przedsiębiorca prowadzący jednoosobową działalność gospodarczą zarejestrowaną w Polsce. Niniejszy regulamin określa zasady korzystania z aplikacji i strony. Przetwarzanie danych osobowych opisuje Polityka prywatności.",
+            "Regulamin obowiązuje od daty wejścia w życie podanej powyżej. Jeśli korzystasz z usługi w imieniu organizacji, musisz być upoważniony do akceptacji regulaminu w jej imieniu.",
           ],
         },
         {
           id: "eligibility",
           title: "Wiek i odpowiedzialne używanie",
           paragraphs: [
-            "Musisz mieć co najmniej 16 lat i spełniać wymogi prawa w miejscu zamieszkania. Jeśli masz mniej niż 18 lat, może być wymagana zgoda rodzica lub opiekuna. Wymagania dostawców i zabezpieczenia dla osób poniżej 18 lat zostaną sprawdzone przed premierą.",
+            "Musisz mieć ukończone 16 lat. Jeśli masz mniej niż 18 lat i wymaga tego prawo lokalne, potrzebujesz zgody rodzica lub opiekuna.",
             "Korzystaj z hotkeygo zgodnie z prawem, szanuj prawa innych osób i przesyłaj tylko teksty, do których przetwarzania masz prawo. Nie zakłócaj działania usługi, nie obchodź limitów ani zabezpieczeń płatności i nie używaj jej w sposób zabroniony przez prawo lub zasady wybranego dostawcy.",
           ],
         },
@@ -145,39 +144,39 @@ export const pl: LegalLocale = {
           id: "plans",
           title: "Plan bezpłatny i płatny",
           paragraphs: [
-            "Plan bezpłatny ma obejmować 30 działań AI w miesiącu kalendarzowym. Plan Unlimited jest planowany w cenie 10 USD miesięcznie, z uwzględnieniem należnych podatków w cenie wyświetlanej przy płatności. Ostateczne zasady płatności, dostępne waluty i podatki dla poszczególnych kanałów sprzedaży muszą zostać potwierdzone przed premierą.",
-            "Płatna subskrypcja odnawia się automatycznie co miesiąc do czasu anulowania. Obowiązują cena i funkcje pokazane przy zakupie. Możemy stosować rozsądne środki przeciwdziałania nadużyciom, oszustwom, problemom technicznym lub nadmiernej automatyzacji; o obowiązujących limitach poinformujemy.",
+            "Plan bezpłatny obejmuje 30 działań AI w miesiącu kalendarzowym. hotkeygo Advanced kosztuje 10 USD miesięcznie, a należne podatki są wliczone w cenę wyświetlaną przy płatności. Paddle może pokazać cenę w Twojej lokalnej walucie.",
+            "Płatna subskrypcja odnawia się automatycznie co miesiąc do czasu anulowania. Do zakupu stosuje się cenę i funkcje pokazane przy płatności. Możemy podejmować rozsądne działania przeciwko nadużyciom, oszustwom lub nadmiernej zautomatyzowanej aktywności.",
           ],
         },
         {
           id: "billing",
           title: "Płatności i anulowanie",
           paragraphs: [
-            "Zakupy bezpośrednie są planowane przez Paddle; zakupy w App Store, jeśli będą oferowane, obsługuje Apple. Do transakcji mają zastosowanie proces zakupu, zasady płatności i zarządzania subskrypcją danego dostawcy. Zakup może wymagać emaila lub danych rozliczeniowych, choć bezpłatna aplikacja nie wymaga konta.",
-            "Możesz anulować automatyczne odnowienie u właściwego dostawcy płatności. O ile zwrot lub inne obowiązujące zasady nie zakończą dostępu wcześniej, płatny dostęp trwa do końca opłaconego okresu, a następnie wraca plan bezpłatny.",
+            "Zakupy bezpośrednie sprzedaje Paddle.com, nasz odsprzedawca i Merchant of Record. Paddle odpowiada za płatności, podatki, faktury i pytania dotyczące płatności, a do transakcji stosuje się jego warunki dla kupujących. Zakup wymaga adresu e-mail i danych płatniczych, choć bezpłatna aplikacja nie wymaga konta.",
+            "Automatyczne odnawianie możesz anulować w dowolnym momencie, korzystając z linku do subskrypcji w wiadomościach od Paddle lub pisząc na support@hotkeygo.app. Po anulowaniu Advanced działa do końca opłaconego okresu, a następnie wracasz do planu bezpłatnego.",
           ],
         },
         {
           id: "refunds",
           title: "Zwroty",
           paragraphs: [
-            "Przy pierwszym zakupie bezpośrednim planujemy przyjmować prośby o pełny zwrot w ciągu 14 dni kalendarzowych od płatności, jeśli usługa Ci nie odpowiada, także po jej wypróbowaniu. Napisz na support@hotkeygo.app. Prośby dotyczące kolejnych odnowień mogą być rozpatrywane indywidualnie.",
-            "Zwroty za transakcje Paddle przetwarza Paddle. Zakupy w App Store podlegają właściwej procedurze Apple, którą trzeba potwierdzić przed premierą. Po zatwierdzonym zwrocie zamierzamy zakończyć płatny dostęp i przywrócić 30 bezpłatnych działań; przed złożeniem tej obietnicy funkcja musi zostać wdrożona i sprawdzona. Regulamin nie ogranicza bezwzględnie obowiązujących praw konsumenta.",
+            "Jeśli pierwszy zakup bezpośredni Ci nie odpowiada, możesz poprosić o pełny zwrot w ciągu 14 dni kalendarzowych od płatności, nawet po skorzystaniu z Advanced. Napisz na support@hotkeygo.app lub skontaktuj się z Paddle przez paddle.net. Wnioski dotyczące kolejnych odnowień rozpatrujemy indywidualnie.",
+            "Zwroty obsługuje Paddle. Po zatwierdzeniu pełnego zwrotu Advanced się kończy, a bezpłatny limit 30 działań zostaje przywrócony. Nic w tym regulaminie nie ogranicza Twoich bezwzględnie obowiązujących praw konsumenta.",
           ],
         },
         {
           id: "devices",
           title: "Urządzenia i dostęp",
           paragraphs: [
-            "Planujemy, aby płatna subskrypcja obejmowała do trzech osobistych komputerów Mac, z możliwością usunięcia starego urządzenia i kontaktu ze wsparciem, gdy nie jest ono dostępne. Przenoszenie między wersjami, kody odzyskiwania i zarządzanie urządzeniami są planowane i nie są jeszcze gwarantowane.",
-            "Zasady urządzeń dla wersji App Store będą podlegać wymaganiom Apple i muszą zostać sprawdzone przed premierą. Dostępność może zależeć od urządzenia, regionu i kanału dystrybucji.",
+            "Subskrypcja należy do instalacji hotkeygo na Macu, na którym ją kupiono. Ponowna instalacja lub aktualizacja aplikacji na tym Macu ją zachowuje.",
+            "Jeśli przenosisz się na inny Mac, reinstalujesz macOS lub straciłeś dostęp do swojego Maca, napisz na support@hotkeygo.app, a pomożemy przenieść subskrypcję.",
           ],
         },
         {
           id: "changes",
           title: "Zmiany ceny i usługi",
           paragraphs: [
-            "Jeżeli zmienimy cenę subskrypcji, zamierzamy poinformować obecnych płacących użytkowników co najmniej 30 dni wcześniej. Zmiana nie podwyższy ceny już opłaconego okresu; nowa cena dotyczy późniejszego odnowienia, z uwzględnieniem zasad dostawcy płatności i prawa.",
+            "Jeśli zmienimy cenę subskrypcji, powiadomimy obecnych subskrybentów e-mailem co najmniej 30 dni wcześniej. Nowa cena obowiązuje dopiero od późniejszego odnowienia, nigdy nie dotyczy już opłaconego okresu, a przed jej wejściem w życie możesz anulować subskrypcję.",
             "Możemy aktualizować, zawieszać lub wycofywać funkcje ze względu na konserwację, bezpieczeństwo, prawo lub przyczyny operacyjne. Powiadomimy o tym, gdy będzie to właściwe lub wymagane, i uszanujemy przysługujące środki ochrony konsumenta.",
           ],
         },

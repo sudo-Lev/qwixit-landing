@@ -1,12 +1,11 @@
+import { OPERATOR_ADDRESS } from "./operator";
 import type { LegalLocale } from "./types";
 
 export const en: LegalLocale = {
   back: "Back to hotkeygo",
   language: "Language",
   contents: "On this page",
-  draft:
-    "Draft for review. Not in effect until the official release. Contact details, product settings, payment flows and legal requirements must be confirmed before publication.",
-  effective: "Effective date: official release (date to be confirmed)",
+  effective: "Effective date",
   contact: "Questions? Contact support@hotkeygo.app",
   other: { privacy: "Read the Terms of Service", terms: "Read the Privacy Policy" },
   documents: {
@@ -20,7 +19,7 @@ export const en: LegalLocale = {
           title: "Who we are",
           paragraphs: [
             "hotkeygo is operated by Lev Misiliuk, a sole proprietor registered in Poland. This policy describes how we handle personal data when you visit hotkeygo.app, use the macOS application, purchase a subscription, or contact us.",
-            "For privacy questions and requests, contact support@hotkeygo.app. The business postal address and the effective date will be confirmed before release.",
+            `For privacy questions and requests, contact support@hotkeygo.app. Business address: ${OPERATOR_ADDRESS}.`,
           ],
         },
         {
@@ -36,16 +35,16 @@ export const en: LegalLocale = {
           id: "providers",
           title: "AI providers and retention",
           paragraphs: [
-            "Anthropic and OpenAI operate under their own applicable service agreements and data controls. For OpenAI requests, hotkeygo sets store: false. This prevents storage of the response for later retrieval through that API setting; it does not itself guarantee that the provider keeps no data for safety or abuse monitoring.",
-            "Provider retention, safety processing and any approved data controls depend on the provider, endpoint and our account configuration. We will verify those arrangements before release and update this policy when they change.",
+            "Anthropic and OpenAI process API requests under their own commercial terms and data controls. Under those terms, data sent through their APIs is not used to train their models by default. For OpenAI requests, hotkeygo sets store: false, so responses are not stored for later retrieval through the API.",
+            "Providers may keep API inputs and outputs for a limited time for safety and abuse monitoring, as described in their own policies. We update this policy if our provider arrangements change.",
           ],
         },
         {
           id: "installation",
           title: "Installation, usage and diagnostics",
           paragraphs: [
-            "A free installation does not require a hotkeygo account or an email address. The app creates a random installation identifier in macOS Keychain. Our service uses installation and subscription information to provide access, track the free allowance, prevent abuse and maintain entitlements.",
-            "Our first-party diagnostics record operational information such as feature and provider used, plan status, request counts, outcomes, fixed error categories and timing. Per-installation analytics use a hash of the installation identifier. These analytics are designed not to include selected text, prompts, model output or IP addresses. Daily installation summaries and profiles are retained for up to 365 days. We plan to add the app interface language to usage analytics; its release configuration must be confirmed.",
+            "A free installation does not require a hotkeygo account or an email address. The app uses a pseudonymous installation identifier that is not linked to your name or email. Our service uses it with subscription information to provide access, count the free allowance, prevent abuse and maintain your subscription.",
+            "Our first-party diagnostics record operational information such as the feature and provider used, plan status, app interface language, request counts, outcomes, fixed error categories and timing. Per-installation analytics use a hash of the installation identifier. These analytics do not include selected text, prompts, model output or IP addresses. Daily installation summaries and profiles are kept for up to 365 days.",
           ],
         },
         {
@@ -53,7 +52,7 @@ export const en: LegalLocale = {
           title: "Website analytics and cookies",
           paragraphs: [
             "The website uses Vercel Web Analytics to understand page visits and improve the site. According to Vercel, Web Analytics does not use cookies for visitor analytics; it uses a short-lived hash of the request. It may report information such as the visited page, referral source, approximate location, browser and device type.",
-            "The website may use a NEXT_LOCALE cookie to remember your language preference. Hosting and security providers may process network information, including an IP address, for delivery and protection. We will review the production site and any additional technologies before release.",
+            "The website uses a NEXT_LOCALE cookie to remember your language choice. It is needed for that function and is not used for analytics or advertising. Hosting and security providers may process network information, including an IP address, to deliver and protect the site.",
           ],
         },
         {
@@ -68,8 +67,8 @@ export const en: LegalLocale = {
           id: "payments",
           title: "Payments and communications",
           paragraphs: [
-            "For a paid subscription, Paddle or Apple may collect information needed to process the transaction, such as your email, billing information, payment details and transaction records. The payment provider processes payments under its own terms and privacy notice. We may receive purchase, subscription and entitlement information needed to provide support and access; we do not need your full card number.",
-            "We may send essential service communications about a purchase, subscription or significant service changes. If a separate optional news subscription is offered, marketing messages will be sent only according to the choice recorded for that purpose and applicable law, with a way to unsubscribe. This feature is planned and must be implemented before use.",
+            "Direct purchases are processed by Paddle, our reseller and Merchant of Record. Paddle collects the information needed for the transaction, such as your email, billing address, payment details and transaction records, and processes it under its own terms and privacy notice. We receive the purchase and subscription information needed to provide access and support; we never receive your full card number.",
+            "Paddle sends receipts and subscription emails. We contact you only about a purchase, a support request or a significant service change. We do not send marketing emails.",
           ],
         },
         {
@@ -84,8 +83,8 @@ export const en: LegalLocale = {
           id: "sharing",
           title: "Service providers and transfers",
           paragraphs: [
-            "Our service providers may include Cloudflare for infrastructure and email delivery, Anthropic and OpenAI for AI processing, Vercel for website hosting and analytics, and Paddle or Apple for payments. Your mailbox provider and macOS may also process information under their own terms.",
-            "Providers may process information outside the European Economic Area. Where European data protection law applies, we will identify the relevant transfer mechanism and safeguards before release, such as an applicable adequacy decision or appropriate contractual safeguards.",
+            "Our service providers are Cloudflare for infrastructure and email delivery, Anthropic and OpenAI for AI processing, Vercel for website hosting and analytics, and Paddle for payments. Your mailbox provider and macOS may also process information under their own terms.",
+            "Some providers process information outside the European Economic Area, including in the United States. Where European data protection law applies, these transfers rely on an adequacy decision, such as the EU–US Data Privacy Framework for certified providers, or on standard contractual clauses in the providers' data processing terms.",
           ],
         },
         {
@@ -100,7 +99,7 @@ export const en: LegalLocale = {
           id: "minors",
           title: "Age, security and changes",
           paragraphs: [
-            "hotkeygo is intended for users aged 16 or older, subject to applicable local law and any necessary parent or guardian permission. The safeguards and provider requirements for users under 18 must be verified before launch.",
+            "hotkeygo is intended for people aged 16 or older. If local law requires it, people under 18 need permission from a parent or guardian.",
             "We use reasonable technical and organisational measures to protect information, but no online service can promise absolute security. We may update this policy as the service or legal requirements change and will communicate material changes when appropriate or required.",
           ],
         },
@@ -114,15 +113,15 @@ export const en: LegalLocale = {
           id: "about",
           title: "The service and these terms",
           paragraphs: [
-            "hotkeygo is a macOS writing utility operated by Lev Misiliuk, a sole proprietor in Poland. These terms govern your use of the app and website. Our Privacy Policy explains how personal data is processed.",
-            "These terms are a pre-release draft and take effect only on the official release date, which will be confirmed before publication. If you use the service for an organisation, you must be authorised to accept terms on its behalf.",
+            "hotkeygo is a macOS writing utility operated by Lev Misiliuk, a sole proprietor registered in Poland. These terms govern your use of the app and website. Our Privacy Policy explains how personal data is processed.",
+            "These terms apply from the effective date shown above. If you use the service for an organisation, you must be authorised to accept them on its behalf.",
           ],
         },
         {
           id: "eligibility",
           title: "Eligibility and responsible use",
           paragraphs: [
-            "You must be at least 16 years old and meet the requirements of the law where you live. If you are under 18, parent or guardian permission may be required. Provider safeguards and local requirements for under-18 users will be confirmed before launch.",
+            "You must be at least 16 years old. If you are under 18 and local law requires it, you need permission from a parent or guardian.",
             "Use hotkeygo lawfully, respect other people's rights, and only submit text you are authorised to process. Do not interfere with the service, attempt to bypass usage limits or payment controls, or use it in ways prohibited by applicable law or the selected provider's policies.",
           ],
         },
@@ -146,39 +145,39 @@ export const en: LegalLocale = {
           id: "plans",
           title: "Free and paid plans",
           paragraphs: [
-            "The free plan is intended to include 30 AI actions per calendar month. The paid Unlimited plan is planned at USD 10 per month, including applicable taxes in the displayed checkout price. The final checkout, available currencies and taxes must be confirmed for each sales channel before release.",
-            "A paid subscription renews automatically each month until cancelled. Prices and features shown at checkout apply to your purchase. We may need reasonable measures to address misuse, fraud, technical limits or excessive automated activity; any applicable limits will be disclosed.",
+            "The free plan includes 30 AI actions per calendar month. hotkeygo Advanced costs USD 10 per month, with applicable taxes included in the price shown at checkout. Paddle may show the price in your local currency.",
+            "A paid subscription renews automatically each month until cancelled. The price and features shown at checkout apply to your purchase. We may take reasonable measures against misuse, fraud or excessive automated activity.",
           ],
         },
         {
           id: "billing",
           title: "Billing and cancellation",
           paragraphs: [
-            "Direct purchases are planned through Paddle; App Store purchases, if offered, are managed through Apple. The provider's checkout, payment terms and subscription management process apply to the transaction. A payment may require an email address or billing information even though the free app does not require an account.",
-            "You may cancel automatic renewal through the relevant payment provider. Unless a refund or another applicable rule changes access earlier, paid access continues until the end of the current paid period and then returns to the free plan.",
+            "Direct purchases are sold by Paddle.com, our reseller and Merchant of Record. Paddle handles payment, taxes, invoices and payment questions, and its buyer terms apply to the transaction. A purchase requires an email address and payment details, even though the free app does not require an account.",
+            "You can cancel automatic renewal at any time with the subscription link in your Paddle emails or by writing to support@hotkeygo.app. After cancellation, Advanced stays active until the end of the paid period and then returns to the free plan.",
           ],
         },
         {
           id: "refunds",
           title: "Refunds",
           paragraphs: [
-            "For a first direct purchase, we plan to accept a request for a full refund within 14 calendar days after payment if the service is not right for you, including after you have tried it. Contact support@hotkeygo.app. Requests concerning later renewals may be considered individually.",
-            "Paddle processes refunds for its transactions. App Store purchases are handled under Apple's applicable refund process, which must be confirmed before launch. After an approved refund, we intend to end paid access and restore the free allowance to 30 actions; this behaviour must be implemented and verified before it is promised at release. Nothing in these terms limits mandatory consumer rights.",
+            "If your first direct purchase isn't right for you, you can request a full refund within 14 calendar days of payment, even after using Advanced. Write to support@hotkeygo.app or contact Paddle at paddle.net. Requests for later renewals are considered individually.",
+            "Paddle processes refunds. When a full refund is approved, Advanced ends and the free allowance of 30 actions is restored. Nothing in these terms limits your mandatory consumer rights.",
           ],
         },
         {
           id: "devices",
           title: "Devices and access",
           paragraphs: [
-            "We intend a paid subscription to cover up to three personal Mac devices, with a way to remove an old device and contact support if it is unavailable. Cross-version transfers, recovery codes and device management are planned and not yet guaranteed.",
-            "The device policy for any App Store version remains subject to Apple's requirements and must be verified before release. Availability may vary by device, region and distribution channel.",
+            "A subscription belongs to the hotkeygo installation on the Mac where you bought it. Reinstalling or updating the app on that Mac keeps it.",
+            "If you move to another Mac, reinstall macOS or lose access to your Mac, write to support@hotkeygo.app and we will help move your subscription.",
           ],
         },
         {
           id: "changes",
           title: "Changes to pricing and service",
           paragraphs: [
-            "If we change the subscription price, we intend to notify existing paid subscribers at least 30 days in advance. A price change will not increase the price already paid for the current period; any new price applies to a later renewal, subject to the payment provider's rules and applicable law.",
+            "If we change the subscription price, we will email existing subscribers at least 30 days in advance. A new price applies only from a later renewal, never to a period you have already paid for, and you can cancel before it takes effect.",
             "We may update, suspend or discontinue features for maintenance, security, legal or operational reasons. We will provide notice where appropriate or required and respect any applicable consumer remedies.",
           ],
         },

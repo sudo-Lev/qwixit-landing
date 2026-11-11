@@ -33,7 +33,7 @@ export const agentContextText = `# hotkeygo
 ## Plans
 
 - Free: 30 AI actions per calendar month.
-- Unlimited: USD 10 per month, with no action counter.
+- Advanced: USD 10 per month, with no action counter.
 - The macOS build is currently marked as coming soon on the public website.
 
 ## Positioning

@@ -77,7 +77,7 @@ export default async function ForAgentsPage({ params }: { params: Promise<{ loca
     url: canonicalUrl,
     offers: [
       { "@type": "Offer", name: "Free", price: "0", priceCurrency: "USD" },
-      { "@type": "Offer", name: "Unlimited", price: "10", priceCurrency: "USD" },
+      { "@type": "Offer", name: "Advanced", price: "10", priceCurrency: "USD" },
     ],
   };
 
@@ -230,7 +230,7 @@ export default async function ForAgentsPage({ params }: { params: Promise<{ loca
                 <small>USD 0</small>
               </div>
               <div>
-                <h3>Unlimited</h3>
+                <h3>Advanced</h3>
                 <strong>$10</strong>
                 <p>per month · no action counter</p>
                 <small>MONTHLY</small>
