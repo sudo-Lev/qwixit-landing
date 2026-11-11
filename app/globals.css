@@ -3534,3 +3534,117 @@ a {
     animation: none;
   }
 }
+
+.checkout-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--canvas);
+}
+.checkout-header {
+  width: min(1180px, calc(100% - 48px));
+  height: 82px;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+}
+.checkout-header img {
+  width: 142px;
+  height: auto;
+}
+.checkout-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  padding: 48px 16px 64px;
+}
+.checkout-card {
+  width: min(420px, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 28px;
+  color: #f1edfa;
+  background: #17141f;
+  border-radius: 14px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+.checkout-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.checkout-face {
+  white-space: pre;
+  font: 800 15px/1 var(--font-mono);
+  text-shadow:
+    -1.25px 0 var(--cyan),
+    1.25px 0 var(--magenta);
+}
+.checkout-price {
+  margin: 34px 0 0;
+  font: 900 68px/1 var(--font-display);
+  letter-spacing: -0.04em;
+}
+.checkout-price small {
+  font: 700 11px/1 var(--font-mono);
+  letter-spacing: 0.04em;
+}
+.checkout-pitch {
+  margin: 16px 0 28px;
+  color: #b0abbf;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.checkout-button {
+  width: 100%;
+  cursor: pointer;
+}
+.checkout-button:disabled {
+  cursor: progress;
+  opacity: 0.55;
+  transform: none;
+}
+.checkout-button:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 3px;
+}
+.checkout-status {
+  min-height: 20px;
+  margin: 14px 0 0;
+  color: #b0abbf;
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: center;
+}
+.checkout-fineprint {
+  margin-top: 18px;
+  color: #77717e;
+  font: 800 9px/1 var(--font-mono);
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+.checkout-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  color: var(--muted);
+  font: 700 10px/1 var(--font-mono);
+  letter-spacing: 0.08em;
+}
+.checkout-links a:hover {
+  color: var(--ink);
+}
+@media (max-width: 480px) {
+  .checkout-header {
+    width: calc(100% - 32px);
+  }
+  .checkout-price {
+    font-size: 56px;
+  }
+}
