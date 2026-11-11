@@ -4,6 +4,6 @@ import { routing } from "./i18n/routing";
 export default createMiddleware(routing);
 
 export const config = {
-  // Everything except API/internals and files with an extension (assets, icons, robots, sitemap).
-  matcher: ["/((?!api|_next|_vercel|.*\\..*).*)"],
+  // Everything except API/internals, the Paddle checkout page, and files with an extension (assets, icons, robots, sitemap).
+  matcher: ["/((?!api|checkout|_next|_vercel|.*\\..*).*)"],
 };
