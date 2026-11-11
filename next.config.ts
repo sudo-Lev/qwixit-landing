@@ -6,6 +6,9 @@ const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  async headers() {
+    return [{ source: "/checkout", headers: [{ key: "X-Frame-Options", value: "DENY" }] }];
+  },
   // Pin the workspace root (a stray lockfile higher up confuses inference).
   outputFileTracingRoot: process.cwd(),
 };
