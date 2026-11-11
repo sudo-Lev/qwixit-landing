@@ -125,31 +125,49 @@ export function CheckoutCard({
       </header>
       <main className="checkout-main">
         <section className="checkout-card" aria-labelledby="checkout-title">
-          <div className="checkout-card__top">
-            <span className="mono-label">ADVANCED</span>
+          <div className="checkout-row checkout-row--top">
+            <span className="checkout-chip">ADVANCED</span>
+            <span className="checkout-secure">
+              <i aria-hidden />
+              SECURE CHECKOUT
+            </span>
+          </div>
+          <div className="checkout-row checkout-row--plan">
             <span className="checkout-face" aria-hidden>
               {face}
             </span>
+            <div className="checkout-plan">
+              <h1 id="checkout-title" className="checkout-price">
+                $10<small>/month</small>
+              </h1>
+              <span className="checkout-meter" aria-hidden>
+                <i />
+                <i />
+                <i />
+                <i />
+              </span>
+            </div>
           </div>
-          <h1 id="checkout-title" className="checkout-price">
-            $10<small>/month</small>
-          </h1>
-          <p className="checkout-pitch">More room to work. No action counter. Cancel anytime.</p>
-          <button
-            type="button"
-            className="download-button download-button--inverse checkout-button"
-            onClick={openCheckout}
-            disabled={!canOpen}
-          >
-            <span className="download-button__inner">
-              <span>Get Advanced</span>
-              <span aria-hidden>→</span>
-            </span>
-          </button>
-          <p className="checkout-status" role="status">
-            {statusText[state]}
+          <p className="checkout-row checkout-row--pitch">
+            More room to work. No action counter. Cancel anytime.
           </p>
-          <span className="checkout-fineprint">TAXES INCLUDED · BILLED MONTHLY BY PADDLE</span>
+          <div className="checkout-row checkout-row--actions">
+            <button
+              type="button"
+              className="checkout-action"
+              onClick={openCheckout}
+              disabled={!canOpen}
+            >
+              <span className="checkout-action__inner">
+                <span>Get Advanced</span>
+                <span aria-hidden>→</span>
+              </span>
+            </button>
+            <p className="checkout-status" role="status">
+              {statusText[state]}
+            </p>
+            <span className="checkout-fineprint">TAXES INCLUDED · BILLED MONTHLY BY PADDLE</span>
+          </div>
         </section>
         <nav className="checkout-links" aria-label="Legal">
           <Link href="/en/terms">Terms</Link>
