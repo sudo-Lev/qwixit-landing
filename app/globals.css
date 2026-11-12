@@ -58,6 +58,12 @@ input {
 button,
 a {
   -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+button,
+[role="button"] {
+  -webkit-user-select: none;
+  user-select: none;
 }
 ::selection {
   color: #fff;
@@ -82,7 +88,7 @@ a {
 
 .site-shell {
   position: relative;
-  min-height: 100vh;
+  min-height: 100svh;
   overflow: clip;
   background: var(--canvas);
 }
@@ -118,8 +124,10 @@ a {
 .site-header > nav a {
   transition: color 150ms ease;
 }
-.site-header > nav a:hover {
-  color: var(--ink);
+@media (hover: hover) and (pointer: fine) {
+  .site-header > nav a:hover {
+    color: var(--ink);
+  }
 }
 .header-actions {
   justify-self: end;
@@ -142,9 +150,16 @@ a {
   padding: 10px 2px;
   transition: color 150ms ease;
 }
-.locale-switcher a:hover,
 .locale-switcher a.is-current {
   color: var(--ink);
+}
+.locale-switcher a:active {
+  color: var(--violet);
+}
+@media (hover: hover) and (pointer: fine) {
+  .locale-switcher a:hover {
+    color: var(--ink);
+  }
 }
 .locale-divider {
   padding-inline: 5px;
@@ -213,12 +228,14 @@ a {
 .download-button__inner > span:last-child {
   font-size: 17px;
 }
-.download-button:hover {
-  transform: translateY(-2px);
-  filter: drop-shadow(0 7px 16px rgba(109, 40, 255, 0.16));
-}
-.download-button:hover .download-button__inner {
-  background: #251f30;
+@media (hover: hover) and (pointer: fine) {
+  .download-button:hover {
+    transform: translateY(-2px);
+    filter: drop-shadow(0 7px 16px rgba(109, 40, 255, 0.16));
+  }
+  .download-button:hover .download-button__inner {
+    background: #251f30;
+  }
 }
 .download-button:active {
   transform: translateY(1px);
@@ -253,8 +270,10 @@ a {
 .download-button--inverse .download-button__inner::before {
   background: var(--ink);
 }
-.download-button--inverse:hover .download-button__inner {
-  background: #f6f4fd;
+@media (hover: hover) and (pointer: fine) {
+  .download-button--inverse:hover .download-button__inner {
+    background: #f6f4fd;
+  }
 }
 
 .shortcut-badge {
@@ -2269,8 +2288,10 @@ a {
   gap: 10px 18px;
   color: var(--ink);
 }
-.legal-footer-nav a:hover {
-  color: var(--violet);
+@media (hover: hover) and (pointer: fine) {
+  .legal-footer-nav a:hover {
+    color: var(--violet);
+  }
 }
 .agent-footer-link {
   min-height: 36px;
@@ -2287,10 +2308,12 @@ a {
     background-color 150ms ease,
     transform 150ms cubic-bezier(0.16, 1, 0.3, 1);
 }
-.agent-footer-link:hover {
-  border-color: color-mix(in srgb, var(--violet) 48%, var(--border));
-  background: var(--hover);
-  transform: translateY(-1px);
+@media (hover: hover) and (pointer: fine) {
+  .agent-footer-link:hover {
+    border-color: color-mix(in srgb, var(--violet) 48%, var(--border));
+    background: var(--hover);
+    transform: translateY(-1px);
+  }
 }
 .agent-footer-face {
   min-width: 58px;
@@ -2306,7 +2329,7 @@ a {
 
 /* Legal documents */
 .legal-shell {
-  min-height: 100vh;
+  min-height: 100svh;
   background: var(--canvas);
 }
 .legal-header {
@@ -2342,8 +2365,10 @@ a {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-.legal-back:hover {
-  color: var(--violet);
+@media (hover: hover) and (pointer: fine) {
+  .legal-back:hover {
+    color: var(--violet);
+  }
 }
 .legal-layout {
   width: min(1180px, calc(100% - 48px));
@@ -2380,8 +2405,10 @@ a {
   font-size: 13px;
   line-height: 1.35;
 }
-.legal-index a:hover {
-  color: var(--violet);
+@media (hover: hover) and (pointer: fine) {
+  .legal-index a:hover {
+    color: var(--violet);
+  }
 }
 .legal-document {
   min-width: 0;
@@ -2497,8 +2524,10 @@ a {
     font-size: 14px;
     line-height: 1.4;
   }
-  .legal-mobile-index a:hover {
-    color: var(--violet);
+  @media (hover: hover) and (pointer: fine) {
+    .legal-mobile-index a:hover {
+      color: var(--violet);
+    }
   }
 }
 @media (max-width: 640px) {
@@ -2534,7 +2563,7 @@ a {
 
 /* Agent-readable product context */
 .agent-shell {
-  min-height: 100vh;
+  min-height: 100svh;
   overflow: clip;
   background: var(--canvas);
 }
@@ -2565,8 +2594,10 @@ a {
   text-transform: uppercase;
   transition: color 150ms ease;
 }
-.agent-back:hover {
-  color: var(--ink);
+@media (hover: hover) and (pointer: fine) {
+  .agent-back:hover {
+    color: var(--ink);
+  }
 }
 .agent-page {
   width: min(1180px, calc(100% - 48px));
@@ -2606,9 +2637,11 @@ a {
     color 150ms ease,
     padding-left 150ms ease;
 }
-.agent-index nav a:hover {
-  padding-left: 5px;
-  color: var(--ink);
+@media (hover: hover) and (pointer: fine) {
+  .agent-index nav a:hover {
+    padding-left: 5px;
+    color: var(--ink);
+  }
 }
 .agent-plain-link {
   min-height: 40px;
@@ -2626,9 +2659,11 @@ a {
     border-color 150ms ease,
     background-color 150ms ease;
 }
-.agent-plain-link:hover {
-  border-color: color-mix(in srgb, var(--violet) 48%, var(--border));
-  background: var(--hover);
+@media (hover: hover) and (pointer: fine) {
+  .agent-plain-link:hover {
+    border-color: color-mix(in srgb, var(--violet) 48%, var(--border));
+    background: var(--hover);
+  }
 }
 .agent-document {
   min-width: 0;
@@ -2918,8 +2953,10 @@ a {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-.agent-document-footer > a:hover {
-  color: var(--violet);
+@media (hover: hover) and (pointer: fine) {
+  .agent-document-footer > a:hover {
+    color: var(--violet);
+  }
 }
 
 .hotkeygo-toast {
@@ -3536,7 +3573,7 @@ a {
 }
 
 .checkout-shell {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   background: var(--canvas);
@@ -3699,9 +3736,11 @@ a {
   height: 2px;
   background: rgba(255, 255, 255, 0.92);
 }
-.checkout-action:hover {
-  transform: translateY(-1px);
-  filter: brightness(1.08);
+@media (hover: hover) and (pointer: fine) {
+  .checkout-action:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.08);
+  }
 }
 .checkout-action:active {
   transform: translateY(1px);
@@ -3737,8 +3776,10 @@ a {
   font: 700 10px/1 var(--font-mono);
   letter-spacing: 0.08em;
 }
-.checkout-links a:hover {
-  color: var(--ink);
+@media (hover: hover) and (pointer: fine) {
+  .checkout-links a:hover {
+    color: var(--ink);
+  }
 }
 @media (max-width: 480px) {
   .checkout-header {
